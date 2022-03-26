@@ -14,3 +14,8 @@ jobs:
           command: "squash and merge"
           approve: true
           target: minor
+fun main() {
+   val kotlin = "🙂"
+   println(kotlin)
+}
+  //http://calbearox.github.io/potential-money/
