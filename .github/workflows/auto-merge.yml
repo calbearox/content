@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: ahmadnassri/action-dependabot-auto-merge@v2.6
         with:
-          github-token: ${{ secrets.AUTOMERGE_TOKEN }}
+          github-token: ${{ secrets.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 }}
           command: "squash and merge"
           approve: true
           target: minor
