@@ -1,12 +1,7 @@
 ---
 title: RTCPeerConnection.sctp
 slug: Web/API/RTCPeerConnection/sctp
-tags:
-  - Property
-  - RTCPeerConnection
-  - Reference
-  - SCTP
-  - WebRTC
+page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.sctp
 ---
 
@@ -29,20 +24,20 @@ channels, or `null` if SCTP negotiation hasn't happened.
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
+const pc = new RTCPeerConnection();
 
-var channel = pc.createDataChannel("Mydata");
-channel.onopen = function (event) {
+const channel = pc.createDataChannel("Mydata");
+channel.onopen = (event) => {
   channel.send("sending a message");
 };
-channel.onmessage = function (event) {
+channel.onmessage = (event) => {
   console.log(event.data);
 };
 
 // Determine the largest message size that can be sent
 
-var sctp = pc.sctp;
-var maxMessageSize = sctp.maxMessageSize;
+const sctp = pc.sctp;
+const maxMessageSize = sctp.maxMessageSize;
 ```
 
 ## Specifications

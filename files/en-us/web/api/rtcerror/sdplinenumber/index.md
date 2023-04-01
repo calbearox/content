@@ -1,21 +1,10 @@
 ---
 title: RTCError.sdpLineNumber
 slug: Web/API/RTCError/sdpLineNumber
-tags:
-  - API
-  - Error
-  - Networking
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - sdpLineNumber
+page-type: web-api-instance-property
 browser-compat: api.RTCError.sdpLineNumber
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCError")}} interface's read-only property

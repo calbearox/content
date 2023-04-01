@@ -1,19 +1,8 @@
 ---
 title: Advanced styling effects
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
-tags:
-  - Article
-  - Beginner
-  - Blend modes
-  - Boxes
-  - CSS
-  - CodingScripting
-  - Filters
-  - Styling
-  - box shadows
-  - effects
-  - shapes
 ---
+
 {{LearnSidebar}}
 
 This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
@@ -52,7 +41,10 @@ Let's look at a simple example to get things started. First, some HTML:
 
 ```html
 <article class="simple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -67,11 +59,15 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .simple {
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -94,7 +90,10 @@ You can also specify multiple box shadows in a single `box-shadow` declaration, 
 
 ```html hidden
 <article class="multiple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -107,7 +106,11 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .multiple {
@@ -144,19 +147,18 @@ button {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow: 1px 1px 1px black, inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 
-button:focus, button:hover {
+button:focus,
+button:hover {
   background-image: linear-gradient(to bottom right, #888, #eee);
 }
 
 button:active {
-  box-shadow: inset 2px 2px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow: inset 2px 2px 1px black, inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 ```
 
@@ -206,10 +208,8 @@ You can find a lot more examples than are available here in our [blend-modes.htm
 Again, let's look at some examples so we can understand this better. First, {{cssxref("background-blend-mode")}} — here we'll show a couple of simple {{htmlelement("div")}}s, so you can compare the original with the blended version:
 
 ```html
-<div>
-</div>
-<div class="multiply">
-</div>
+<div></div>
+<div class="multiply"></div>
 ```
 
 Now some CSS — we are adding to the `<div>` one background image and a green background color:
@@ -241,20 +241,14 @@ Now let's look at {{cssxref("mix-blend-mode")}}. Here we'll present the same two
 ```html
 <article>
   No mix blend mode
-  <div>
-
-  </div>
-  <div>
-  </div>
+  <div></div>
+  <div></div>
 </article>
 
 <article>
   Multiply mix
-  <div class="multiply-mix">
-
-  </div>
-  <div>
-  </div>
+  <div class="multiply-mix"></div>
+  <div></div>
 </article>
 ```
 
@@ -315,9 +309,9 @@ In the image below we have a pleasingly round balloon. The actual file is rectan
 
 {{EmbedGHLiveSample("css-examples/learn/images/shapes.html", '100%', 1000)}}
 
-The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its centre point from the centre of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
+The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its center point from the center of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
 
-> **Note:** In Firefox you can use the DevTools [Shapes Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) to inspect Shapes.
+> **Note:** In Firefox you can use the DevTools [Shapes Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) to inspect Shapes.
 
 The `circle()` function is just one of a few basic shapes that are defined, however there are a number of different ways to create shapes. For more information and example code for CSS Shapes see the [Guides to CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes) on MDN.
 

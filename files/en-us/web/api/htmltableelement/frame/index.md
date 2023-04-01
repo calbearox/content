@@ -1,18 +1,12 @@
 ---
 title: HTMLTableElement.frame
 slug: Web/API/HTMLTableElement/frame
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Tables
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.frame
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The {{domxref("HTMLTableElement")}} interface's **`frame`**
@@ -21,7 +15,7 @@ drawn.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `void`
   - : No sides. This is the default.
@@ -46,8 +40,8 @@ One of the followings:
 
 ```js
 // Set the frame of TableA to 'border'
-var t = document.getElementById('TableA');
-t.frame  = "border";
+const t = document.getElementById("TableA");
+t.frame = "border";
 t.border = "2px";
 ```
 

@@ -1,14 +1,10 @@
 ---
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.paused
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`HTMLMediaElement.paused`** property
@@ -22,7 +18,7 @@ paused.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.paused); // true
 ```
 
@@ -36,4 +32,4 @@ console.log(obj.paused); // true
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.paused` property

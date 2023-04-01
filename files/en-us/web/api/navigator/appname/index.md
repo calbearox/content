@@ -1,15 +1,12 @@
 ---
 title: Navigator.appName
 slug: Web/API/Navigator/appName
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Navigator.appName
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The value of the **`Navigator.appName`** property is always

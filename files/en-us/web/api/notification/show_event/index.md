@@ -1,16 +1,10 @@
 ---
-title: 'Notification: show event'
+title: "Notification: show event"
 slug: Web/API/Notification/show_event
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Event
-  - Reference
-  - show
+page-type: web-api-event
 browser-compat: api.Notification.show_event
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`show`** event of the {{domxref("Notification")}} interface fires when a {{domxref("Notification")}} is displayed.
@@ -20,9 +14,9 @@ The **`show`** event of the {{domxref("Notification")}} interface fires when a {
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('show', event => { });
+addEventListener("show", (event) => {});
 
-onshow = event => { };
+onshow = (event) => {};
 ```
 
 ## Event type

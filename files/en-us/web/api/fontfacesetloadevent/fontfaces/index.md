@@ -1,19 +1,11 @@
 ---
 title: FontFaceSetLoadEvent.fontfaces
 slug: Web/API/FontFaceSetLoadEvent/fontfaces
-tags:
-  - API
-  - CSSFontLoading
-  - CSSOM
-  - Experimental
-  - FontFaceLoadEvent
-  - Fonts
-  - Property
-  - Reference
-  - fontfaces
+page-type: web-api-instance-property
 browser-compat: api.FontFaceSetLoadEvent.fontfaces
 ---
-{{SeeCompatTable}}{{APIRef("CSS Font Loading API")}}
+
+{{APIRef("CSS Font Loading API")}}
 
 The **`fontfaces`** read-only property of the
 {{domxref("FontFaceSetLoadEvent")}} interface returns an array of

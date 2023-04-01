@@ -1,14 +1,10 @@
 ---
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
-tags:
-  - API
-  - File API
-  - Files
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.FileReader.readyState
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} **`readyState`** property provides the current state of the reading operation a `FileReader` is in. A `FileReader` exists in one of the following states:
@@ -29,14 +25,14 @@ The {{domxref("FileReader")}} **`readyState`** property provides the current sta
 ## Examples
 
 ```js
-var reader = new FileReader();
-console.log('EMPTY', reader.readyState); // readyState will be 0
+const reader = new FileReader();
+console.log("EMPTY", reader.readyState); // readyState will be 0
 
 reader.readAsText(blob);
-console.log('LOADING', reader.readyState); // readyState will be 1
+console.log("LOADING", reader.readyState); // readyState will be 1
 
-reader.onloadend = function () {
-  console.log('DONE', reader.readyState); // readyState will be 2
+reader.onloadend = () => {
+  console.log("DONE", reader.readyState); // readyState will be 2
 };
 ```
 

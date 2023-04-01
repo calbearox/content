@@ -1,17 +1,12 @@
 ---
 title: Navigator.keyboard
 slug: Web/API/Navigator/keyboard
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - Navigator
-  - Property
-  - Reference
-  - keyboard
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Navigator.keyboard
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`keyboard`** read-only property

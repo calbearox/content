@@ -1,15 +1,10 @@
 ---
 title: OfflineAudioContext.length
 slug: Web/API/OfflineAudioContext/length
-tags:
-  - API
-  - NeedsExample
-  - OfflineAudioContext
-  - Property
-  - Reference
-  - Web Audio API
+page-type: web-api-instance-property
 browser-compat: api.OfflineAudioContext.length
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`length`** property of the

@@ -1,15 +1,13 @@
 ---
 title: UIEvent.sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - UIEvent
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.UIEvent.sourceCapabilities
 ---
-{{SeeCompatTable}}{{APIRef()}}
+
+{{APIRef("UI Events")}}{{SeeCompatTable}}
 
 The **`UIEvent.sourceCapabilities`** read-only property returns
 an instance of the {{domxref('InputDeviceCapabilities')}} interface which provides

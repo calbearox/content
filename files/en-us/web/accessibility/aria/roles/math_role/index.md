@@ -1,13 +1,7 @@
 ---
-title: 'ARIA: math role'
+title: "ARIA: math role"
 slug: Web/Accessibility/ARIA/Roles/math_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
+spec-urls: https://w3c.github.io/aria/#math
 ---
 
 The `math` role indicates that the content represents a mathematical expression.
@@ -33,22 +27,19 @@ The above pythagorean theorem is written accessibly as:
 
 ```html
 <div role="math" aria-label="a^{2} + b^{2} = c^{2}">
-   a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+  a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
 </div>
 ```
 
 Had an image been used, the `alt` attribute would be used along with the `math` role:
 
 ```html
-<img src="pythagorean_theorem.gif" alt="a^{2} + b^{2} = c^{2}" role="math">
+<img src="pythagorean_theorem.gif" alt="a^{2} + b^{2} = c^{2}" role="math" />
 ```
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#math","ARIA: math role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_math_role","math role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 
@@ -59,6 +50,6 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

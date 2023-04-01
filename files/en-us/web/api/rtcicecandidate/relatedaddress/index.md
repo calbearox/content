@@ -1,22 +1,10 @@
 ---
 title: RTCIceCandidate.relatedAddress
 slug: Web/API/RTCIceCandidate/relatedAddress
-tags:
-  - API
-  - Address
-  - IP
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - STUN
-  - TURN
-  - WebRTC
-  - WebRTC API
-  - relatedAddress
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.relatedAddress
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`relatedAddress`** property is a
@@ -32,7 +20,7 @@ for analysis and diagnostic purposes only, and their inclusion may be blocked by
 
 ## Value
 
-A {{domxref("DOMString")}} which contains the candidate's related address. For both
+A string which contains the candidate's related address. For both
 peer and server reflexive candidates, the related address (and related port) are the
 base for that server or peer reflexive candidate. For relay candidates, the related
 address and port are set to the mapped address selected by the TURN server.
@@ -62,21 +50,24 @@ checked, and then debugging output is presented, based on the candidate type, in
 the candidate's {{domxref("RTCIceCandidate/address", "ip")}} and `relatedAddress`.
 
 ```js
-switch(candidate.type) {
+switch (candidate.type) {
   case "host":
-    console.log("Host candidate's IP address is " + candidate.ip);
+    console.log(`Host candidate's IP address is ${candidate.ip}`);
     break;
   case "srflx":
-    console.log("Server reflexive candidate's base address is " +
-        candidate.relatedAddress + "; reachable at " + candidate.ip);
+    console.log(
+      `Server reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`
+    );
     break;
   case "prflx":
-    console.log("Peer reflexive candidate's base address is " +
-        candidate.relatedAddress + "; reachable at " + candidate.ip);
+    console.log(
+      `Peer reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`
+    );
     break;
   case "relay":
-    console.log("Relay candidate's address assigned by the TURN server is " +
-        candidate.relatedAddress + "; reachable at " + candidate.ip);
+    console.log(
+      `Relay candidate's address assigned by the TURN server is ${candidate.relatedAddress}; reachable at ${candidate.ip}`
+    );
     break;
 }
 ```

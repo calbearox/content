@@ -1,14 +1,12 @@
 ---
 title: Background Fetch API
 slug: Web/API/Background_Fetch_API
-tags:
-  - API
-  - Overview
-  - Reference
-  - Background Fetch API
-  - Experimental
+page-type: web-api-overview
+status:
+  - experimental
 browser-compat: api.BackgroundFetchManager
 ---
+
 {{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}
 
 The **Background Fetch API** provides a method for managing downloads that may take a significant amount of time such as movies, audio files, and software.
@@ -40,8 +38,8 @@ The Background Fetch API will enable the fetch to happen if the user starts the 
 
 Before using Background Fetch, check for browser support.
 
-```css
-if (!('BackgroundFetchManager' in self)) {
+```js
+if (!("BackgroundFetchManager" in self)) {
   // Provide fallback downloading.
 }
 ```
@@ -53,15 +51,21 @@ A background fetch may fetch a number of files. In our example the fetch request
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
-    title: 'Episode 5: Interesting things.',
-    icons: [{
-      sizes: '300x300',
-      src: '/ep-5-icon.png',
-      type: 'image/png',
-    }],
-    downloadTotal: 60 * 1024 * 1024,
-  });
+  const bgFetch = await swReg.backgroundFetch.fetch(
+    "my-fetch",
+    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+    {
+      title: "Episode 5: Interesting things.",
+      icons: [
+        {
+          sizes: "300x300",
+          src: "/ep-5-icon.png",
+          type: "image/png",
+        },
+      ],
+      downloadTotal: 60 * 1024 * 1024,
+    }
+  );
 });
 ```
 
@@ -69,9 +73,7 @@ You can find a demo application which implements Background Fetch [here](https:/
 
 ## Specifications
 
-| Specification                                                |
-| ------------------------------------------------------------ |
-| [Background Fetch](https://wicg.github.io/background-fetch/) |
+{{Specifications}}
 
 ## Browser compatibility
 

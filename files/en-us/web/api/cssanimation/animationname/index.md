@@ -1,15 +1,11 @@
 ---
-title: CSSAnimation
+title: CSSAnimation.animationName
 slug: Web/API/CSSAnimation/animationName
-tags:
-  - API
-  - Animation
-  - CSSAnimation
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CSSAnimation.animationName
 ---
-{{APIRef("Web Animations API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Animations")}}
 
 The **`animationName`** property of the
 {{domxref("CSSAnimation")}} interface returns the {{CSSXref("animation-name")}}. This
@@ -18,7 +14,7 @@ element.
 
 ## Value
 
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

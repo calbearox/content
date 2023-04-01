@@ -1,15 +1,10 @@
 ---
 title: HTMLTableElement.tBodies
 slug: Web/API/HTMLTableElement/tBodies
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLTableElement.tBodies
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.tBodies`** read-only property returns a

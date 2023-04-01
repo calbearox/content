@@ -1,14 +1,12 @@
 ---
 title: WindowControlsOverlay.getTitlebarAreaRect()
 slug: Web/API/WindowControlsOverlay/getTitlebarAreaRect
-tags:
-  - API
-  - Method
-  - Reference
-  - WindowControlsOverlay
-  - Progressive Web Apps
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlay.getTitlebarAreaRect
 ---
+
 {{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The **`getTitlebarAreaRect()`** method of the {{domxref('WindowControlsOverlay')}} interface queries the current geometry of the title bar area of the Progressive Web App window.
@@ -17,9 +15,13 @@ This only applies to Progressive Web Apps installed on desktop operating systems
 
 ## Syntax
 
-```js
-getTitlebarAreaRect();
+```js-nolint
+getTitlebarAreaRect()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

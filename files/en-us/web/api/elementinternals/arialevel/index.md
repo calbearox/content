@@ -1,16 +1,10 @@
 ---
 title: ElementInternals.ariaLevel
 slug: Web/API/ElementInternals/ariaLevel
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLevel
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaLevel
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaLevel`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute, which defines the hierarchical level of an element within a structure.
@@ -19,7 +13,7 @@ The **`ariaLevel`** property of the {{domxref("ElementInternals")}} interface re
 
 ## Value
 
-A {{domxref("DOMString")}} containing an integer.
+A string containing an integer.
 
 ## Examples
 

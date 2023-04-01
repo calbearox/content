@@ -1,15 +1,12 @@
 ---
 title: HTMLTableElement.cellPadding
 slug: Web/API/HTMLTableElement/cellPadding
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.cellPadding
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.cellPadding`** property represents the
@@ -23,14 +20,13 @@ A string representing pixels (e.g. "10") or a percentage value (e.g. "10%").
 
 ```js
 // Set cell padding to 10 pixels
-let t = document.getElementById('TableA');
-t.cellPadding = '10';
+let t = document.getElementById("TableA");
+t.cellPadding = "10";
 ```
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification [_HTMLTableElement_
-  .cellPadding](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-59162158).
+- W3C DOM 2 HTML Specification [_HTMLTableElement.cellPadding_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-59162158).
 
 ## Browser compatibility
 

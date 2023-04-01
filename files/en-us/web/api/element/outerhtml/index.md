@@ -1,20 +1,10 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - NeedsMobileBrowserCompatibility
-  - Parsing
-  - Property
-  - Reference
-  - Serialization
-  - Serializing
-  - outerHTML
+page-type: web-api-instance-property
 browser-compat: api.Element.outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`outerHTML`** attribute of the {{ domxref("Element") }}
@@ -28,7 +18,7 @@ instead.
 
 ## Value
 
-Reading the value of `outerHTML` returns a {{domxref("DOMString")}}
+Reading the value of `outerHTML` returns a string
 containing an HTML serialization of the `element` and its descendants.
 Setting the value of `outerHTML` replaces the element and all of its
 descendants with a new DOM tree constructed by parsing the specified
@@ -45,9 +35,9 @@ descendants with a new DOM tree constructed by parsing the specified
 
 ## Examples
 
-Getting the value of an element's `outerHTML` property:
+### Getting the value of an element's outerHTML property
 
-### HTML
+#### HTML
 
 ```html
 <div id="d">
@@ -56,19 +46,19 @@ Getting the value of an element's `outerHTML` property:
 </div>
 ```
 
-### Javascript
+#### JavaScript
 
 ```js
-var d = document.getElementById("d");
+const d = document.getElementById("d");
 console.log(d.outerHTML);
 
 // The string '<div id="d"><p>Content</p><p>Further Elaborated</p></div>'
 // is written to the console window
 ```
 
-Replacing a node by setting the `outerHTML` property:
+### Replacing a node by setting the outerHTML property
 
-### HTML
+#### HTML
 
 ```html
 <div id="container">
@@ -76,11 +66,11 @@ Replacing a node by setting the `outerHTML` property:
 </div>
 ```
 
-### Javascript
+#### JavaScript
 
 ```js
-var container = document.getElementById("container");
-var d = document.getElementById("d");
+const container = document.getElementById("container");
+const d = document.getElementById("d");
 
 console.log(container.firstElementChild.nodeName); // logs "DIV"
 
@@ -99,8 +89,8 @@ not change it or its descendants. Many browsers will also throw an exception. Fo
 example:
 
 ```js
-var div = document.createElement("div");
-div.outerHTML = "<div class=\"test\">test</div>";
+const div = document.createElement("div");
+div.outerHTML = '<div class="test">test</div>';
 console.log(div.outerHTML); // output: "<div></div>"
 ```
 
@@ -109,7 +99,7 @@ Also, while the element will be replaced in the document, the variable whose
 element:
 
 ```js
-var p = document.getElementsByTagName("p")[0];
+const p = document.querySelector("p");
 console.log(p.nodeName); // shows: "P"
 p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // still "P";
@@ -118,7 +108,7 @@ console.log(p.nodeName); // still "P";
 The returned value will contain HTML escaped attributes:
 
 ```js
-var anc = document.createElement("a");
+const anc = document.createElement("a");
 anc.href = "https://developer.mozilla.org?a=b&c=d";
 console.log(anc.outerHTML); // output: "<a href='https://developer.mozilla.org?a=b&amp;c=d'></a>"
 ```

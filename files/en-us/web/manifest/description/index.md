@@ -1,12 +1,9 @@
 ---
 title: description
 slug: Web/Manifest/description
-tags:
-  - Manifest
-  - Web
-  - description
 browser-compat: html.manifest.description
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -15,14 +12,10 @@ browser-compat: html.manifest.description
       <th scope="row">Type</th>
       <td><code>String</code></td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
-The _`description`_ member is a string in which developers can explain what the application does. `description` is directionality-capable, which means it can be displayed left to right or right to left based on the values of the [`dir`](/en-US/docs/Web/Manifest/dir) and [`lang`](/en-US/docs/Web/Manifest/lang) manifest members.
+The `description` member is a string in which developers can explain what the application does. `description` is directionality-capable, which means it can be displayed left to right or right to left based on the values of the [`dir`](/en-US/docs/Web/Manifest/dir) and [`lang`](/en-US/docs/Web/Manifest/lang) manifest members.
 
 ## Examples
 

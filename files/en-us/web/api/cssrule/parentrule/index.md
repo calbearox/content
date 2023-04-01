@@ -1,14 +1,10 @@
 ---
 title: CSSRule.parentRule
 slug: Web/API/CSSRule/parentRule
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CSSRule.parentRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`parentRule`** property of the {{domxref("CSSRule")}}

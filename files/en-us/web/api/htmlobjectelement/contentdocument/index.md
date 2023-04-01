@@ -1,16 +1,10 @@
 ---
 title: HTMLObjectElement.contentDocument
 slug: Web/API/HTMLObjectElement/contentDocument
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - contentDocument
+page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.contentDocument
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`contentDocument`** read-only property of

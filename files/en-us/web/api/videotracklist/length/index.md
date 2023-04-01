@@ -1,20 +1,10 @@
 ---
 title: VideoTrackList.length
 slug: Web/API/VideoTrackList/length
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrackList
-  - length
-  - list
-  - track
+page-type: web-api-instance-property
 browser-compat: api.VideoTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrackList")}}**
@@ -38,8 +28,8 @@ element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
   "querySelector()")}}.
 
 ```js
-var videoElem = document.querySelector("video");
-var numVideoTracks = 0;
+const videoElem = document.querySelector("video");
+let numVideoTracks = 0;
 
 if (videoElem.videoTracks) {
   numVideoTracks = videoElem.videoTracks.length;

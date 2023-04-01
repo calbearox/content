@@ -1,19 +1,10 @@
 ---
 title: DOMPoint.w
 slug: Web/API/DOMPoint/w
-tags:
-  - API
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Reference
-  - W
-  - perspective
+page-type: web-api-instance-property
 browser-compat: api.DOMPoint.w
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's

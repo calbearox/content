@@ -1,15 +1,10 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Element.clientLeft
 ---
+
 {{ APIRef("DOM") }}
 
 The width of the left border of an element in pixels. It includes the width of the
@@ -38,9 +33,12 @@ In the following example, the client area has a white background and a 24px blac
 ```html
 <div id="container">
   <div id="contained">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
   </div>
 </div>
 ```
@@ -48,7 +46,6 @@ In the following example, the client area has a white background and a 24px blac
 ### CSS
 
 ```css
-
 #container {
   margin: 3rem;
   background-color: rgb(255, 255, 204);
@@ -66,7 +63,7 @@ In the following example, the client area has a white background and a 24px blac
 
 ### Result
 
-{{EmbedLiveSample("Example", 400, 350)}}
+{{EmbedLiveSample("Examples", 400, 350)}}
 
 ## Specifications
 

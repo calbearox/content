@@ -1,14 +1,10 @@
 ---
 title: StyleSheet.type
 slug: Web/API/StyleSheet/type
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.StyleSheet.type
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`type`** property of the {{domxref("StyleSheet")}}
@@ -21,7 +17,7 @@ A string.
 ## Examples
 
 ```js
- myStyleSheet.type = 'text/css';
+myStyleSheet.type = "text/css";
 ```
 
 ## Specifications

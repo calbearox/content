@@ -1,18 +1,13 @@
 ---
 title: PayerResponse.payerPhone
 slug: Web/API/PaymentResponse/payerPhone
-tags:
-  - API
-  - Experimental
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - payerPhone
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.payerPhone
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The `payerPhone` read-only property of the {{domxref("PaymentResponse")}}

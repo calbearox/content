@@ -1,22 +1,10 @@
 ---
 title: Navigator.mediaSession
 slug: Web/API/Navigator/mediaSession
-tags:
-  - API
-  - Audio
-  - Device
-  - Media
-  - Media Session API
-  - MediaSession
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - UX
-  - Video
-  - metadata
+page-type: web-api-instance-property
 browser-compat: api.Navigator.mediaSession
 ---
+
 {{APIRef}}
 
 The read-only {{domxref("Navigator")}} property
@@ -33,7 +21,7 @@ In addition, the `MediaSession` interface provides the
 {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method, which lets
 you receive events when the user engages device controls such as either onscreen or
 physical play, pause, seek, and other similar controls. An internet radio app, for
-example, can use `setActionHandler()` to let fhe media controls on a keyboard
+example, can use `setActionHandler()` to let the media controls on a keyboard
 or elsewhere on the user's device be used to control the app's media playback.
 
 ## Value
@@ -51,12 +39,12 @@ that the code begins by ensuring that the {{domxref("navigator.mediaSession")}} 
 is available before attempting to use it.
 
 ```js
-if ("mediaSession" in navigator){
+if ("mediaSession" in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: "Podcast Episode Title",
     artist: "Podcast Host",
     album: "Podcast Name",
-    artwork: [{src: "podcast.jpg"}]
+    artwork: [{ src: "podcast.jpg" }],
   });
 }
 ```

@@ -1,15 +1,12 @@
 ---
 title: WorkerNavigator.appCodeName
 slug: Web/API/WorkerNavigator/appCodeName
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - WorkerNavigator
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.WorkerNavigator.appCodeName
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The value of the **`WorkerNavigator.appCodeName`** property is

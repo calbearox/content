@@ -1,17 +1,10 @@
 ---
 title: MediaKeySession.closed
 slug: Web/API/MediaKeySession/closed
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Experimental
-  - MediaKeySession
-  - NeedsExample
-  - Property
-  - Reference
-  - closed
+page-type: web-api-instance-property
 browser-compat: api.MediaKeySession.closed
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.closed` read-only property returns a

@@ -1,48 +1,29 @@
 ---
-title: 'HTMLMediaElement: canplaythrough event'
+title: "HTMLMediaElement: canplaythrough event"
 slug: Web/API/HTMLMediaElement/canplaythrough_event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
+page-type: web-api-event
 browser-compat: api.HTMLMediaElement.canplaythrough_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `canplaythrough` event is fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.oncanplaythrough")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("canplaythrough", (event) => {});
+
+oncanplaythrough = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -51,22 +32,24 @@ These examples add an event listener for the HTMLMediaElement's `canplaythrough`
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplaythrough', (event) => {
-  console.log('I think I can play through the entire ' +
-      'video without ever having to stop to buffer.');
+video.addEventListener("canplaythrough", (event) => {
+  console.log(
+    "I think I can play through the entire video without having to stop to buffer."
+  );
 });
 ```
 
 Using the `oncanplaythrough` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.oncanplaythrough = (event) => {
-  console.log('I think I can play through the entire ' +
-      'video without ever having to stop to buffer.');
+  console.log(
+    "I think I can play through the entire video without having to stop to buffer."
+  );
 };
 ```
 

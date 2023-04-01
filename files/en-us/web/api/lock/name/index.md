@@ -1,18 +1,11 @@
 ---
 title: Locks.name
 slug: Web/API/Lock/name
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Web Locks API
-  - lock
-  - mode
-  - name
+page-type: web-api-instance-property
 browser-compat: api.Lock.name
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}
+
+{{APIRef("Web Locks")}}
 
 The **`name`** read-only property of
 the {{domxref("Lock")}} interface returns the _name_ passed to
@@ -26,7 +19,7 @@ database, it could use a lock name such as `"net_db_sync"`.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

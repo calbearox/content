@@ -1,20 +1,10 @@
 ---
 title: HTMLImageElement.crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
-tags:
-  - API
-  - CORS
-  - Cross-Origin
-  - Crossorigin
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - Security
-  - origin
+page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}}
@@ -24,7 +14,7 @@ retrieving the image.
 
 ## Value
 
-A {{domxref("DOMString")}} of a keyword specifying the CORS mode to use when fetching
+A string of a keyword specifying the CORS mode to use when fetching
 the image resource. If you don't specify `crossOrigin`, the image is fetched
 without CORS (the fetch `no-cors` mode).
 
@@ -62,9 +52,7 @@ const container = document.querySelector(".container");
 
 function loadImage(url) {
   const image = new Image(200, 200);
-  image.addEventListener("load",
-    () => container.prepend(image)
-  );
+  image.addEventListener("load", () => container.prepend(image));
 
   image.addEventListener("error", () => {
     const errMsg = document.createElement("output");
@@ -84,10 +72,11 @@ loadImage(imageUrl);
 
 ```html
 <div class="container">
-  <p>Here's a paragraph. It's a very interesting paragraph. You
-  are captivated by this paragraph. Keep reading this paragraph.
-  Okay, now you can stop reading this paragraph. Thanks for
-  reading me.</p>
+  <p>
+    Here's a paragraph. It's a very interesting paragraph. You are captivated by
+    this paragraph. Keep reading this paragraph. Okay, now you can stop reading
+    this paragraph. Thanks for reading me.
+  </p>
 </div>
 ```
 
@@ -118,7 +107,7 @@ output {
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 260)}}
+{{EmbedLiveSample("Examples", 600, 260)}}
 
 ## Specifications
 

@@ -1,14 +1,10 @@
 ---
 title: PageTransitionEvent.persisted
 slug: Web/API/PageTransitionEvent/persisted
-tags:
-  - API
-  - PageTransitionEvent
-  - Property
-  - Reference
-  - Web API
+page-type: web-api-instance-property
 browser-compat: api.PageTransitionEvent.persisted
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`persisted`** read-only property indicates if a webpage is loading from a cache.

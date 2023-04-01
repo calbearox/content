@@ -1,16 +1,10 @@
 ---
 title: Notification.tag
 slug: Web/API/Notification/tag
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - tag
+page-type: web-api-instance-property
 browser-compat: api.Notification.tag
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`tag`** read-only property of the
@@ -25,12 +19,11 @@ notifications.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
-Our [Using
-the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#Dealing_with_repeated_notifications) article has a good example of tag usage.
+Our [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#dealing_with_repeated_notifications) article has a good example of tag usage.
 
 ## Specifications
 
@@ -42,5 +35,4 @@ the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notificat
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

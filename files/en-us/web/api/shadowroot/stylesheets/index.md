@@ -1,14 +1,10 @@
 ---
 title: ShadowRoot.styleSheets
 slug: Web/API/ShadowRoot/styleSheets
-tags:
-  - API
-  - ShadowRoot
-  - Property
-  - Reference
-  - Stylesheets
+page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.styleSheets
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`styleSheets`** read-only property of the {{domxref("ShadowRoot")}} interface
@@ -21,7 +17,7 @@ A {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let styleSheets = shadow.styleSheets;
 ```

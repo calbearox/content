@@ -1,24 +1,10 @@
 ---
 title: RTCIceCandidateStats.localCandidateId
 slug: Web/API/RTCIceCandidatePairStats/localCandidateId
-tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - local
-  - localCandidateId
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.localCandidateId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property
@@ -29,7 +15,7 @@ candidates.
 
 ## Value
 
-A {{domxref("DOMString")}} giving a unique identifier for the local
+A string giving a unique identifier for the local
 {{domxref("RTCIceCandidate")}} for the connection described by this
 `RTCIceCandidatePairStats` object.
 

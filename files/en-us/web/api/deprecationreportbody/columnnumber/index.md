@@ -1,15 +1,13 @@
 ---
 title: DeprecationReportBody.columnNumber
 slug: Web/API/DeprecationReportBody/columnNumber
-tags:
-  - API
-  - Property
-  - Reference
-  - columnNumber
-  - DeprecationReportBody
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.columnNumber
 ---
-{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`columnNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
 
@@ -25,11 +23,11 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe depr
 
 ```js
 let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.sourceFile); // the source file

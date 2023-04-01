@@ -1,15 +1,13 @@
 ---
 title: DeprecationReportBody.anticipatedRemoval
 slug: Web/API/DeprecationReportBody/anticipatedRemoval
-tags:
-  - API
-  - Property
-  - Reference
-  - anticipatedRemoval
-  - DeprecationReportBody
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.anticipatedRemoval
 ---
-{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`anticipatedRemoval`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the date that the browser version which removes the feature will ship. This value can be used to prioritize warnings. If this property returns `null` because the date is unknown, then the deprecation should be considered low priority.
 
@@ -23,11 +21,11 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe depr
 
 ```js
 let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.anticipatedRemoval);

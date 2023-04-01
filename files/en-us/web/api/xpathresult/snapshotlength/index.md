@@ -1,15 +1,10 @@
 ---
 title: XPathResult.snapshotLength
 slug: Web/API/XPathResult/snapshotLength
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
+page-type: web-api-instance-property
 browser-compat: api.XPathResult.snapshotLength
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`snapshotLength`** property of the
@@ -44,14 +39,14 @@ The following example shows the use of the `snapshotLength` property.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+const xpath = "//div";
+const result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

@@ -1,14 +1,10 @@
 ---
 title: CSSConditionRule.conditionText
 slug: Web/API/CSSConditionRule/conditionText
-tags:
-  - API
-  - CSSOM
-  - CSSConditionRule
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CSSConditionRule.conditionText
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`conditionText`** property of
@@ -17,7 +13,7 @@ rule.
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Examples
 
@@ -38,7 +34,7 @@ let myRules = document.styleSheets[0].cssRules;
 let text = myRules[0].conditionText;
 console.log(text); // "(min-width: 500px)"
 text = "(min-width: 400px)";
-console.log(text);  // "(min-width: 400px)"
+console.log(text); // "(min-width: 400px)"
 ```
 
 ## Specifications
@@ -51,5 +47,4 @@ console.log(text);  // "(min-width: 400px)"
 
 ## See also
 
-- [Using dynamic styling
-  information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

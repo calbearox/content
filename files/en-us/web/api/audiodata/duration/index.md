@@ -1,15 +1,13 @@
 ---
 title: AudioData.duration
 slug: Web/API/AudioData/duration
-tags:
-  - API
-  - Property
-  - Reference
-  - duration
-  - AudioData
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioData.duration
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`duration`** read-only property of the {{domxref("AudioData")}} interface returns the duration in microseconds of this `AudioData` object.
 

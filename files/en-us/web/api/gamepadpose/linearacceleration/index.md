@@ -1,18 +1,12 @@
 ---
 title: GamepadPose.linearAcceleration
 slug: Web/API/GamepadPose/linearAcceleration
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
-  - linearAcceleration
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.GamepadPose.linearAcceleration
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`linearAcceleration`** read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the linear acceleration vector of the {{domxref("Gamepad")}}, in meters per second per second.

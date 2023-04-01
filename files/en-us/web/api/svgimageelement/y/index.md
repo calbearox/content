@@ -1,18 +1,10 @@
 ---
 title: SVGImageElement.y
 slug: Web/API/SVGImageElement/y
-tags:
-  - API
-  - Image
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - 'y'
+page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.y
 ---
+
 {{APIRef("SVG")}}
 
 The **`y`** read-only property of the

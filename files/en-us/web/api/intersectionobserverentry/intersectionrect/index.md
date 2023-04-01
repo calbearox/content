@@ -1,18 +1,11 @@
 ---
 title: IntersectionObserverEntry.intersectionRect
 slug: Web/API/IntersectionObserverEntry/intersectionRect
-tags:
-  - API
-  - Experimental
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserverEntry
-  - Property
-  - Reference
-  - intersectionRect
+page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.intersectionRect
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
 read-only **`intersectionRect`** property is a
@@ -39,10 +32,10 @@ area is redrawn.
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     refreshZones.push({
       element: entry.target,
-      rect: entry.intersectionRect
+      rect: entry.intersectionRect,
     });
   });
 }

@@ -1,24 +1,20 @@
 ---
 title: BluetoothDevice.id
 slug: Web/API/BluetoothDevice/id
-tags:
-  - API
-  - BluetoothDevice
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - id
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothDevice.id
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothDevice.id`** read-only property returns a
-{{DOMxRef("DOMString")}} that uniquely identifies a device.
+string that uniquely identifies a device.
 
 ## Value
 
-A {{DOMxRef("DOMString")}}.
+A string.
 
 ## Specifications
 

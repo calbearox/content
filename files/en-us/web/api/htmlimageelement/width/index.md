@@ -1,18 +1,10 @@
 ---
 title: HTMLImageElement.width
 slug: Web/API/HTMLImageElement/width
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - size
-  - width
+page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.width
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`width`** property of the
@@ -36,8 +28,8 @@ screen or printer:
 ## Examples
 
 In this example, two different sizes are provided for an image of a clock using the
-{{htmlattrxref("srcset", "img")}} attribute. One is 200px wide and the other is 400px
-wide. The {{htmlattrxref("sizes", "img")}} attribute is used to specify the width at
+[`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute. One is 200px wide and the other is 400px
+wide. The [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attribute is used to specify the width at
 which the image should be drawn given the viewport's width.
 
 ### HTML
@@ -47,11 +39,14 @@ drawn at 400px.
 
 ```html
 <p>Image width: <span class="size">?</span>px (resize to update)</p>
-<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png.png"
-      alt="Clock"
-      srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-          /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 200px, 400px">
+<img
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+  alt="Clock"
+  srcset="
+    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+  "
+  sizes="(max-width: 400px) 200px, 400px" />
 ```
 
 ### JavaScript
@@ -62,10 +57,12 @@ at the moment. This is performed in the window's {{domxref("Window.load_event",
 current width information is always available.
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateWidth = event => { output.innerText = clockImage.width; };
+const updateWidth = (event) => {
+  output.innerText = clockImage.width;
+};
 
 window.addEventListener("load", updateWidth);
 window.addEventListener("resize", updateWidth);
@@ -73,9 +70,9 @@ window.addEventListener("resize", updateWidth);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 450)}}
+{{EmbedLiveSample("Examples", 640, 450)}}
 
-This example may be easier to try out {{LiveSampleLink('Example', 'in its own window')}}.
+This example may be easier to try out {{LiveSampleLink('Examples', 'in its own window')}}.
 
 ## Specifications
 

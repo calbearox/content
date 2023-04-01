@@ -1,18 +1,12 @@
 ---
 title: KeyboardLayoutMap.keys
 slug: Web/API/KeyboardLayoutMap/keys
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Property
-  - Reference
-  - keyboard
-  - keys
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.keys
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`keys`** read-only property of

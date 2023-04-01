@@ -1,22 +1,10 @@
 ---
 title: RTCIceCandidate.address
 slug: Web/API/RTCIceCandidate/address
-tags:
-  - API
-  - Address
-  - Candidate
-  - ICE
-  - IP
-  - Networking
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.address
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`address`** property is a string providing the IP address of the device which is the source of the candidate.
@@ -27,7 +15,7 @@ You can't specify the value of `address` directly in the options object, but its
 
 ## Value
 
-A {{domxref("DOMString")}} providing the IP address from which the candidate comes.
+A string providing the IP address from which the candidate comes.
 
 > **Note:** If `port` is `null` — and
 > `port` is supported by the {{Glossary("user agent")}} — passing the
@@ -41,7 +29,7 @@ It's important to note here that although WebRTC does not require the two peers 
 `address` property on `RTCIceCandidate` _can_ expose more
 information about the source of the remote peer than the user expects. The IP address
 can be used to derive information about the remote device's location, network topology,
-and so forth. It can also be used for fingerprinting purposes.
+and so forth. It can also be used for [fingerprinting](/en-US/docs/Glossary/Fingerprinting) purposes.
 
 The candidate IP addresses are _always_ exposed to the application through
 `address`, and unsavory applications can in turn potentially reveal the
@@ -53,16 +41,16 @@ address from being exposed, but reduces the pool of available candidates to choo
 To do this, configure the ICE agent's ICE transport policy with an object confirming to the `configuration` property described in {{domxref("RTCPeerConnection.setConfiguration")}}, like this:
 
 ```js
-var rtcConfig = {
+const rtcConfig = {
   iceServers: [
     {
       urls: "turn:myturn.server.ip",
       username: "username",
-      credential: "password"
-    }
+      credential: "password",
+    },
   ],
-  iceTransportPolicy: "relay"
-}
+  iceTransportPolicy: "relay",
+};
 ```
 
 By setting `iceTransportPolicy` to `"relay"`,

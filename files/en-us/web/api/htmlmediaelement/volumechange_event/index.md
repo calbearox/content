@@ -1,48 +1,29 @@
 ---
-title: 'HTMLMediaElement: volumechange event'
+title: "HTMLMediaElement: volumechange event"
 slug: Web/API/HTMLMediaElement/volumechange_event
-tags:
-  - API
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-  - Web
+page-type: web-api-event
 browser-compat: api.HTMLMediaElement.volumechange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `volumechange` event is fired when the volume has changed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onvolumechange")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("volumechange", (event) => {});
+
+onvolumechange = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -51,20 +32,20 @@ These examples add an event listener for the HTMLMediaElement's `volumechange` e
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('volumechange', (event) => {
-  console.log('The volume changed.');
+video.addEventListener("volumechange", (event) => {
+  console.log("The volume changed.");
 });
 ```
 
 Using the `onvolumechange` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onvolumechange = (event) => {
-  console.log('The volume changed.');
+  console.log("The volume changed.");
 };
 ```
 

@@ -1,14 +1,10 @@
 ---
 title: Selection.removeRange()
 slug: Web/API/Selection/removeRange
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+page-type: web-api-instance-method
 browser-compat: api.Selection.removeRange
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.removeRange()`** method removes a range from a
@@ -16,29 +12,29 @@ selection.
 
 ## Syntax
 
-```js
-sel.removeRange(range)
+```js-nolint
+removeRange(range)
 ```
 
 ### Parameters
 
-- _`range`_
+- `range`
   - : A range object that will be removed to the selection.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
 /* Programmatically, more than one range can be selected.
  * This will remove all ranges except the first. */
-s = window.getSelection();
-if(s.rangeCount > 1) {
- for(var i = 1; i < s.rangeCount; i++) {
-  s.removeRange(s.getRangeAt(i));
- }
+const s = window.getSelection();
+if (s.rangeCount > 1) {
+  for (let i = 1; i < s.rangeCount; i++) {
+    s.removeRange(s.getRangeAt(i));
+  }
 }
 ```
 

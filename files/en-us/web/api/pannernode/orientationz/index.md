@@ -1,13 +1,10 @@
 ---
 title: PannerNode.orientationZ
 slug: Web/API/PannerNode/orientationZ
-tags:
-  - Audio
-  - PannerNode
-  - Property
-  - Web Audio
+page-type: web-api-instance-property
 browser-compat: api.PannerNode.orientationZ
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`orientationZ`** property of the {{ domxref("PannerNode") }} interface
@@ -53,6 +50,5 @@ See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#exam
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

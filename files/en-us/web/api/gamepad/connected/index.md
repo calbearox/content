@@ -1,16 +1,10 @@
 ---
 title: Gamepad.connected
 slug: Web/API/Gamepad/connected
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Gamepad.connected
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.connected`** property of the
@@ -27,13 +21,9 @@ A boolean.
 ## Examples
 
 ```js
-var gp = navigator.getGamepads()[0];
+const gp = navigator.getGamepads()[0];
 console.log(gp.connected);
 ```
-
-## Value
-
-A boolean value.
 
 ## Specifications
 

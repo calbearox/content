@@ -1,16 +1,13 @@
 ---
 title: color-contrast()
 slug: Web/CSS/color_value/color-contrast
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color-contrast
+page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.color.color-contrast
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`color-contrast()`** functional notation takes a {{cssxref("color_value","color")}} value and compares it to a list of other {{cssxref("color_value","color")}} values, selecting the one with the highest contrast from the list.
 

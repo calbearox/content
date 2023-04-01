@@ -1,16 +1,10 @@
 ---
 title: ElementInternals.ariaPlaceholder
 slug: Web/API/ElementInternals/ariaPlaceholder
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPlaceholder
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaPlaceholder
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaPlaceholder`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-placeholder`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
@@ -19,7 +13,7 @@ The **`ariaPlaceholder`** property of the {{domxref("ElementInternals")}} interf
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

@@ -1,15 +1,10 @@
 ---
-title: 'SVGAnimationElement: repeatEvent event'
+title: "SVGAnimationElement: repeatEvent event"
 slug: Web/API/SVGAnimationElement/repeatEvent_event
-tags:
-  - API
-  - Reference
-  - SMIL
-  - SVG animations
-  - SVGAnimationElement
-  - Event
+page-type: web-api-event
 browser-compat: api.SVGAnimationElement.repeatEvent_event
 ---
+
 {{APIRef("SVG")}}
 
 The **`repeatEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.
@@ -23,23 +18,23 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('repeatEvent', event => { });
+addEventListener("repeatEvent", (event) => {});
 
-onrepeat = event => { };
+onrepeat = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TimeEvent")}}
 
 ## Event properties
 
 - {{domxref("TimeEvent.detail")}} {{ReadOnlyInline}}
-  - : Is a `long` that specifies some detail information about the Event, depending on the type of the event. For this event type, indicates the repeat number for the animation.
+  - : A `long` that specifies some detail information about the Event, depending on the type of the event. For this event type, indicates the repeat number for the animation.
 - {{domxref("TimeEvent.view")}} {{ReadOnlyInline}}
-  - : Is a {{domxref("WindowProxy")}} that identifies the Window from which the event was generated.
+  - : A {{glossary("WindowProxy")}} that identifies the Window from which the event was generated.
 
 ## Examples
 
@@ -49,17 +44,13 @@ An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
   <title>SVG SMIL Animate with Path</title>
   <circle cx="0" cy="50" r="50" fill="blue" stroke="black" stroke-width="1">
-    <animateMotion
-       path="M 0 0 H 300 Z"
-       dur="5s" repeatCount="indefinite" />
+    <animateMotion path="M 0 0 H 300 Z" dur="5s" repeatCount="indefinite" />
   </circle>
 </svg>
 
-<hr>
+<hr />
 
-<ul>
-
-</ul>
+<ul></ul>
 ```
 
 ```css
@@ -72,25 +63,25 @@ ul {
 ```
 
 ```js
-let svgElem = document.querySelector('svg');
-let animateElem = document.querySelector('animateMotion');
-let list = document.querySelector('ul');
+let svgElem = document.querySelector("svg");
+let animateElem = document.querySelector("animateMotion");
+let list = document.querySelector("ul");
 
-animateElem.addEventListener('beginEvent', () => {
-  let listItem = document.createElement('li');
-  listItem.textContent = 'beginEvent fired';
+animateElem.addEventListener("beginEvent", () => {
+  let listItem = document.createElement("li");
+  listItem.textContent = "beginEvent fired";
   list.appendChild(listItem);
-})
+});
 
-animateElem.addEventListener('repeatEvent', (e) => {
-  let listItem = document.createElement('li');
-  let msg = 'repeatEvent fired';
-  if(e.detail) {
-    msg += '; repeat number: ' + e.detail;
+animateElem.addEventListener("repeatEvent", (e) => {
+  let listItem = document.createElement("li");
+  let msg = "repeatEvent fired";
+  if (e.detail) {
+    msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);
-})
+});
 ```
 
 {{EmbedLiveSample('Animated_circle', '100%', '270')}}
@@ -101,8 +92,8 @@ Note that you can also create an event listener for the `repeat` event using the
 
 ```js
 animateElem.onrepeat = () => {
-  console.log('repeatEvent fired');
-}
+  console.log("repeatEvent fired");
+};
 ```
 
 ## Specifications

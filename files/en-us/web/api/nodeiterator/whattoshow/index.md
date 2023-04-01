@@ -1,13 +1,10 @@
 ---
 title: NodeIterator.whatToShow
 slug: Web/API/NodeIterator/whatToShow
-tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.NodeIterator.whatToShow
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.whatToShow`** read-only property represents
@@ -119,15 +116,16 @@ The values that can be combined to form the bitmask are:
 ## Examples
 
 ```js
-var nodeIterator = document.createNodeIterator(
-    document.body,
-    ( NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT ),
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+const nodeIterator = document.createNodeIterator(
+  document.body,
+  NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT,
+  { acceptNode: (node) => NodeFilter.FILTER_ACCEPT }
 );
-if ((nodeIterator.whatToShow & NodeFilter.SHOW_ALL) ||
-    (nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT)) {
-    // nodeIterator will show comments
+if (
+  nodeIterator.whatToShow & NodeFilter.SHOW_ALL ||
+  nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT
+) {
+  // nodeIterator will show comments
 }
 ```
 

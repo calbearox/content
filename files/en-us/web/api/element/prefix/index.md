@@ -1,15 +1,10 @@
 ---
 title: Element.prefix
 slug: Web/API/Element/prefix
-tags:
-  - API
-  - DOM
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Element.prefix
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.prefix`** read-only property returns the

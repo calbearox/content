@@ -1,46 +1,29 @@
 ---
-title: 'HTMLMediaElement: playing event'
+title: "HTMLMediaElement: playing event"
 slug: Web/API/HTMLMediaElement/playing_event
-tags:
-  - API
-  - HTMLMediaElement
-  - Reference
-  - playing
-  - Event
+page-type: web-api-event
 browser-compat: api.HTMLMediaElement.playing_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `playing` event is fired after playback is first started, and whenever it is restarted. For example it is fired when playback resumes after having been paused or delayed due to lack of data.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onplaying")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("playing", (event) => {});
+
+onplaying = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -49,20 +32,20 @@ These examples add an event listener for the HTMLMediaElement's `playing` event,
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('playing', (event) => {
-  console.log('Video is no longer paused');
+video.addEventListener("playing", (event) => {
+  console.log("Video is no longer paused");
 });
 ```
 
 Using the `onplaying` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onplaying = (event) => {
-  console.log('Video is no longer paused.');
+  console.log("Video is no longer paused.");
 };
 ```
 

@@ -1,14 +1,10 @@
 ---
 title: CSSGroupingRule.cssRules
 slug: Web/API/CSSGroupingRule/cssRules
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CSSGroupingRule.cssRules
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`cssRules`** property of the

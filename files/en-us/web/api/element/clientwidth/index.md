@@ -1,14 +1,10 @@
 ---
 title: Element.clientWidth
 slug: Web/API/Element/clientWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Element.clientWidth
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.clientWidth`** property is zero for inline
@@ -18,8 +14,7 @@ present).
 
 When `clientWidth` is used on the root element (the
 `<html>` element), (or on `<body>` if the document is
-in quirks mode), the viewport's width (excluding any scrollbar) is returned. [This
-is a special case of `clientWidth`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth).
+in quirks mode), the viewport's width (excluding any scrollbar) is returned. [This is a special case of `clientWidth`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth).
 
 > **Note:** This property will round the value to an integer. If you need
 > a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
@@ -30,7 +25,7 @@ A number.
 
 ## Examples
 
-![](dimensions-client.png)
+![An example element with large padding, border and margin. clientWidth is the inner width of the element including its padding, and excluding its margin, border, and vertical scrollbar.](dimensions-client.png)
 
 ## Specifications
 
@@ -48,5 +43,4 @@ A number.
 
 - {{domxref("HTMLElement.offsetWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determining
-  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

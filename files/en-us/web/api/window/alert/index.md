@@ -1,15 +1,10 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - alert
+page-type: web-api-instance-method
 browser-compat: api.Window.alert
 ---
+
 {{ APIRef }}
 
 `window.alert()` instructs the browser to display a dialog with an optional message, and to wait until the user dismisses the dialog.
@@ -18,8 +13,9 @@ Under some conditions — for example, when the user switches tabs — the brows
 
 ## Syntax
 
-```js
-window.alert(message);
+```js-nolint
+alert()
+alert(message)
 ```
 
 ### Parameters
@@ -28,7 +24,11 @@ window.alert(message);
   - : A string you want to display in the alert dialog, or, alternatively, an object that
     is converted into a string and displayed.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 window.alert("Hello world!");
@@ -37,7 +37,7 @@ alert("Hello world!");
 
 Both produce:
 
-![](alerthelloworld.png)
+![Black alert dialog box. At the top left small circle icon follow by white open and close brackets containing this white text: JavaScript application. Below on the left, a Hello world! white text. And on the bottom right a small blue button. The button's text is: ok in black.](alerthelloworld.png)
 
 ## Notes
 
@@ -64,6 +64,3 @@ Alternatively {{HTMLElement("dialog")}} element can be used to display alerts.
 - {{HTMLElement("dialog")}} element
 - {{domxref("window.confirm","confirm")}}
 - {{domxref("window.prompt","prompt")}}
-- For [Mozilla Chrome](/en-US/docs/Glossary/Chrome) see
-  {{ifmethod("nsIPromptService","alert")}} and
-  {{ifmethod("nsIPromptService","alertCheck")}}

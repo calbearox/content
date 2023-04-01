@@ -1,28 +1,20 @@
 ---
 title: HTMLMediaElement.controller
 slug: Web/API/HTMLMediaElement/controller
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLMediaElement.controller
 ---
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLMediaElement.controller`** property represents the media controller assigned to the element.
 
 ## Value
 
 A `MediaController` object or `null` if no media controller is assigned to the element. The default is `null`.
-
-## Examples
-
-```js
-...
-```
 
 ## Specifications
 
@@ -31,7 +23,3 @@ In 2016, the whole Media Controller feature was [removed from the HTML specifica
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- The interface defining it, {{domxref("HTMLMediaElement")}}.

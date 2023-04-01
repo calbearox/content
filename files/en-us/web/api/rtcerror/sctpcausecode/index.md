@@ -1,21 +1,10 @@
 ---
 title: RTCError.sctpCauseCode
 slug: Web/API/RTCError/sctpCauseCode
-tags:
-  - API
-  - Error
-  - Networking
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - SCTP
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - sctpCauseCode
+page-type: web-api-instance-property
 browser-compat: api.RTCError.sctpCauseCode
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sctpCauseCode`** property in an

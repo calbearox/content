@@ -1,15 +1,10 @@
 ---
 title: PointerEvent.width
 slug: Web/API/PointerEvent/width
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.PointerEvent.width
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`width`** read-only property of the
@@ -32,10 +27,14 @@ This example illustrates using the {{domxref("PointerEvent")}} interface's
 {{domxref("PointerEvent.height","height")}} properties to calculate the contact area.
 
 ```js
-target.addEventListener("pointerdown", function(ev) {
-   // Calculate the contact area
-   var area = ev.width * ev.height;
- }, false);
+target.addEventListener(
+  "pointerdown",
+  (ev) => {
+    // Calculate the contact area
+    const area = ev.width * ev.height;
+  },
+  false
+);
 ```
 
 ## Specifications

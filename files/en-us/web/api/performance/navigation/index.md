@@ -1,19 +1,13 @@
 ---
 title: Performance.navigation
 slug: Web/API/Performance/navigation
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTTP
-  - Navigation Timing
-  - Performance
-  - Property
-  - Read-only
-  - legacy
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Performance.navigation
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 The legacy
 **`Performance.navigation`**

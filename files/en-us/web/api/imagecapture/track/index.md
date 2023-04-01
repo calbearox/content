@@ -1,19 +1,13 @@
 ---
 title: ImageCapture.track
 slug: Web/API/ImageCapture/track
-tags:
-  - API
-  - Experimental
-  - Image
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ImageCapture.track
 ---
-{{APIRef("MediaStream Image")}}
+
+{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`track`** read-only property of the
 {{domxref("ImageCapture")}} interface returns a reference to the

@@ -1,21 +1,10 @@
 ---
 title: RTCIceCandidate.usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
-tags:
-  - API
-  - Candidate
-  - NeedsExample
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - ufrag
-  - usernameFragment
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.usernameFragment
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`usernameFragment`** property on the {{domxref("RTCIceCandidate")}} interface is a string indicating the
@@ -28,13 +17,13 @@ Note that 24 bits of the username fragment are required to be randomized by the 
 
 ## Value
 
-A {{domxref("DOMString")}} containing the username fragment (usually referred to in
+A string containing the username fragment (usually referred to in
 shorthand as "ufrag" or "ice-ufrag") that, along with the ICE password ("ice-pwd"),
 uniquely identifies a single ongoing ICE interaction, including for any communication
 with the {{Glossary("STUN")}} server. The string may be up to 256 characters long, and
 has no default value.
 
-#### Randomization
+### Randomization
 
 At least 24 bits of the text in the `ufrag` are required to be randomly
 selected by the ICE layer at the beginning of the ICE session. The specifics for which
@@ -79,11 +68,11 @@ from the signaling server that contains an ICE candidate to be added to the
 restart, we can use code like this:
 
 ```js
-const ssNewCandidate = signalMsg => {
+const ssNewCandidate = (signalMsg) => {
   let candidate = new RTCIceCandidate(signalMsg.candidate);
   let receivers = pc.getReceivers();
 
-  receivers.forEach(receiver => {
+  receivers.forEach((receiver) => {
     let parameters = receiver.transport.getParameters();
 
     if (parameters.usernameFragment === candidate.usernameFragment) {
@@ -91,9 +80,8 @@ const ssNewCandidate = signalMsg => {
     }
   });
 
-  pc.addIceCandidate(candidate)
-    .catch(reportError);
-}
+  pc.addIceCandidate(candidate).catch(reportError);
+};
 ```
 
 This walks through the list of the {{domxref("RTCRtpReceiver")}} objects being used to

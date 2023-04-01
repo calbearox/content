@@ -1,16 +1,10 @@
 ---
 title: VisualViewport.scale
 slug: Web/API/VisualViewport/scale
-tags:
-  - API
-  - Property
-  - Reference
-  - Visual Viewport API
-  - VisualViewport
-  - size
-  - viewport
+page-type: web-api-instance-property
 browser-compat: api.VisualViewport.scale
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`scale`** read-only property of the

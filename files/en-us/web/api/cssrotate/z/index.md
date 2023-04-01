@@ -1,19 +1,11 @@
 ---
 title: CSSRotate.z
 slug: Web/API/CSSRotate/z
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSRotate
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.CSSRotate.z
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`z`** property of the
 {{domxref("CSSRotate")}} interface representing the z-component of the translating

@@ -1,21 +1,10 @@
 ---
 title: RTCIceCandidate.port
 slug: Web/API/RTCIceCandidate/port
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - port
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.port
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`port`** property contains the port
@@ -52,10 +41,10 @@ This code snippet fetches the IP address and port number of the candidate, stori
 into an object for future use.
 
 ```js
-var candidateLoc = {
+const candidateLoc = {
   address: candidate.ip,
-  port: candidate.port
-}
+  port: candidate.port,
+};
 ```
 
 ## Specifications

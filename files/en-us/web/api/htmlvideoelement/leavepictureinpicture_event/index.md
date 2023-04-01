@@ -1,17 +1,10 @@
 ---
-title: 'HTMLVideoElement: leavepictureinpicture event'
+title: "HTMLVideoElement: leavepictureinpicture event"
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
-tags:
-  - API
-  - Event
-  - Interface
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
+page-type: web-api-event
 browser-compat: api.HTMLVideoElement.leavepictureinpicture_event
 ---
+
 {{APIRef("HTMLVideoElement")}}
 
 The `leavepictureinpicture` event is fired when the {{DOMxRef("HTMLVideoElement")}} leaves picture-in-picture mode successfully.
@@ -23,14 +16,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('leavepictureinpicture', event => { });
+addEventListener("leavepictureinpicture", (event) => {});
 
-onleavepictureinpicture = event => { };
+onleavepictureinpicture = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
@@ -45,8 +38,8 @@ These examples add an event listener for the HTMLVideoElement's `leavepictureinp
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('#video');
-const button = document.querySelector('#button');
+const video = document.querySelector("#video");
+const button = document.querySelector("#button");
 
 function onExitPip() {
   console.log("Picture-in-Picture mode deactivated!");
@@ -54,18 +47,18 @@ function onExitPip() {
 
 video.addEventListener("leavepictureinpicture", onExitPip, false);
 
-button.onclick = function() => {
+button.onclick = () => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
-}
+};
 ```
 
 Using the `onleavepictureinpicture` event handler property:
 
 ```js
-const video = document.querySelector('#video');
-const button = document.querySelector('#button');
+const video = document.querySelector("#video");
+const button = document.querySelector("#button");
 
 function onExitPip() {
   console.log("Picture-in-Picture mode deactivated!");
@@ -73,11 +66,11 @@ function onExitPip() {
 
 video.onleavepictureinpicture = onExitPip;
 
-button.onclick = function() => {
+button.onclick = () => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
-}
+};
 ```
 
 ## Specifications
@@ -91,4 +84,4 @@ button.onclick = function() => {
 ## See also
 
 - {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API")}}
+- {{domxref("Picture-in-Picture_API", "Picture-in-Picture API")}}

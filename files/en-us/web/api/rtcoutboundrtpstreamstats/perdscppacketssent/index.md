@@ -1,22 +1,10 @@
 ---
 title: RTCOutboundRtpStreamStats.perDscpPacketsSent
 slug: Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
-tags:
-  - API
-  - DSCP
-  - Media
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTP
-  - Reference
-  - Services
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - perDscpPacketsSent
+page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.perDscpPacketsSent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`perDscpPacketsSent`** property

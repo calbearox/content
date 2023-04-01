@@ -1,16 +1,10 @@
 ---
 title: HTMLObjectElement.willValidate
 slug: Web/API/HTMLObjectElement/willValidate
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - willValidate
+page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.willValidate
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`willValidate`** read-only property of

@@ -1,21 +1,10 @@
 ---
 title: RTCIceCandidatePair.local
 slug: Web/API/RTCIceCandidatePair/local
-tags:
-  - API
-  - Candidate
-  - Connectivity
-  - ICE
-  - Negotiation
-  - Property
-  - RTCIceCandidatePair
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - local
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePair.local
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`local`** property of the
@@ -36,8 +25,10 @@ This one-line example obtains the current candidate pair and then from that gets
 local candidate.
 
 ```js
-var candidatePair = pc.getSenders()[0].transport.transport.getSelectedCandidatePair();
-var localCandidate = candidatePair.local;
+const candidatePair = pc
+  .getSenders()[0]
+  .transport.transport.getSelectedCandidatePair();
+const localCandidate = candidatePair.local;
 ```
 
 The {{domxref("RTCIceTransport")}} is found by getting the list of

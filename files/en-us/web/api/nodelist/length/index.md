@@ -1,16 +1,10 @@
 ---
 title: NodeList.length
 slug: Web/API/NodeList/length
-tags:
-  - API
-  - DOM
-  - Gecko
-  - NeedsSpecTable
-  - NodeList
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.NodeList.length
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.length`** property returns the number of items

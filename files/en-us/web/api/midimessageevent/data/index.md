@@ -1,14 +1,10 @@
 ---
 title: MIDIMessageEvent.data
 slug: Web/API/MIDIMessageEvent/data
-tags:
-  - API
-  - Property
-  - Reference
-  - data
-  - MIDIMessageEvent
+page-type: web-api-instance-property
 browser-compat: api.MIDIMessageEvent.data
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`data`** read-only property of the {{domxref("MIDIMessageEvent")}} interface returns the MIDI data bytes of a single MIDI message.
@@ -23,10 +19,10 @@ In the following example {{domxref("MIDIInput.midimessage_event", "midimessage")
 
 ```js
 inputs.forEach((input) => {
-  input.onmidimessage = message => {
+  input.onmidimessage = (message) => {
     console.log(message.data);
-  }
-})
+  };
+});
 ```
 
 ## Specifications

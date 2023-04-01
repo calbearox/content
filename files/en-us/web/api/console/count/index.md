@@ -1,16 +1,10 @@
 ---
 title: console.count()
 slug: Web/API/console/count
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - web console
+page-type: web-api-instance-method
 browser-compat: api.console.count
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.count()`** method logs the number of times that
@@ -20,8 +14,9 @@ this particular call to `count()` has been called.
 
 ## Syntax
 
-```js
-console.count([label]);
+```js-nolint
+count()
+count(label)
 ```
 
 ### Parameters
@@ -30,6 +25,10 @@ console.count([label]);
   - : A string. If supplied, `count()` outputs the number of
     times it has been called with that label. If omitted, `count()` behaves as
     though it was called with the "default" label.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -40,7 +39,7 @@ let user = "";
 
 function greet() {
   console.count();
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -70,7 +69,7 @@ let user = "";
 
 function greet() {
   console.count(user);
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";

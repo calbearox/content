@@ -1,47 +1,29 @@
 ---
-title: 'HTMLMediaElement: stalled event'
+title: "HTMLMediaElement: stalled event"
 slug: Web/API/HTMLMediaElement/stalled_event
-tags:
-  - API
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
+page-type: web-api-event
 browser-compat: api.HTMLMediaElement.stalled_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `stalled` event is fired when the user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onstalled")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("stalled", (event) => {});
+
+onstalled = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -50,20 +32,20 @@ These examples add an event listener for the HTMLMediaElement's `stalled` event,
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('stalled', (event) => {
-  console.log('Failed to fetch data, but trying.');
+video.addEventListener("stalled", (event) => {
+  console.log("Failed to fetch data, but trying.");
 });
 ```
 
 Using the `onstalled` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onstalled = (event) => {
-  console.log('Failed to fetch data, but trying.');
+  console.log("Failed to fetch data, but trying.");
 };
 ```
 

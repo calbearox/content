@@ -1,20 +1,10 @@
 ---
 title: MediaError.code
 slug: Web/API/MediaError/code
-tags:
-  - API
-  - Audio
-  - Code
-  - Errors
-  - HTML DOM
-  - Media
-  - MediaError
-  - Property
-  - Read-only
-  - Reference
-  - Video
+page-type: web-api-instance-property
 browser-compat: api.MediaError.code
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.code`** returns a numeric
@@ -26,7 +16,7 @@ string with specific diagnostic information, see {{domxref("MediaError.message")
 A numeric value indicating the general type of error which occurred. The possible
 values are described below, in [Media error code constants](#media_error_code_constants).
 
-#### Media error code constants
+### Media error code constants
 
 <table class="no-markdown">
   <thead>
@@ -76,13 +66,15 @@ values are described below, in [Media error code constants](#media_error_code_co
 ## Examples
 
 This example creates a {{HTMLElement("video")}} element, establishes an error handler
-for it, and then sets the element's {{htmlattrxref("src", "video")}} attribute to the
+for it, and then sets the element's [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute to the
 video resource to present in the element. The error handler outputs a message
 
 ```js
-var obj = document.createElement('video');
-obj.onerror = function() {console.log("Error with media: " + obj.error.code);}
-obj.src="https://example.com/blahblah.mp4";
+const obj = document.createElement("video");
+obj.onerror = () => {
+  console.error(`Error with media: ${obj.error.code}`);
+};
+obj.src = "https://example.com/blahblah.mp4";
 ```
 
 ## Specifications
@@ -95,4 +87,4 @@ obj.src="https://example.com/blahblah.mp4";
 
 ## See also
 
-- The interface defining it, {{domxref("MediaError")}}.
+- {{domxref("MediaError")}}: Interface used to define the `MediaError.code` property

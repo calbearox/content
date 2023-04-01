@@ -1,15 +1,10 @@
 ---
 title: Touch.clientY
 slug: Web/API/Touch/clientY
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - touch
+page-type: web-api-instance-property
 browser-compat: api.Touch.clientY
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`Touch.clientY`** read-only property returns the Y
@@ -39,26 +34,36 @@ touch point, are calculated.
 
 ```js
 // Register touchstart and touchend listeners for element 'source'
-var src = document.getElementById("source");
-var clientX, clientY;
+const src = document.getElementById("source");
+let clientX;
+let clientY;
 
-src.addEventListener('touchstart', function(e) {
-  // Cache the client X/Y coordinates
-  clientX = e.touches[0].clientX;
-  clientY = e.touches[0].clientY;
-}, false);
+src.addEventListener(
+  "touchstart",
+  (e) => {
+    // Cache the client X/Y coordinates
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
+  },
+  false
+);
 
-src.addEventListener('touchend', function(e) {
-  var deltaX, deltaY;
+src.addEventListener(
+  "touchend",
+  (e) => {
+    let deltaX;
+    let deltaY;
 
-  // Compute the change in X and Y coordinates.
-  // The first touch point in the changedTouches
-  // list is the touch point that was just removed from the surface.
-  deltaX = e.changedTouches[0].clientX - clientX;
-  deltaY = e.changedTouches[0].clientY - clientY;
+    // Compute the change in X and Y coordinates.
+    // The first touch point in the changedTouches
+    // list is the touch point that was just removed from the surface.
+    deltaX = e.changedTouches[0].clientX - clientX;
+    deltaY = e.changedTouches[0].clientY - clientY;
 
-  // Process the data ...
-}, false);
+    // Process the data…
+  },
+  false
+);
 ```
 
 ## Specifications

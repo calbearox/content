@@ -1,18 +1,13 @@
 ---
 title: text-decoration-skip
 slug: Web/CSS/text-decoration-skip
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Experimental
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.text-decoration-skip
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`text-decoration-skip`** [CSS](/en-US/docs/Web/CSS) property sets what parts of an element's content any text decoration affecting the element must skip over. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.
 

@@ -1,23 +1,10 @@
 ---
 title: RTCIceCandidateStats.relayProtocol
 slug: Web/API/RTCIceCandidateStats/relayProtocol
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - Property
-  - Protocol
-  - RTCIceCandidate
-  - RTCIceCandidateStats
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - relayProtocol
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.relayProtocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's
@@ -30,7 +17,7 @@ The ICE protocol being used by the candidate otherwise can be obtained from the
 
 ## Value
 
-A {{domxref("DOMString")}} identifying the protocol being used by the endpoint to
+A string identifying the protocol being used by the endpoint to
 communicate with the TURN server. The possible values are:
 
 - `tcp`

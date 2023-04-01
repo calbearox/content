@@ -1,14 +1,10 @@
 ---
 title: GamepadButton.pressed
 slug: Web/API/GamepadButton/pressed
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.GamepadButton.pressed
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`GamepadButton.pressed`** property of the
@@ -20,7 +16,7 @@ the button is currently pressed (`true`) or unpressed (`false`).
 ```js
 let gp = navigator.getGamepads()[0]; // Get the first gamepad object
 
-if(gp.buttons[0].pressed == true) {
+if (gp.buttons[0].pressed) {
   // respond to button being pressed
 }
 ```

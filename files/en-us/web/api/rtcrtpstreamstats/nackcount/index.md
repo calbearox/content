@@ -1,24 +1,10 @@
 ---
 title: RTCRtpStreamStats.nackCount
 slug: Web/API/RTCRtpStreamStats/nackCount
-tags:
-  - API
-  - Acknowledgement
-  - Generic NACK
-  - NACK
-  - Negative Acknowledgement
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - nackCount
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.nackCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`nackCount`** property of the

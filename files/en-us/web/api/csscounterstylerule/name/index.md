@@ -1,21 +1,17 @@
 ---
 title: CSSCounterStyleRule.name
 slug: Web/API/CSSCounterStyleRule/name
-tags:
-  - API
-  - Property
-  - Reference
-  - name
-  - CSSCounterStyleRule
+page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.name
 ---
+
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
 The **`name`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the {{CSSxRef("&lt;custom-ident&gt;")}} defined as the `name` for the associated rule.
 
 ## Value
 
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 
@@ -25,7 +21,7 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 @counter-style box-corner {
   system: fixed;
   symbols: ◰ ◳ ◲ ◱;
-  suffix: ': ';
+  suffix: ": ";
   fallback: disc;
 }
 ```

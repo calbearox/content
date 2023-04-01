@@ -1,19 +1,15 @@
 ---
 title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - ellipse
-  - CSS Functions
-  - Data Type
-  - Reference
+page-type: css-function
 browser-compat: css.types.basic-shape.ellipse
 ---
+
 {{CSSRef}}
 
 The **`ellipse()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).
+
+{{EmbedInteractiveExample("pages/css/function-ellipse.html")}}
 
 ## Syntax
 
@@ -42,7 +38,7 @@ An ellipse is essentially a squashed circle and so `ellipse()` acts in a very si
 
 ### Basic ellipse() example
 
-This example shows an ellipse with an x radius of 40%, a y radius of 50% and the position being left. This means that the centre of the ellipse is on the left edge of the box giving us a half ellipse shape to wrap our text around. You can change these values to see how the ellipse changes.
+This example shows an ellipse with an x radius of 40%, a y radius of 50% and the position being left. This means that the center of the ellipse is on the left edge of the box giving us a half ellipse shape to wrap our text around. You can change these values to see how the ellipse changes.
 
 {{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse.html", '100%', 800)}}
 

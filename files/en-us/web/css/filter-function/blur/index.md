@@ -1,14 +1,10 @@
 ---
 title: blur()
 slug: Web/CSS/filter-function/blur
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.filter-function.blur
 ---
+
 {{CSSRef}}
 
 The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
@@ -24,7 +20,7 @@ blur(radius)
 ### Parameters
 
 - `radius`
-  - : The radius of the blur, specified as a {{cssxref("&lt;length&gt;")}}. It defines the value of the standard deviation to the Gaussian function, i.e., how many pixels on the screen blend into each other; thus, a larger value will create more blur. A value of `0` leaves the input unchanged. The lacuna value for interpolation is `0`.
+  - : The radius of the blur, specified as a {{cssxref("&lt;length&gt;")}}. It defines the value of the standard deviation to the Gaussian function, i.e., how many pixels on the screen blend into each other; thus, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`.
 
 ## Examples
 
@@ -46,7 +42,8 @@ blur(1.17rem)  /* Blur with 1.17rem radius */
 
 ## See also
 
-- {{cssxref("&lt;filter-function&gt;")}}
+The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+
 - {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}

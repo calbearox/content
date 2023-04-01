@@ -1,16 +1,11 @@
 ---
 title: FileSystemHandle.name
 slug: Web/API/FileSystemHandle/name
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Property
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.FileSystemHandle.name
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`name`** read-only property of the
 {{domxref("FileSystemHandle")}} interface returns the name of the entry represented by
@@ -18,7 +13,7 @@ handle.
 
 ## Value
 
-{{domxref('USVString')}}
+A string.
 
 ## Examples
 
@@ -34,7 +29,6 @@ async function getFile() {
   [fileHandle] = await window.showOpenFilePicker();
 
   const fileName = fileHandle.name;
-
 }
 ```
 
@@ -49,5 +43,4 @@ async function getFile() {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

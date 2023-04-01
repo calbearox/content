@@ -1,16 +1,10 @@
 ---
 title: VisualViewport.pageLeft
 slug: Web/API/VisualViewport/pageLeft
-tags:
-  - API
-  - Property
-  - Reference
-  - Visual Viewport API
-  - VisualViewport
-  - pageLeft
-  - viewport
+page-type: web-api-instance-property
 browser-compat: api.VisualViewport.pageLeft
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`pageLeft`** read-only property of the

@@ -1,14 +1,10 @@
 ---
 title: ImageData.width
 slug: Web/API/ImageData/width
-tags:
-  - API
-  - Canvas
-  - ImageData
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.ImageData.width
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.width`** property returns the number
@@ -25,7 +21,7 @@ pixels tall. Thus, the `width` property is `200`.
 
 ```js
 let imageData = new ImageData(200, 100);
-console.log(imageData.width);  // 200
+console.log(imageData.width); // 200
 ```
 
 ## Specifications

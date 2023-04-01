@@ -1,19 +1,10 @@
 ---
 title: self.crypto
 slug: Web/API/crypto_property
-tags:
-  - API
-  - Crypto
-  - Cryptography
-  - Encoding
-  - Encryption
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - Security
+page-type: web-api-global-property
 browser-compat: api.crypto
 ---
+
 {{APIRef}}
 
 The global read-only **`crypto`** property returns the {{domxref("Crypto")}} object associated to the global object. This object allows web pages access to certain cryptographic related services.
@@ -35,28 +26,27 @@ This example uses the `crypto` property to access the {{domxref("Crypto.getRando
 ### JavaScript
 
 ```js
-genRandomNumbers = function getRandomNumbers() {
+globalThis.genRandomNumbers = () => {
   const array = new Uint32Array(10);
   crypto.getRandomValues(array);
 
   const randText = document.getElementById("myRandText");
-  randText.textContent = "The random numbers are: "
-  for (let i = 0; i < array.length; i++) {
-    randText.textContent += array[i] + " ";
-  }
-}
+  randText.textContent = `The random numbers are: ${array.join(" ")}`;
+};
 ```
 
 ### HTML
 
 ```html
-<p id="myRandText">The random numbers are: </p>
-<button type="button" onClick='genRandomNumbers()'>Generate 10 random numbers</button>
+<p id="myRandText">The random numbers are:</p>
+<button type="button" onClick="genRandomNumbers()">
+  Generate 10 random numbers
+</button>
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

@@ -1,13 +1,10 @@
 ---
 title: HTMLMediaElement.playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.playbackRate
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.playbackRate`** property sets the rate at which the media is being played back. This is used to implement user controls for fast forward, slow motion, and so forth. The normal playback rate is multiplied by this value to obtain the current rate, so a value of 1.0 indicates normal speed.
@@ -25,7 +22,7 @@ A [`double`](https://en.wikipedia.org/wiki/Double-precision_floating-point_forma
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.playbackRate); // Expected Output: 1
 ```
 
@@ -39,4 +36,4 @@ console.log(obj.playbackRate); // Expected Output: 1
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.playbackRate` property

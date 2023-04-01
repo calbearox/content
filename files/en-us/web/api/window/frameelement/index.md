@@ -1,14 +1,10 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.frameElement
 ---
+
 {{ApiRef}}
 
 The **`Window.frameElement`** property
@@ -23,7 +19,7 @@ in which the window is embedded.
 
 The element which the window is embedded into. If the window isn't embedded into
 another document, or if the document into which it's embedded has a different
-{{glossary("origin")}}, the value is {{jsxref("null")}} instead.
+{{glossary("origin")}}, the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) instead.
 
 ## Examples
 
@@ -31,7 +27,7 @@ another document, or if the document into which it's embedded has a different
 const frameEl = window.frameElement;
 // If we're embedded, change the containing element's URL to 'https://mozilla.org/'
 if (frameEl) {
-  frameEl.src = 'https://mozilla.org/';
+  frameEl.src = "https://mozilla.org/";
 }
 ```
 

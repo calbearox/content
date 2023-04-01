@@ -1,34 +1,26 @@
 ---
 title: SourceBufferList
 slug: Web/API/SourceBufferList
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Interface
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - SourceBufferList
-  - Video
+page-type: web-api-interface
 browser-compat: api.SourceBufferList
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`SourceBufferList`** interface represents a simple container list for multiple {{domxref("SourceBuffer")}} objects.
 
 The source buffer list containing the `SourceBuffer`s appended to a particular `MediaSource` can be retrieved using the {{domxref("MediaSource.sourceBuffers")}} property.
 
-The individual source buffers can be accessed using the [array operator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements) `[]`.
+The individual source buffers can be accessed using the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation) `[]`.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-- {{domxref("SourceBufferList.length")}} {{readonlyInline}}
+- {{domxref("SourceBufferList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("SourceBuffer")}} objects in the list.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
@@ -45,11 +37,10 @@ This example shows how to access the active source buffers of the {{domxref("Med
 
 ```js
 // Video is an already playing video using a MediaSource srcObject
-var video = document.querySelector('video');
-var mediaSource = video.srcObject;
-var sourceBufferList = mediaSource.activeSourceBuffers;
-for (var i = 0; i < sourceBufferList.length; i++) {
-  var sourceBuffer = sourceBufferList[i];
+const video = document.querySelector("video");
+const mediaSource = video.srcObject;
+const sourceBufferList = mediaSource.activeSourceBuffers;
+for (const sourceBuffer of sourceBufferList) {
   // Do something with each SourceBuffer, such as call abort()
   sourceBuffer.abort();
 }

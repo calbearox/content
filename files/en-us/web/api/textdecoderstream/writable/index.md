@@ -1,14 +1,10 @@
 ---
 title: TextDecoderStream.writable
 slug: Web/API/TextDecoderStream/writable
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TextDecoderStream
+page-type: web-api-instance-property
 browser-compat: api.TextDecoderStream.writable
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}}.

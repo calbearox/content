@@ -1,22 +1,10 @@
 ---
 title: RTCIceCandidateStats.port
 slug: Web/API/RTCIceCandidateStats/port
-tags:
-  - API
-  - Candidate
-  - Connection
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - port
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.port
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's **`port`**

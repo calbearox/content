@@ -1,25 +1,10 @@
 ---
 title: RTCInboundRtpStreamStats.sliCount
 slug: Web/API/RTCInboundRtpStreamStats/sliCount
-tags:
-  - API
-  - Corruption
-  - Errors
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - SLI
-  - Slice Loss
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - sliCount
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.sliCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`sliCount`** property of the
@@ -57,6 +42,6 @@ This is a very technical part of how video codecs work. For details, see {{RFC(4
 
 ## See also
 
-- {{RFC(4585, "6.3.2")}}: Definition of "Slice Loss Indication" in the document
+- {{RFC(4585, "", "6.3.2")}}: Definition of "Slice Loss Indication" in the document
   _Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based
   Feedback (RTP/AVPF)_.

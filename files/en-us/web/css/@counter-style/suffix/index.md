@@ -1,18 +1,13 @@
 ---
 title: suffix
 slug: Web/CSS/@counter-style/suffix
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.suffix
 ---
+
 {{CSSRef}}
 
-The **`suffix`** descriptor of the{{cssxref("@counter-style")}} rule specifies content that will be appended to the marker representation.
+The **`suffix`** descriptor of the {{cssxref("@counter-style")}} rule specifies content that will be appended to the marker representation.
 
 ## Syntax
 

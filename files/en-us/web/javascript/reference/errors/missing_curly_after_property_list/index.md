@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: missing } after property list'
+title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after property list" occurs when there is a mistake
@@ -15,9 +12,9 @@ Might be in fact a missing curly bracket, but could also be a missing comma.
 
 ## Message
 
-```js
-SyntaxError: Expected '}' (Edge)
+```
 SyntaxError: missing } after property list (Firefox)
+SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal. (Safari)
 ```
 
 ## Error type
@@ -39,7 +36,7 @@ also help you to see through the jungle.
 Oftentimes, there is a missing comma in your object initializer code:
 
 ```js example-bad
-var obj = {
+const obj = {
   a: 1,
   b: { myProp: 2 }
   c: 3
@@ -49,10 +46,10 @@ var obj = {
 Correct would be:
 
 ```js example-good
-var obj = {
+const obj = {
   a: 1,
   b: { myProp: 2 },
-  c: 3
+  c: 3,
 };
 ```
 

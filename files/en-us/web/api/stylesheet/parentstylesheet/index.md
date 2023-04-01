@@ -1,14 +1,10 @@
 ---
 title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.StyleSheet.parentStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`parentStyleSheet`** property of the
@@ -23,11 +19,7 @@ A {{domxref("StyleSheet")}} object.
 
 ```js
 // Find the top level stylesheet
-if (stylesheet.parentStyleSheet) {
-  sheet = stylesheet.parentStyleSheet;
-} else {
-  sheet = stylesheet;
-}
+const sheet = stylesheet.parentStyleSheet ?? stylesheet;
 ```
 
 ## Notes

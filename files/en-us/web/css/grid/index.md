@@ -1,14 +1,10 @@
 ---
 title: grid
 slug: Web/CSS/grid
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.grid
 ---
+
 {{CSSRef}}
 
 The **`grid`** CSS property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) that sets all of the explicit and implicit grid properties in a single declaration.

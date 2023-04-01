@@ -1,15 +1,10 @@
 ---
 title: Request.headers
 slug: Web/API/Request/headers
-tags:
-  - API
-  - Fetch
-  - Headers
-  - Property
-  - Reference
-  - request
+page-type: web-api-instance-property
 browser-compat: api.Request.headers
 ---
+
 {{APIRef("Fetch")}}
 
 The **`headers`** read-only property of the
@@ -27,8 +22,8 @@ In the following snippet, we create a new request using the
 the script), then save the request headers in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myHeaders = myRequest.headers; // Headers {}
+const myRequest = new Request("flowers.jpg");
+const myHeaders = myRequest.headers; // Headers {}
 ```
 
 To add a header to the {{domxref("Headers")}} object we use
@@ -36,19 +31,19 @@ To add a header to the {{domxref("Headers")}} object we use
 2nd init parameter, passing headers in as an init option:
 
 ```js
-var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "image/jpeg");
 
-var myInit = {
-  method: 'GET',
+const myInit = {
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default'
+  mode: "cors",
+  cache: "default",
 };
 
-var myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request("flowers.jpg", myInit);
 
-myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
+const myContentType = myRequest.headers.get("Content-Type"); // returns 'image/jpeg'
 ```
 
 ## Specifications

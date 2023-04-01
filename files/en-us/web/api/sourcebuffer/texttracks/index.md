@@ -1,18 +1,12 @@
 ---
 title: SourceBuffer.textTracks
 slug: Web/API/SourceBuffer/textTracks
-tags:
-  - API
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - textTracks
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SourceBuffer.textTracks
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`textTracks`** read-only property of the

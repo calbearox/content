@@ -1,15 +1,10 @@
 ---
 title: HTMLElement.lang
 slug: Web/API/HTMLElement/lang
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - NeedsUpdate
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.lang
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.lang`** property gets or sets the base
@@ -32,7 +27,7 @@ A string.
 
 ```js
 // this snippet compares the base language and
-// redirects to another url based on language
+// redirects to another URL based on language
 if (document.documentElement.lang === "en") {
   window.location.href = "Some_document.html.en";
 } else if (document.documentElement.lang === "ru") {

@@ -1,23 +1,10 @@
 ---
 title: RTCIceCandidatePairStats.responsesSent
 slug: Web/API/RTCIceCandidatePairStats/responsesSent
-tags:
-  - API
-  - Connectivity
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Responses
-  - STUN
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - responsesSent
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.responsesSent
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} dictionary's

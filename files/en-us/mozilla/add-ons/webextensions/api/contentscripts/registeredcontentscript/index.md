@@ -1,15 +1,10 @@
 ---
 title: contentScripts.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
-tags:
-  - API
-  - Extensions
-  - Reference
-  - RegisteredContentScript
-  - Type
-  - contentScripts
+page-type: webextension-api-type
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript
 ---
+
 {{AddonSidebar()}}
 
 A `RegisteredContentScript` is returned by a call to {{WebExtAPIRef("contentScripts.register()")}} and represents the content scripts registered in that call.

@@ -1,15 +1,10 @@
 ---
 title: HTMLFormElement.target
 slug: Web/API/HTMLFormElement/target
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsSpecTable
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.target
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`target`** property of the {{domxref("HTMLFormElement")}}

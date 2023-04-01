@@ -1,22 +1,16 @@
 ---
 title: DeviceOrientationEvent.absolute
 slug: Web/API/DeviceOrientationEvent/absolute
-tags:
-  - API
-  - Device Orientation API
-  - DeviceOrientationEvent
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.DeviceOrientationEvent.absolute
 ---
+
 {{ apiref("Device Orientation Events") }}
 
 Indicates whether or not the device is providing orientation data absolutely (that is,
 in reference to the Earth's coordinate frame) or using some arbitrary frame determined
-by the device. See [Orientation and motion data
-explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained) for details.
+by the device.
+See [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) for details.
 
 ## Value
 
@@ -34,8 +28,7 @@ explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained) f
 ## See also
 
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
-- [Orientation and motion data
-  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}

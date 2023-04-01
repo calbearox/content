@@ -1,23 +1,16 @@
 ---
 title: PannerNode.positionY
 slug: Web/API/PannerNode/positionY
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - positionY
+page-type: web-api-instance-property
 browser-compat: api.PannerNode.positionY
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`positionY`** property of the {{ domxref("PannerNode")
-    }} interface specifies the Y coordinate of the audio source's position in 3D Cartesian
-coordinates, corresponding to the *vertical* axis (top-bottom). The complete
+The **`positionY`** property of the {{ domxref("PannerNode") }} interface specifies the Y coordinate of the audio source's position in 3D Cartesian
+coordinates, corresponding to the _vertical_ axis (top-bottom). The complete
 vector is defined by the position of the audio source, given as
-({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
-    "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
+({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY", "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
 of the audio source (that is, the direction in which it's facing), given as
 ({{domxref("PannerNode.orientationX", "orientationX")}},
 {{domxref("PannerNode.orientationY", "orientationY")}},
@@ -52,14 +45,13 @@ const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';
+panner.panningModel = "HRTF";
 
 panner.positionY.setValueAtTime(1, context.currentTime + 1);
 panner.positionY.setValueAtTime(-1, context.currentTime + 2);
 panner.positionY.setValueAtTime(0, context.currentTime + 3);
 
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```
@@ -75,6 +67,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

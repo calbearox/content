@@ -1,14 +1,10 @@
 ---
 title: ElementInternals.form
 slug: Web/API/ElementInternals/form
-tags:
-  - API
-  - Property
-  - Reference
-  - form
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.form
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`form`** read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("HTMLFormElement")}} associated with this element.
@@ -32,6 +28,7 @@ Printing `form.length` to the console, gives us the value of {{domxref("HTMLForm
 ```js
 class CustomCheckbox extends HTMLElement {
   static formAssociated = true;
+  #internals;
 
   constructor() {
     super();
@@ -39,7 +36,7 @@ class CustomCheckbox extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log(this.#internals.form.length)
+    console.log(this.#internals.form.length);
   }
 }
 

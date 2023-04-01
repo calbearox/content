@@ -1,15 +1,11 @@
 ---
 title: Touch.force
 slug: Web/API/Touch/force
-tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
-  - touch
+page-type: web-api-instance-property
 browser-compat: api.Touch.force
 ---
-{{ APIRef("Touch Events") }}{{SeeCompatTable}}
+
+{{ APIRef("Touch Events") }}
 
 The **`Touch.force`** read-only property returns the amount of
 pressure the user is applying to the touch surface for a {{ domxref("Touch") }} point.
@@ -31,21 +27,25 @@ applied, in the range `0.0` to `1.0`, where `0.0` is no
 pressure, and `1.0` is the highest level of pressure the touch device is
 capable of sensing.
 
-In following code snippet, the {{event("touchstart")}} event handler iterates through
+In following code snippet, the {{domxref("Element/touchstart_event", "touchstart")}} event handler iterates through
 the `targetTouches` list and logs the `force` value of each touch
 point but the code could invoke different processing depending on the value.
 
 ```js
-someElement.addEventListener('touchstart', function(e) {
-   // Iterate through the list of touch points and log each touch
-   // point's force.
-   for (var i=0; i < e.targetTouches.length; i++) {
-     // Add code to "switch" based on the force value. For example
-     // minimum pressure vs. maximum pressure could result in
-     // different handling of the user's input.
-     console.log("targetTouches[" + i + "].force = " + e.targetTouches[i].force);
-   }
-}, false);
+someElement.addEventListener(
+  "touchstart",
+  (e) => {
+    // Iterate through the list of touch points and log each touch
+    // point's force.
+    for (let i = 0; i < e.targetTouches.length; i++) {
+      // Add code to "switch" based on the force value. For example
+      // minimum pressure vs. maximum pressure could result in
+      // different handling of the user's input.
+      console.log(`targetTouches[${i}].force = ${e.targetTouches[i].force}`);
+    }
+  },
+  false
+);
 ```
 
 ## Specifications

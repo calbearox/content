@@ -1,18 +1,10 @@
 ---
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardEvent
-  - Cut
-  - Property
-  - Read-only
-  - copy
-  - paste
+page-type: web-api-instance-property
 browser-compat: api.ClipboardEvent.clipboardData
 ---
+
 {{APIRef("Clipboard API")}}
 
 The **`ClipboardEvent.clipboardData`** property holds a {{domxref("DataTransfer")}} object, which can be used:

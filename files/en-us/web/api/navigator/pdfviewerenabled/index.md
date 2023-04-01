@@ -1,14 +1,10 @@
 ---
 title: Navigator.pdfViewerEnabled
 slug: Web/API/Navigator/pdfViewerEnabled
-tags:
-  - pdfViewerEnabled
-  - API
-  - DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Navigator.pdfViewerEnabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`pdfViewerEnabled`** property of the {{domxref("Navigator")}} interface indicates whether the browser supports inline display of PDF files when navigating to them.

@@ -1,15 +1,10 @@
 ---
 title: Selection.focusOffset
 slug: Web/API/Selection/focusOffset
-tags:
-  - API
-  - HTML Editing
-  - Property
-  - Read-only
-  - Reference
-  - Selection
+page-type: web-api-instance-property
 browser-compat: api.Selection.focusOffset
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.focusOffset`** read-only property returns the

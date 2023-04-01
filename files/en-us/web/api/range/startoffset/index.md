@@ -1,13 +1,10 @@
 ---
 title: Range.startOffset
 slug: Web/API/Range/startOffset
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
+page-type: web-api-instance-property
 browser-compat: api.Range.startOffset
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.startOffset`** read-only property returns a number
@@ -30,10 +27,10 @@ A number.
 ## Examples
 
 ```js
-var range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
-var startRangeOffset = range.startOffset;
+const range = document.createRange();
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
+const startRangeOffset = range.startOffset;
 ```
 
 ## Specifications

@@ -1,19 +1,8 @@
 ---
-title: 'Django Tutorial Part 7: Sessions framework'
+title: "Django Tutorial Part 7: Sessions framework"
 slug: Learn/Server-side/Django/Sessions
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Python
-  - Server
-  - Tutorial
-  - django
-  - django sessions
-  - server-side
-  - sessions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
 
 This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding a session-based visit-counter to the home page.
@@ -48,7 +37,7 @@ The session framework lets you implement this sort of behavior, allowing you to 
 
 ## What are sessions?
 
-All communication between web browsers and servers is via {{Glossary("HTTP")}}, which is _stateless_. The fact that the protocol is stateless means that messages between the client and server are completely independent of each other— there is no notion of "sequence" or behavior based on previous messages. As a result, if you want to have a site that keeps track of the ongoing relationships with a client, you need to implement that yourself.
+All communication between web browsers and servers is via {{Glossary("HTTP")}}, which is _stateless_. The fact that the protocol is stateless means that messages between the client and server are completely independent of each other — there is no notion of "sequence" or behavior based on previous messages. As a result, if you want to have a site that keeps track of the ongoing relationships with a client, you need to implement that yourself.
 
 Sessions are the mechanism used by Django (and most of the Internet) for keeping track of the "state" between the site and a particular browser. Sessions allow you to store arbitrary data per browser, and have this data available to the site whenever the browser connects. Individual data items associated with the session are then referenced by a "key", which is used both to store and retrieve the data.
 
@@ -62,14 +51,14 @@ The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of
 
 ```python
 INSTALLED_APPS = [
-    ...
+    # …
     'django.contrib.sessions',
-    ....
+    # …
 
 MIDDLEWARE = [
-    ...
+    # …
     'django.contrib.sessions.middleware.SessionMiddleware',
-    ....
+    # …
 ```
 
 ## Using sessions
@@ -108,7 +97,7 @@ By default, Django only saves to the session database and sends the session cook
 request.session['my_car'] = 'mini'
 ```
 
-If you're updating some information *within* session data, then Django will not recognize that you've made a change to the session and save the data (for example, if you were to change "`wheels`" data inside your "`my_car`" data, as shown below). In this case you will need to explicitly mark the session as having been modified.
+If you're updating some information _within_ session data, then Django will not recognize that you've made a change to the session and save the data (for example, if you were to change "`wheels`" data inside your "`my_car`" data, as shown below). In this case you will need to explicitly mark the session as having been modified.
 
 ```python
 # Session object not directly modified, only data within the session. Session changes not saved!
@@ -128,7 +117,7 @@ Open **/locallibrary/catalog/views.py**, and add the lines that contain `num_vis
 
 ```python
 def index(request):
-    ...
+    # …
 
     num_authors = Author.objects.count()  # The 'all()' is implied by default.
 
@@ -183,21 +172,3 @@ In our next articles we'll explain the authentication and authorization (permiss
 - [How to use sessions](https://docs.djangoproject.com/en/4.0/topics/http/sessions/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- **Django Tutorial Part 7: Sessions framework**
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

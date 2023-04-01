@@ -1,17 +1,12 @@
 ---
 title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.align
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`HTMLTableElement.align`** property represents the
@@ -29,14 +24,13 @@ One of the following string values:
 
 ```js
 // Set the alignment of a table
-var t = document.getElementById('TableA');
-t.align = 'center';
+const t = document.getElementById("TableA");
+t.align = "center";
 ```
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification [_HTMLTableElement_
-  .align](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977).
+- W3C DOM 2 HTML Specification [_HTMLTableElement.align_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977).
 
 ## Browser compatibility
 

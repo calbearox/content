@@ -1,18 +1,12 @@
 ---
 title: Navigation Timing API
 slug: Web/API/Navigation_timing_API
-tags:
-  - API
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Overview
-  - Performance
-  - Timing
-  - Web
-  - Web Performance
+page-type: web-api-overview
+browser-compat:
+  - api.PerformanceNavigationTiming
 ---
-{{DefaultAPISidebar("Navigation Timing")}}
+
+{{DefaultAPISidebar("Performance API")}}
 
 The **Navigation Timing API** provides data that can be used to measure the performance of a web site. Unlike JavaScript-based libraries that have historically been used to collect similar information, the Navigation Timing API can be much more accurate and reliable.
 
@@ -22,12 +16,12 @@ The **Navigation Timing API** provides data that can be used to measure the perf
 
 You can use the Navigation Timing API to gather performance data on the client side, which you can then transmit to a server using {{domxref("XMLHttpRequest")}} or other techniques.
 
-This API lets you measure data that was previously difficult to obtain, such as the amount of time needed to unload the previous page, how long domain lookups take, the total time spent executing the window's {{event("load")}} handler, and so forth.
+This API lets you measure data that was previously difficult to obtain, such as the amount of time needed to unload the previous page, how long domain lookups take, the total time spent executing the window's {{domxref("Window/load_event", "load")}} handler, and so forth.
 
 ## Interfaces
 
 - {{domxref("Performance")}}
-  - : The {{domxref("window.performance")}} property returns a `Performance` object. While this interface is defined by the High Resolution Time API, the Navigation Timing API adds two properties: {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}}, of the types below.
+  - : The {{domxref("performance_property", "window.performance")}} property returns a `Performance` object. While this interface is defined by the High Resolution Time API, the Navigation Timing API adds two properties: {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}}, of the types below.
 - {{domxref("PerformanceNavigationTiming")}}
   - : Provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
 - {{domxref("PerformanceTiming")}} {{deprecated_inline}}
@@ -48,7 +42,7 @@ const perfData = window.performance.timing;
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
 ```
 
-This subtracts the time at which navigation began ({{domxref("PerformanceTiming.navigationStart", "navigationStart")}}) from the time at which the {{event("load")}} event handler returns ({{domxref("PerformanceTiming.loadEventEnd", "loadEventEnd")}}). This gives you the perceived page load time.
+This subtracts the time at which navigation began ({{domxref("PerformanceTiming.navigationStart", "navigationStart")}}) from the time at which the {{domxref("Window/load_event", "load")}} event handler returns ({{domxref("PerformanceTiming.loadEventEnd", "loadEventEnd")}}). This gives you the perceived page load time.
 
 ### Calculate request response time
 
@@ -72,12 +66,8 @@ This is obtained by starting with the time at which loading of the DOM and its d
 
 ## Specifications
 
-| Specification                                                 |
-| ------------------------------------------------------------- |
-| [Navigation Timing](https://w3c.github.io/navigation-timing/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Window.performance.timing`
-
-{{Compat("api.PerformanceTiming")}}
+{{Compat}}

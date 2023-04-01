@@ -1,20 +1,13 @@
 ---
 title: PerformanceTiming.navigationStart
 slug: Web/API/PerformanceTiming/navigationStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - Performance
-  - PerformanceTiming.navigationStart
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.navigationStart
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
 > Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.

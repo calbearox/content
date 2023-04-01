@@ -1,15 +1,10 @@
 ---
 title: RTCDtlsTransport.iceTransport
 slug: Web/API/RTCDtlsTransport/iceTransport
-tags:
-  - API
-  - Property
-  - RTCDtlsTransport
-  - Read-only
-  - Reference
-  - iceTransport
+page-type: web-api-instance-property
 browser-compat: api.RTCDtlsTransport.iceTransport
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{DOMxRef("RTCDtlsTransport")}}**

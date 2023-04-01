@@ -1,17 +1,14 @@
 ---
 title: HTMLAnchorElement.port
 slug: Web/API/HTMLAnchorElement/port
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.port
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.port`** property is a
-{{domxref("USVString")}} containing the port number of the URL. If the URL does not
+string containing the port number of the URL. If the URL does not
 contain an explicit port number, it will be set to `''`.
 
 ## Value

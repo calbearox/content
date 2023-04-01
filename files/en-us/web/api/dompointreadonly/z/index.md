@@ -1,21 +1,10 @@
 ---
 title: DOMPointReadOnly.z
 slug: Web/API/DOMPointReadOnly/z
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Depth
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Read-only
-  - Reference
-  - z
+page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.z
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly`** interface's

@@ -1,16 +1,9 @@
 ---
 title: Add to Home screen
 slug: Web/Progressive_web_apps/Add_to_home_screen
-tags:
-  - Manifest
-  - PWA
-  - Progressive web apps
-  - Service Worker
-  - a2hs
-  - add to home screen
-  - icon
 ---
-Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, ie. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
+
+Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, i.e. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
 
 ## Why A2HS?
 
@@ -28,7 +21,7 @@ See [caniuse.com](https://caniuse.com/#feat=web-app-manifest) for exact details.
 
 We've written a very simple example web site ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also [see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be added to a Home screen, as well as a service worker to enable it to be used offline. The example displays a series of fox pictures.
 
-If you have either Firefox for Android or Chrome for Android available, use it to navigate to our demo at https://mdn.github.io/pwa-examples/a2hs/ (the URL bar appears on the top in Chrome and at the bottom in Firefox).
+If you have either Firefox for Android or Chrome for Android available, use it to navigate to our [demo](https://mdn.github.io/pwa-examples/a2hs/) (the URL bar appears on the top in Chrome and at the bottom in Firefox).
 
 ![URL bar menu](url_bar_menu.png)
 
@@ -54,7 +47,7 @@ For example, Firefox on Android on a Google Pixel 3 will display the Pixel launc
 
 Regardless of which browser you are using, when you choose to add the app to your Home screen, you'll see it appear along with a short title, in the same way that native apps do.
 
-![](a2hs-on-home-screen.png)
+![A device home screen containing the app icon with the name Foxes](a2hs-on-home-screen.png)
 
 Tapping this icon opens it up, but as a fullscreen app, you'll no longer see the browser UI around it.
 
@@ -79,11 +72,11 @@ The fields needed for A2HS are as follows:
 - `display`: Specifies how the app should be displayed. To make it feel like a distinct app (and not just a web page), you should choose a value such as `fullscreen` (no UI is shown at all) or `standalone` (very similar, but system-level UI elements such as the status bar might be visible).
 - `icons`: Specifies icons for the browser to use when representing the app in different places (such as on the task switcher, or more important, the Home screen). We've included only one in our demo.
 - `name`/`short_name`: These fields provide an app name to be displayed when representing the app in different places. `name` provides the full app name, and `short_name` provides a shortened name to be used when there is insufficient space to display the full name. You are advised to provide both if your app's name is particularly long.
-- `start_url`: Provides a path to the asset that should be loaded when the added-to-Home screen app is launched. Note that this has to be a relative URL pointing to the site index, relative to the url of the manifest. Also, be aware that Chrome requires this before it will display the install banner, whereas Firefox doesn't require it for showing the home-with-a-plus icon.
+- `start_url`: Provides a path to the asset that should be loaded when the added-to-Home screen app is launched. Note that this has to be a relative URL pointing to the site index, relative to the URL of the manifest. Also, be aware that Chrome requires this before it will display the install banner, whereas Firefox doesn't require it for showing the home-with-a-plus icon.
 
 The manifest for our sample app looks like this:
 
-```js
+```json
 {
   "background_color": "purple",
   "description": "Shows random fox pictures. Hey, at least it isn't cats.",
@@ -107,14 +100,14 @@ As shown in the above manifest listing, we are including a 192 x 192 px icon for
 
 Note that the `type` member in each icon's object specifies the icon's mimetype, so the browser can quickly read what type the icon is, and then ignore it and move to a different icon if it doesn't support it.
 
-In terms of how to design the icon, you should follow the same best practices you'd follow for any Android icon (see the [Android icon design guidelines](https://developer.android.com/guide/practices/ui_guidelines/icon_design.html)).
+In terms of how to design the icon, you should follow the same best practices you'd follow for any Android icon (see the [Google Play icon design specifications](https://developer.android.com/distribute/google-play/resources/icon-design-specifications)).
 
 ### Link the HTML to the manifest
 
 To finish setting up your manifest, you need to reference it from the HTML of your application's home page:
 
 ```html
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest" />
 ```
 
 Browsers that support A2HS will know where to look for your manifest once this is in place.
@@ -155,35 +148,35 @@ At the bottom of our [`index.js` file](https://github.com/mdn/pwa-examples/blob/
 
 ```js
 let deferredPrompt;
-const addBtn = document.querySelector('.add-button');
-addBtn.style.display = 'none';
+const addBtn = document.querySelector(".add-button");
+addBtn.style.display = "none";
 ```
 
 We hide the button initially because the PWA will not be available for install until it follows the A2HS criteria. When this happens, supporting browsers will fire a `beforeinstallprompt` event. We can then use a handler like the one below to handle the installation:
 
 ```js
-window.addEventListener('beforeinstallprompt', (e) => {
+window.addEventListener("beforeinstallprompt", (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   // Update UI to notify the user they can add to home screen
-  addBtn.style.display = 'block';
+  addBtn.style.display = "block";
 
-  addBtn.addEventListener('click', (e) => {
+  addBtn.addEventListener("click", (e) => {
     // hide our user interface that shows our A2HS button
-    addBtn.style.display = 'none';
+    addBtn.style.display = "none";
     // Show the prompt
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
     deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-      });
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted the A2HS prompt");
+      } else {
+        console.log("User dismissed the A2HS prompt");
+      }
+      deferredPrompt = null;
+    });
   });
 });
 ```
@@ -204,11 +197,11 @@ The click handler contains the following steps:
 
 So when the button is clicked, the install prompt appears.
 
-![](chrome-desktop-a2hs-banner.png)
+![Install prompt prompts for installing or cancelling the awesome fox picture.](chrome-desktop-a2hs-banner.png)
 
 If the user selects _Install_, the app is installed (available as standalone desktop app), and the Install button no longer shows (the `onbeforeinstallprompt` event no longer fires if the app is already installed). When you open the app, it will appear in its own window:
 
-![](a2hs-installed-desktop.png)
+![A browser window of the app, displaying an image of a fox in a field](a2hs-installed-desktop.png)
 
 If the user selects _Cancel_, the state of the app goes back to how it was before the button was clicked.
 

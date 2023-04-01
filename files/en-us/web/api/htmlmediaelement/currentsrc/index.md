@@ -1,15 +1,10 @@
 ---
 title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
+page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.currentSrc`** property contains the
@@ -19,7 +14,7 @@ is an empty string if the `networkState` property is `EMPTY`.
 
 ## Value
 
-A {{domxref("DOMString")}} object containing the absolute URL of the chosen media
+A string object containing the absolute URL of the chosen media
 source; this may be an empty string if `networkState` is `EMPTY`;
 otherwise, it will be one of the resources listed by the
 {{domxref("HTMLSourceElement")}} contained within the media element, or the value or src
@@ -28,7 +23,7 @@ if no {{HTMLElement("source")}} element is provided.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.currentSrc); // ""
 ```
 
@@ -42,4 +37,4 @@ console.log(obj.currentSrc); // ""
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.currentSrc` property

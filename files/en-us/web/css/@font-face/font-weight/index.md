@@ -1,15 +1,10 @@
 ---
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
-tags:
-  - '@font-face'
-  - At-rule descriptor
-  - CSS
-  - Reference
-  - descriptor
-  - font-weight
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-weight
 ---
+
 {{CSSRef}}
 
 The **`font-weight`** CSS descriptor allows authors to specify font weights for the fonts specified in the {{cssxref("@font-face")}} rule. The {{cssxref("font-weight")}} property can separately be used to set how thick or thin characters in text should be displayed.
@@ -92,8 +87,8 @@ The following finds a local Open Sans font or imports it, and allows using the f
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: local("Open Sans") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
   font-weight: 400;
 }
 ```
@@ -112,7 +107,6 @@ The following finds a local Open Sans font or imports it, and allows using the f
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

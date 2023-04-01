@@ -1,17 +1,13 @@
 ---
 title: HTMLIFrameElement.csp
 slug: Web/API/HTMLIFrameElement/csp
-tags:
-  - API
-  - CSP
-  - Content Security Policy
-  - HTML DOM
-  - HTMLIFrameElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLIFrameElement.csp
 ---
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`csp`** property of the {{domxref("HTMLIFrameElement")}}
 interface specifies the [Content Security Policy](/en-US/docs/Web/HTTP/CSP) that an

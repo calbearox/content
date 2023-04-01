@@ -1,34 +1,26 @@
 ---
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Experimental
-  - Interface
-  - Media
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
+page-type: web-api-interface
 browser-compat: api.RTCDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannel`** interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an {{DOMxRef("RTCPeerConnection")}}, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser).
 
 To create a data channel and ask a remote peer to join you, call the {{DOMxRef("RTCPeerConnection")}}'s {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method. The peer being invited to exchange data receives a {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event (which has type {{DOMxRef("RTCDataChannelEvent")}}) to let it know the data channel has been added to the connection.
 
+`RTCDataChannel` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
+
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.binaryType", "binaryType")}}
-  - : Is a string specifying the type of object
+  - : A string specifying the type of object
     that should be used to represent binary data received on the `RTCDataChannel`.
     Values are the same as allowed on the {{DOMxRef("WebSocket.binaryType")}} property:
     `blob` if {{DOMxRef("Blob")}} objects are being used,
@@ -74,23 +66,20 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCDataChannel.readyState", "readyState")}} {{ReadOnlyInline}}
   - : Returns a string
     which indicates the state of the data channel's underlying data connection.
-    It can have on of the following values:
+    It can have one of the following values:
     `connecting`, `open`, `closing`, or `closed`.
 
 ### Obsolete properties
 
-- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indicates whether or not the data channel is _reliable_.
-- {{DOMxRef("RTCDataChannel.stream", "stream")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : Returns an ID number (between 0 and 65,535)
-    which uniquely identifies the data channel.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.close", "close()")}}
-  - : Closes the{{domxref("RTCDataChannel")}}.
+  - : Closes the {{domxref("RTCDataChannel")}}.
     Either peer is permitted to call this method
     to initiate closure of the channel.
 - {{DOMxRef("RTCDataChannel.send", "send()")}}
@@ -104,7 +93,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
     falls below the value specified by {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}.
 - {{domxref("RTCDataChannel.close_event", "close")}}
   - : Sent when the underlying data transport closes.
-- {{domxref("RTCDataChannel.closing_event", "closing")}} {{Experimental_inline}}
+- {{domxref("RTCDataChannel.closing_event", "closing")}}
   - : Sent when the underlying data transport is about to start closing.
 - {{domxref("RTCDataChannel.error_event", "error")}}
   - : Sent when an error occurs on the data channel.
@@ -118,23 +107,23 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 ## Data format
 
-The underlying data format is defined by the IEEE draft specification [`draft-ietf-mmusic-sctp-sdp`](https://datatracker.ietf.org/doc/draft-ietf-mmusic-sctp-sdp). The current format specifies its protocol as either `"UDP/DTLS/SCTP"` (UDP carrying DTLS carrying SCTP) or `"TCP/DTLS/SCTP"` (TCP carrying DTLS carrying SCTP). Older browsers may only specify `"DTLS/SCTP"`.
+The underlying data format is defined by the IEEE specification [SDP Offer/Answer Procedures for SCTP over DTLS Transport(RFC 8841)](https://datatracker.ietf.org/doc/rfc8841/). The current format specifies its protocol as either `"UDP/DTLS/SCTP"` (UDP carrying DTLS carrying SCTP) or `"TCP/DTLS/SCTP"` (TCP carrying DTLS carrying SCTP). Older browsers may only specify `"DTLS/SCTP"`.
 
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
-dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+dc.onmessage = (event) => {
+  console.log(`received: ${event.data}`);
 };
 
-dc.onopen = function () {
+dc.onopen = () => {
   console.log("datachannel open");
 };
 
-dc.onclose = function () {
+dc.onclose = () => {
   console.log("datachannel close");
 };
 ```

@@ -1,16 +1,10 @@
 ---
 title: Touch events
 slug: Web/API/Touch_events
-tags:
-  - Advanced
-  - DOM
-  - Event
-  - Guide
-  - Mobile
-  - Overview
-  - touch
+page-type: web-api-overview
 browser-compat: api.Touch
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 To provide quality support for touch-based user interfaces, touch events offer the ability to interpret finger (or stylus) activity on touch screens or trackpads.
@@ -47,8 +41,9 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   Your browser does not support canvas element.
 </canvas>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ```css
@@ -66,12 +61,12 @@ This sets up all the event listeners for our {{HTMLElement("canvas")}} element s
 
 ```js
 function startup() {
-  const el = document.getElementById('canvas');
-  el.addEventListener('touchstart', handleStart);
-  el.addEventListener('touchend', handleEnd);
-  el.addEventListener('touchcancel', handleCancel);
-  el.addEventListener('touchmove', handleMove);
-  log('Initialized.');
+  const el = document.getElementById("canvas");
+  el.addEventListener("touchstart", handleStart);
+  el.addEventListener("touchend", handleEnd);
+  el.addEventListener("touchcancel", handleCancel);
+  el.addEventListener("touchmove", handleMove);
+  log("Initialized.");
 }
 
 document.addEventListener("DOMContentLoaded", startup);
@@ -90,18 +85,18 @@ When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indic
 ```js
 function handleStart(evt) {
   evt.preventDefault();
-  log('touchstart.');
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  log("touchstart.");
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
     log(`touchstart: ${i}.`);
     ongoingTouches.push(copyTouch(touches[i]));
     const color = colorForTouch(touches[i]);
-    log(`color of touch with id ${ touches[i].identifier } = ${ color }`);
+    log(`color of touch with id ${touches[i].identifier} = ${color}`);
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
   }
@@ -119,8 +114,8 @@ Each time one or more fingers move, a {{domxref("Element/touchmove_event", "touc
 ```js
 function handleMove(evt) {
   evt.preventDefault();
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -128,19 +123,21 @@ function handleMove(evt) {
     const idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
-      log(`continuing touch ${ idx }`);
+      log(`continuing touch ${idx}`);
       ctx.beginPath();
-      log(`ctx.moveTo( ${ ongoingTouches[idx].pageX }, ${ ongoingTouches[idx].pageY } );`);
+      log(
+        `ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      log(`ctx.lineTo( ${ touches[i].pageX }, ${ touches[i].pageY } );`);
+      log(`ctx.lineTo( ${touches[i].pageX}, ${touches[i].pageY} );`);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
       ctx.stroke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
+      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
     } else {
-      log('can\'t figure out which touch to continue');
+      log("can't figure out which touch to continue");
     }
   }
 }
@@ -160,8 +157,8 @@ When the user lifts a finger off the surface, a {{domxref("Element/touchend_even
 function handleEnd(evt) {
   evt.preventDefault();
   log("touchend");
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -174,10 +171,10 @@ function handleEnd(evt) {
       ctx.beginPath();
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
-      ongoingTouches.splice(idx, 1);  // remove it; we're done
+      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // and a square at the end
+      ongoingTouches.splice(idx, 1); // remove it; we're done
     } else {
-      log('can\'t figure out which touch to end');
+      log("can't figure out which touch to end");
     }
   }
 }
@@ -192,12 +189,12 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 ```js
 function handleCancel(evt) {
   evt.preventDefault();
-  log('touchcancel.');
+  log("touchcancel.");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
     let idx = ongoingTouchIndexById(touches[i].identifier);
-    ongoingTouches.splice(idx, 1);  // remove it; we're done
+    ongoingTouches.splice(idx, 1); // remove it; we're done
   }
 }
 ```
@@ -221,7 +218,7 @@ function colorForTouch(touch) {
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
-  const color = "#" + r + g + b;
+  const color = `#${r}${g}${b}`;
   return color;
 }
 ```
@@ -248,11 +245,11 @@ function ongoingTouchIndexById(idToFind) {
   for (let i = 0; i < ongoingTouches.length; i++) {
     const id = ongoingTouches[i].identifier;
 
-    if (id == idToFind) {
+    if (id === idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 
@@ -260,11 +257,9 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  const container = document.getElementById('log');
-  container.textContent = `${ msg } \n${ container.textContent }`;
+  const container = document.getElementById("log");
+  container.textContent = `${msg} \n${container.textContent}`;
 }
-
-
 ```
 
 ### Result
@@ -276,7 +271,7 @@ You can test this example on mobile devices by touching the box below.
 > **Note:** More generally, the example will work on platforms that provide touch events.
 > You can test this on desktop platforms that can simulate such events:
 >
-> - On Firefox enable "touch simulation" in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#toggling_responsive_design_mode) (you may need to reload the page).
+> - On Firefox enable "touch simulation" in [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#toggling-responsive-design-mode) (you may need to reload the page).
 > - On Chrome use [Device mode](https://developer.chrome.com/docs/devtools/device-mode/) and set the [Device type](https://developer.chrome.com/docs/devtools/device-mode/#type) to one that sends touch events.
 
 ## Additional tips
@@ -285,12 +280,15 @@ This section provides additional tips on how to handle touch events in your web 
 
 ### Handling clicks
 
-Since calling `preventDefault()` on a {{domxref("Element/touchstart_event", "touchstart")}} or the first {{domxref("Element/touchmove_event", "touchmove")}} event of a series prevents the corresponding mouse events from firing, it's common to call `preventDefault()` on `touchmove` rather than `touchstart`. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to refiring touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)
+Since calling `preventDefault()` on a {{domxref("Element/touchstart_event", "touchstart")}} or the first {{domxref("Element/touchmove_event", "touchmove")}} event of a series prevents the corresponding mouse events from firing, it's common to call `preventDefault()` on `touchmove` rather than `touchstart`. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to re-firing touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)
 
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type === "touchend" && evt.touches.length > 0)
+  )
     return;
 
   const newEvt = document.createEvent("MouseEvents");
@@ -312,9 +310,23 @@ function onTouch(evt) {
       break;
   }
 
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shiftKey,
+    evt.metaKey,
+    0,
+    null
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```
@@ -329,8 +341,6 @@ One technique for preventing things like `pinchZoom` on a page is to call `preve
 
 ## Browser compatibility
 
-### Touch
-
 Touch events are typically available on devices with a touch screen, but many browsers make the touch events API unavailable on all desktop devices, even those with touch screens.
 
 The reason for this is that some websites use the availability of parts of the touch events API as an indicator that the browser is running on a mobile device. If the touch events API is available, these websites will assume a mobile device and serve mobile-optimized content. This may then provide a poor experience for users of desktop devices that have touch screens.
@@ -338,11 +348,3 @@ The reason for this is that some websites use the availability of parts of the t
 To support both touch and mouse across all types of devices, use [pointer events](/en-US/docs/Web/API/Pointer_events) instead.
 
 {{Compat}}
-
-### Firefox, touch events, and multiprocess (e10s)
-
-In Firefox, touch events are disabled when e10s (electrolysis; [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox)) is disabled. e10s is on by default in Firefox but can end up becoming disabled in certain situations, for example when certain accessibility tools or Firefox add-ons are installed that require e10s to be disabled to work. This means that even on a touchscreen-enabled desktop/laptop, touch events won't be enabled.
-
-You can test whether e10s is disabled by going to `about:support` and looking at the "Multiprocess Windows" entry in the "Application Basics" section. 1/1 means it is enabled, 0/1 means disabled.
-
-If you want to force e10s to be on — to explicitly re-enable touch events support — you need to go to `about:config` and create a new Boolean preference `browser.tabs.remote.force-enable`. Set it to `true`, restart the browser, and e10s will be enabled regardless of any other settings.

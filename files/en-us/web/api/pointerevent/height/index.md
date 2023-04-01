@@ -1,15 +1,10 @@
 ---
 title: PointerEvent.height
 slug: Web/API/PointerEvent/height
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.PointerEvent.height
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`height`** read-only property of the

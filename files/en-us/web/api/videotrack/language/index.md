@@ -1,20 +1,10 @@
 ---
-title: Videotrack.language
+title: VideoTrack.language
 slug: Web/API/VideoTrack/language
-tags:
-  - API
-  - HTML DOM
-  - Language
-  - Localization
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrack
-  - track
+page-type: web-api-instance-property
 browser-compat: api.VideoTrack.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrack")}}**
@@ -27,7 +17,7 @@ should be the video's primary language.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
+A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of
 the primary language used in the video track, or an empty string (`""`) if
 the language is not specified or known, or if the track doesn't contain speech.
 

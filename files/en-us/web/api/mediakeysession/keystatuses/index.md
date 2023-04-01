@@ -1,17 +1,10 @@
 ---
 title: MediaKeySession.keyStatuses
 slug: Web/API/MediaKeySession/keyStatuses
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Experimental
-  - MediaKeySession
-  - NeedsExample
-  - Property
-  - Reference
-  - keyStatuses
+page-type: web-api-instance-property
 browser-compat: api.MediaKeySession.keyStatuses
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeySession.keyStatuses`** read-only property

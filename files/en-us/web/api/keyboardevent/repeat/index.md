@@ -1,16 +1,11 @@
 ---
 title: KeyboardEvent.repeat
 slug: Web/API/KeyboardEvent/repeat
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.repeat
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`repeat`** read-only property of the
 {{domxref("KeyboardEvent")}} interface returns a boolean value that is
@@ -19,7 +14,7 @@ repeating.
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Specifications
 

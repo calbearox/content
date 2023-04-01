@@ -1,17 +1,11 @@
 ---
 title: AudioWorkletProcessor.port
 slug: Web/API/AudioWorkletProcessor/port
-tags:
-  - API
-  - Audio
-  - AudioWorkletProcessor
-  - Experimental
-  - Property
-  - Reference
-  - Web Audio API
+page-type: web-api-instance-property
 browser-compat: api.AudioWorkletProcessor.port
 ---
-{{APIRef("Web Audio API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Audio API")}}
 
 The read-only **`port`** property of the
 {{domxref("AudioWorkletProcessor")}} interface returns the associated
@@ -40,5 +34,4 @@ See [`AudioWorkletNode.port`](/en-US/docs/Web/API/AudioWorkletNode/port#examples
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

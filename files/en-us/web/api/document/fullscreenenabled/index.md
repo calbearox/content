@@ -1,19 +1,10 @@
 ---
 title: Document.fullscreenEnabled
 slug: Web/API/Document/fullscreenEnabled
-tags:
-  - API
-  - Document
-  - Fullscreen
-  - Fullscreen API
-  - Property
-  - Read-only
-  - Reference
-  - fullscreen
-  - fullscreenEnabled
-  - screen
+page-type: web-api-instance-property
 browser-compat: api.Document.fullscreenEnabled
 ---
+
 {{APIRef("Fullscreen API")}}
 
 The read-only **`fullscreenEnabled`**
@@ -22,7 +13,7 @@ mode is available.
 
 fullscreen mode is available only for a page that has no
 windowed plug-ins in any of its documents, and if all {{HTMLElement("iframe")}} elements
-which contain the document have their {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+which contain the document have their [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
 attribute set.
 
 Although this property is read-only, it will not throw if it is modified (even in
@@ -42,11 +33,11 @@ In this example, before attempting to request fullscreen mode for a
 checked, in order to avoid making the attempt when not available.
 
 ```js
-function requestFullScreen() {
+function requestFullscreen() {
   if (document.fullscreenEnabled) {
-    videoElement.requestFullScreen();
+    videoElement.requestFullscreen();
   } else {
-    console.log('Your browser cannot use fullscreen right now');
+    console.log("Your browser cannot use fullscreen right now");
   }
 }
 ```
@@ -67,5 +58,5 @@ function requestFullScreen() {
 - {{domxref("Document.exitFullscreen()")}}
 - {{domxref("Document.fullscreenElement")}}
 - {{cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- The {{HTMLElement("iframe")}} {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- The {{HTMLElement("iframe")}} [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
   attribute

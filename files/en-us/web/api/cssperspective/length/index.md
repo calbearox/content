@@ -1,18 +1,11 @@
 ---
 title: CSSPerspective.length
 slug: Web/API/CSSPerspective/length
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPerspective
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.CSSPerspective.length
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`length`** property of the
 {{domxref("CSSPerspective")}} interface sets the distance from z=0.

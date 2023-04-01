@@ -1,17 +1,12 @@
 ---
 title: USBDevice.deviceVersionMinor
 slug: Web/API/USBDevice/deviceVersionMinor
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - deviceVersionMinor
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.USBDevice.deviceVersionMinor
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`deviceVersionMinor`** read only property of the

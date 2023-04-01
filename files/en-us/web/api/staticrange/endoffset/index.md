@@ -1,20 +1,10 @@
 ---
 title: StaticRange.endOffset
 slug: Web/API/StaticRange/endOffset
-tags:
-  - API
-  - DOM
-  - DOM API
-  - Property
-  - Read-only
-  - Reference
-  - Static Range API
-  - StaticRange
-  - endOffset
-  - offset
-  - startContainer
+page-type: web-api-instance-property
 browser-compat: api.StaticRange.endOffset
 ---
+
 {{APIRef("DOM")}}
 
 The **`endOffset`** property of the {{domxref("StaticRange")}}

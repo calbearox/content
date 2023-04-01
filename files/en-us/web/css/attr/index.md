@@ -1,21 +1,19 @@
 ---
 title: attr()
 slug: Web/CSS/attr
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - attr
+page-type: css-function
 browser-compat: css.types.attr
 ---
+
 {{CSSRef}}
 
 > **Note:** The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
 
 The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the value of the attribute on the pseudo-element's originating element is returned.
+
+{{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
+
+## Syntax
 
 ```css
 /* Simple usage */
@@ -33,8 +31,6 @@ attr(src url, "");
 attr(data-width px, inherit);
 attr(data-something, "default");
 ```
-
-## Syntax
 
 ### Values
 
@@ -62,7 +58,7 @@ attr(data-something, "default");
         Relative URL are resolved relatively to the original document, not relatively to the style sheet.
         Leading and trailing spaces are stripped.
 
-        Default value: the url `about:invalid` that points to a non-existent document with a generic error condition.
+        Default value: the URL `about:invalid` that points to a non-existent document with a generic error condition.
 
     - `integer` {{Experimental_Inline}}
 
@@ -117,7 +113,7 @@ attr(data-something, "default");
 
     - `s`, `ms` {{Experimental_Inline}}
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an{{CSSxRef("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
+      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an {{CSSxRef("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
         Leading and trailing spaces are stripped.
 
         Default value: `0s`, or, if `0s` is not a valid value for the property, the property's minimum value.
@@ -179,7 +175,10 @@ attr(data-something, "default");
 #### HTML
 
 ```html
-<div class="background" data-background="lime">background expected to be red if your browser does not support advanced usage of attr()</div>
+<div class="background" data-background="lime">
+  background expected to be red if your browser does not support advanced usage
+  of attr()
+</div>
 ```
 
 #### CSS

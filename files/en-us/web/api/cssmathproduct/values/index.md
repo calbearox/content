@@ -1,19 +1,11 @@
 ---
 title: CSSMathProduct.values
 slug: Web/API/CSSMathProduct/values
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathProduct
-  - CSSUnparsedValue
-  - Experimental
-  - Houdini
-  - Property
-  - Reference
-  - values
+page-type: web-api-instance-property
 browser-compat: api.CSSMathProduct.values
 ---
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathProduct.values`** read-only
 property of the {{domxref("CSSMathProduct")}} interface returns a

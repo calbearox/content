@@ -1,15 +1,10 @@
 ---
 title: WorkerNavigator.storage
 slug: Web/API/WorkerNavigator/storage
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Secure context
-  - Storage
+page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.storage
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`WorkerNavigator.storage`**

@@ -1,19 +1,11 @@
 ---
 title: SecurityPolicyViolationEvent.columnNumber
 slug: Web/API/SecurityPolicyViolationEvent/columnNumber
-tags:
-  - API
-  - CSP
-  - Experimental
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - columnNumber
+page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.columnNumber
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+
+{{HTTPSidebar}}
 
 The **`columnNumber`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is the column number in the

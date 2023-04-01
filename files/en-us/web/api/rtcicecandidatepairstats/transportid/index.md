@@ -1,23 +1,10 @@
 ---
 title: RTCIceCandidatePairStats.transportId
 slug: Web/API/RTCIceCandidatePairStats/transportId
-tags:
-  - API
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - RTCIceTransport
-  - Reference
-  - Statistics
-  - Stats
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - id
-  - transportID
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.transportId
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`transportId`** property
@@ -27,7 +14,7 @@ the transport-related statistics contained in the
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the `RTCIceTransport`
+A string which uniquely identifies the `RTCIceTransport`
 object from which the transport-related data was obtained for the statistics contained
 in this {{domxref("RTCIceCandidatePairStats")}} object.
 

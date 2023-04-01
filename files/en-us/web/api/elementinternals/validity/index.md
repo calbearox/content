@@ -1,14 +1,10 @@
 ---
 title: ElementInternals.validity
 slug: Web/API/ElementInternals/validity
-tags:
-  - API
-  - Property
-  - Reference
-  - validity
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.validity
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`validity`** read-only property of the {{domxref("ElementInternals")}} interface returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
@@ -33,12 +29,12 @@ class CustomCheckbox extends HTMLElement {
   constructor() {
     super();
     this.internals_ = this.attachInternals();
-
-    /* ... */
-
   }
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
+
+  // …
+}
+
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
 let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.validity.valid);

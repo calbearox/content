@@ -1,28 +1,10 @@
 ---
 title: XRInputSourceEvent.inputSource
 slug: Web/API/XRInputSourceEvent/inputSource
-tags:
-  - API
-  - AR
-  - Controller
-  - Input
-  - Mixed
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceEvent
-  - augmented
-  - inputSource
-  - source
+page-type: web-api-instance-property
 browser-compat: api.XRInputSourceEvent.inputSource
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRInputSourceEvent")}} interface's read-only
@@ -46,10 +28,10 @@ input devices. The device type is identified by looking at the
 {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} property.
 
 ```js
-xrSession.onselect = event => {
+xrSession.onselect = (event) => {
   let source = event.inputSource;
 
-  if (source.targetRayMode == "gaze") {
+  if (source.targetRayMode === "gaze") {
     /* handle selection using a gaze input */
   }
 };

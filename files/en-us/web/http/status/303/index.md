@@ -1,13 +1,9 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Status/303
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - redirects
 browser-compat: http.status.303
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`303 See Other`**
@@ -17,7 +13,7 @@ redirected page is always {{HTTPMethod("GET")}}.
 
 ## Status
 
-```
+```http
 303 See Other
 ```
 
@@ -31,6 +27,6 @@ redirected page is always {{HTTPMethod("GET")}}.
 
 ## See also
 
-- {{HTTPStatus("302", "302 Found")}}, the temporary redirect
-- {{HTTPStatus("307", "307 Temporary Redirect")}}, the equivalent of this status code
+- {{HTTPStatus("302", "302 Found")}}, a temporary redirect
+- {{HTTPStatus("307", "307 Temporary Redirect")}}, a temporary redirect
   where the method used never changes.

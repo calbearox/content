@@ -1,15 +1,9 @@
 ---
-title: 'ARIA: tree role'
+title: "ARIA: tree role"
 slug: Web/Accessibility/ARIA/Roles/tree_role
-tags: 
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - Tree role
-  - composite widget role
-  - needs example
+spec-urls:
+  - https://w3c.github.io/aria/#tree
+  - https://w3c.github.io/aria-practices/#TreeView
 ---
 
 A `tree` is a widget that allows the user to select one or more items from a hierarchically organized collection.
@@ -18,7 +12,7 @@ A `tree` is a widget that allows the user to select one or more items from a hie
 
 A `tree` widget is a hierarchical list with parent and child nodes that can expand and collapse. Any item in the hierarchy may have child tree items, set with [`role="treeitem"`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role). Tree items that have children can be expanded or collapsed, showing and hiding their children.
 
-An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Folder items can be expanded to reveal the contents of the folder -- which may be files, folders, or both -- and collapsed, hiding its contents.
+An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Folder items can be expanded to reveal the contents of the folder — which may be files, folders, or both — and collapsed, hiding its contents.
 
 ARIA tree views are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, before creating a tree view, consider alternative options to address the functionality you need.
 
@@ -28,7 +22,7 @@ ARIA tree views are navigated primarily with arrow keys on the keyboard instead 
 
 Trees can be "single-select", allowing users to choose just one item for an action, or "multi-select", where users are able to select more than one item for an action. In multi-select trees, the `tree` has [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) set to true. Otherwise, `aria-multiselectable` is either set to `false` or the default value of `false` is implied. In both cases, to be keyboard accessible, focus must be managed for all tree descendants.
 
-In some implementations of single-select tree, the focused item also has a selected state; this is known as "selection follows focus".   When a single-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first node. If a tree item is selected before the tree receives focus, focus is set on the selected tree item. In single-select trees, [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) is set to `true` for the selected tree items and it is not present on any other tree item in the tree.
+In some implementations of single-select tree, the focused item also has a selected state; this is known as "selection follows focus". When a single-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first node. If a tree item is selected before the tree receives focus, focus is set on the selected tree item. In single-select trees, [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) is set to `true` for the selected tree items and it is not present on any other tree item in the tree.
 
 In multi-select trees, all selected tree items have `aria-selected="true"` set and all tree item nodes that are selectable but not currently selected have `aria-selected="false"` set. Do not includes the `aria-selected` attribute on tree items that are not selectable.
 
@@ -40,11 +34,11 @@ In multi-select trees, the selected state is always independent of the focus. Fo
 
 In a tree view, the `tree` node is the root node; it can have child, grandchild, and further descendant `treeitem` nodes.
 
-Each element serving as a tree node has role `treeitem`, except for the root tree node which has a role of `tree`.  A `tree` does not have a parent `tree` node - it is the root node. If a node is both nested in a tree and has descendant tree items, then it has the role `treeitem` and the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute; `aria-expanded="false"` is set when the node is in a closed state, `aria-expanded="true"` is set when the node is in an open state.
+Each element serving as a tree node has role `treeitem`, except for the root tree node which has a role of `tree`. A `tree` does not have a parent `tree` node - it is the root node. If a node is both nested in a tree and has descendant tree items, then it has the role `treeitem` and the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute; `aria-expanded="false"` is set when the node is in a closed state, `aria-expanded="true"` is set when the node is in an open state.
 
 `treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) element, which, when nested in a `tree` is an expandable collections of treeitem elements.
 
-Do not include `aria-expanded` on end nodes -- those without tree item children -- as that would incorrectly describe the node as a parent node to assistive technologies.
+Do not include `aria-expanded` on end nodes — those without tree item children — as that would incorrectly describe the node as a parent node to assistive technologies.
 
 ### DOM placement and presence
 
@@ -85,7 +79,7 @@ For a vertically oriented `tree`, which is the default orientation:
 <td>
 <ul>
 <li>When focus is on a closed node, opens the node; focus does not move.
-<li>When focus is on a open node, moves focus to the first child node.
+<li>When focus is on an open node, moves focus to the first child node.
 <li>When focus is on an end node (a tree item with no children), does nothing.
 </td>
 </tr>
@@ -145,7 +139,7 @@ For a vertically oriented `tree`, which is the default orientation:
 
 There are two interaction models for multi-select trees: While you can require that users press a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd> while navigating the list in order to avoid losing selection states, the model that does not require the user to hold a modifier key is recommended.
 
-#### Recommended multi user select model:
+#### Recommended multi user select model
 
 <table>
 <tr>
@@ -238,10 +232,7 @@ The alternative multi-selection model is a modifier key model in which moving fo
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#tree","ARIA: tree role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#TreeView","tree view")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 
@@ -249,6 +240,6 @@ The alternative multi-selection model is a modifier key model in which moving fo
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

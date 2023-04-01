@@ -1,14 +1,10 @@
 ---
-title: 'MediaKeySession: keystatuseschange event'
+title: "MediaKeySession: keystatuseschange event"
 slug: Web/API/MediaKeySession/keystatuseschange_event
-tags:
-  - keystatuseschange
-  - API
-  - Event
-  - Reference
-  - MediaKeySession
+page-type: web-api-event
 browser-compat: api.MediaKeySession.keystatuseschange_event
 ---
+
 {{APIRef("Encrypted Media Extensions")}}
 
 The **`keystatuseschange`** event of the {{domxref("MediaKeySession")}} API fires when there has been a change in the keys or their statuses within a session.
@@ -18,9 +14,9 @@ The **`keystatuseschange`** event of the {{domxref("MediaKeySession")}} API fire
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('keystatuseschange', event => { });
+addEventListener("keystatuseschange", (event) => {});
 
-onkeystatuseschange = event => { };
+onkeystatuseschange = (event) => {};
 ```
 
 ## Event type
@@ -31,7 +27,7 @@ An {{domxref("ExtendableEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-{{page("/en-US/docs/Web/API/ExtendableEvent", "Properties")}}
+_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
 
 ## Specifications
 

@@ -1,22 +1,10 @@
 ---
 title: RTCIceCandidate.component
 slug: Web/API/RTCIceCandidate/component
-tags:
-  - API
-  - ICE
-  - Property
-  - RTCIceCandidate
-  - RTCP
-  - RTP
-  - Read-only
-  - Reference
-  - SDP
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - component
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.component
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`component`** property
@@ -57,9 +45,9 @@ This code snippet examines a candidate's component type and dispatches the candi
 different handlers depending on the value.
 
 ```js
-if (candidate.component == "rtp") {
+if (candidate.component === "rtp") {
   handleRTPCandidate(candidate);
-} else if (candidate.component == "rtcp") {
+} else if (candidate.component === "rtcp") {
   handleRTCPCandidate(candidate);
 } else {
   handleUnknownCandidate(candidate);

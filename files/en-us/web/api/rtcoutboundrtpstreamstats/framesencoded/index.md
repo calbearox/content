@@ -1,24 +1,10 @@
 ---
 title: RTCOutboundRtpStreamStats.framesEncoded
 slug: Web/API/RTCOutboundRtpStreamStats/framesEncoded
-tags:
-  - API
-  - Encoding
-  - Frames
-  - Media
-  - Property
-  - RTCOutboundRtpStreamStats
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - encode
-  - framesEncoded
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.framesEncoded
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`framesEncoded`** property of

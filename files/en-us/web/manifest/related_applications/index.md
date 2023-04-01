@@ -1,23 +1,18 @@
 ---
 title: related_applications
 slug: Web/Manifest/related_applications
-tags:
-  - Manifest
-  - Web
-  - related_applications
+status:
+  - experimental
 browser-compat: html.manifest.related_applications
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type</th>
       <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -37,6 +32,9 @@ The `related_applications` field is an array of objects specifying native applic
   }, {
     "platform": "itunes",
     "url": "https://itunes.apple.com/app/example-app1/id123456789"
+  }, {
+    "platform": "windows",
+    "url": "https://apps.microsoft.com/store/detail/example-app1/id123456789"
   }
 ]
 ```

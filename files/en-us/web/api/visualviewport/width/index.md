@@ -1,16 +1,10 @@
 ---
 title: VisualViewport.width
 slug: Web/API/VisualViewport/width
-tags:
-  - API
-  - Property
-  - Reference
-  - Visual Viewport API
-  - VisualViewport
-  - viewport
-  - width
+page-type: web-api-instance-property
 browser-compat: api.VisualViewport.width
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`width`** read-only property of the

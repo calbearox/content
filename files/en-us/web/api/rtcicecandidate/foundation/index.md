@@ -1,21 +1,10 @@
 ---
 title: RTCIceCandidate.foundation
 slug: Web/API/RTCIceCandidate/foundation
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - foundation
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.foundation
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}**
@@ -27,7 +16,7 @@ multiple {{domxref("RTCIceTransport")}} objects
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the candidate across all
+A string which uniquely identifies the candidate across all
 `RTCIceTransport`s on which it is available.
 
 > **Note:** If `port` is `null` — and
@@ -52,7 +41,7 @@ This code snippet uses the `foundation` of two candidates to determine if
 they're actually the same candidate.
 
 ```js
-if (candidate1.foundation == candidate2.foundation) {
+if (candidate1.foundation === candidate2.foundation) {
   /* the two candidates are the same, even if they're on
      different transports */
 }

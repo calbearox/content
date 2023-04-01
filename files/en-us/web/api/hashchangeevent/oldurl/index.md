@@ -1,14 +1,10 @@
 ---
 title: HashChangeEvent.oldURL
 slug: Web/API/HashChangeEvent/oldURL
-tags:
-  - API
-  - HashChangeEvent
-  - Property
-  - Reference
-  - Web API
+page-type: web-api-instance-property
 browser-compat: api.HashChangeEvent.oldURL
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`oldURL`** read-only property of the
@@ -17,13 +13,13 @@ was navigated.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
 ```js
-window.addEventListener('hashchange', function(event) {
-  console.log('Hash changed from ' + event.oldURL);
+window.addEventListener("hashchange", (event) => {
+  console.log(`Hash changed from ${event.oldURL}`);
 });
 ```
 

@@ -1,18 +1,12 @@
 ---
 title: GamepadPose.position
 slug: Web/API/GamepadPose/position
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Position
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.GamepadPose.position
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`position`** read-only property of the {{domxref("GamepadPose")}} interface returns the position of the {{domxref("Gamepad")}} as a 3D vector.

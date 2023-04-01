@@ -1,20 +1,12 @@
 ---
 title: RTCIceCandidatePairStats.priority
 slug: Web/API/RTCIceCandidatePairStats/priority
-tags:
-  - API
-  - ICE
-  - Deprecated
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - priority
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.RTCIceCandidatePairStats.priority
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}

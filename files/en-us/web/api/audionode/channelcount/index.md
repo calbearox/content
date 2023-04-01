@@ -1,15 +1,10 @@
 ---
 title: AudioNode.channelCount
 slug: Web/API/AudioNode/channelCount
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - channelCount
+page-type: web-api-instance-property
 browser-compat: api.AudioNode.channelCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`channelCount`** property of the {{ domxref("AudioNode") }} interface represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node.
@@ -27,12 +22,10 @@ An integer.
 ## Examples
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
-var audioCtx = new AudioContext();
-
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillator = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);

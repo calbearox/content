@@ -1,17 +1,10 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - JavaScript
-  - Media Queries
-  - Method
-  - Reference
-  - Window
+page-type: web-api-instance-method
 browser-compat: api.Window.matchMedia
 ---
+
 {{APIRef}}
 
 The {{domxref("Window")}} interface's **`matchMedia()`** method
@@ -22,8 +15,8 @@ media query.
 
 ## Syntax
 
-```js
-mqList = window.matchMedia(mediaQueryString)
+```js-nolint
+matchMedia(mediaQueryString)
 ```
 
 ### Parameters
@@ -62,7 +55,7 @@ than or equal to 600 pixels wide, and will say "false" if the window is wider th
 ### JavaScript
 
 ```js
-let mql = window.matchMedia('(max-width: 600px)');
+let mql = window.matchMedia("(max-width: 600px)");
 
 document.querySelector(".mq-value").innerText = mql.matches;
 ```
@@ -95,8 +88,7 @@ A simple `<span>` to receive the output.
 
 {{EmbedLiveSample("Examples", "100%", "60")}}
 
-See [Testing media
-queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for additional code examples.
+See [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for additional code examples.
 
 ## Specifications
 

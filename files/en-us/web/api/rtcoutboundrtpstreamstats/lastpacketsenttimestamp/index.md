@@ -1,22 +1,10 @@
 ---
 title: RTCOutboundRtpStreamStats.lastPacketSentTimestamp
 slug: Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp
-tags:
-  - API
-  - Packet
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - lastPacketSentTImestamp
-  - timeStamp
+page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.lastPacketSentTimestamp
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`lastPacketSentTimestamp`**
@@ -30,8 +18,7 @@ remote receiver.
 A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most
 recently received packet arrived on this RTP stream.
 
-> **Note:** This value differs from the {{domxref("RTCStats.timestamp",
-    "timestamp")}}, which represents the time at which the statistics object was created.
+> **Note:** This value differs from the {{domxref("RTCStats.timestamp", "timestamp")}}, which represents the time at which the statistics object was created.
 
 ## Specifications
 

@@ -1,17 +1,10 @@
 ---
 title: SpeechSynthesisUtterance.pitch
 slug: Web/API/SpeechSynthesisUtterance/pitch
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisUtterance
-  - Web Speech API
-  - pitch
-  - speech
-  - synthesis
+page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.pitch
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`pitch`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the pitch at which the utterance will be spoken at.
@@ -27,30 +20,31 @@ If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be o
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   utterThis.pitch = 1.5;
   synth.speak(utterThis);
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

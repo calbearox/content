@@ -1,16 +1,12 @@
 ---
 title: Navigator.connection
 slug: Web/API/Navigator/connection
-tags:
-  - API
-  - Connection
-  - Experimental
-  - Navigator
-  - Network Information API
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Navigator.connection
 ---
+
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
 The **`Navigator.connection`** read-only property returns a {{domxref("NetworkInformation")}} object containing information about the system's connection, such as the current bandwidth of the user's device or whether the connection is metered.
@@ -31,4 +27,4 @@ A {{domxref("NetworkInformation")}} object.
 
 ## See also
 
-- [Online and offline events](/en-US/docs/Web/API/Navigator/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)

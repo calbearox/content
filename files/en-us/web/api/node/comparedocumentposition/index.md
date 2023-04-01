@@ -1,11 +1,10 @@
 ---
 title: Node.compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Node.compareDocumentPosition
 ---
+
 {{APIRef("DOM")}}
 
 The **`compareDocumentPosition()`** method of the {{domxref("Node")}} interface
@@ -13,8 +12,8 @@ reports the position of its argument node relative to the node on which it is ca
 
 ## Syntax
 
-```js
-compareDocumentPosition(otherNode);
+```js-nolint
+compareDocumentPosition(otherNode)
 ```
 
 ### Parameters
@@ -54,9 +53,9 @@ const head = document.head;
 const body = document.body;
 
 if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
-  console.log('Well-formed document');
+  console.log("Well-formed document");
 } else {
-  console.error('<head> is not before <body>');
+  console.error("<head> is not before <body>");
 }
 ```
 

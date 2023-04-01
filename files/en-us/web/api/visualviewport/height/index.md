@@ -1,16 +1,10 @@
 ---
 title: VisualViewport.height
 slug: Web/API/VisualViewport/height
-tags:
-  - API
-  - Property
-  - Reference
-  - Visual Viewport API
-  - VisualViewport
-  - height
-  - viewport
+page-type: web-api-instance-property
 browser-compat: api.VisualViewport.height
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`height`** read-only property of the

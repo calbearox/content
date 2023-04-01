@@ -1,14 +1,10 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - CSS
-  - CSS Lists
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.list-style-image
 ---
+
 {{CSSRef}}
 
 The **`list-style-image`** [CSS](/en-US/docs/Web/CSS) property sets an image to be used as the list item marker.
@@ -17,7 +13,7 @@ It is often more convenient to use the shorthand {{ cssxref("list-style") }}.
 
 {{EmbedInteractiveExample("pages/css/list-style-image.html")}}
 
-> **Note:** This property is applied to list items, i.e. elements with `{{cssxref("display")}}: list-item;` [by default](https://www.w3.org/TR/html5/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.
+> **Note:** This property is applied to list items, i.e. elements with `{{cssxref("display")}}: list-item;` [by default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.
 
 ## Syntax
 
@@ -26,7 +22,7 @@ It is often more convenient to use the shorthand {{ cssxref("list-style") }}.
 list-style-image: none;
 
 /* <url> values */
-list-style-image: url('starsolid.gif');
+list-style-image: url("starsolid.gif");
 
 /* valid image values */
 list-style-image: linear-gradient(to left bottom, red, blue);

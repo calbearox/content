@@ -1,15 +1,10 @@
 ---
 title: overscroll-behavior-x
 slug: Web/CSS/overscroll-behavior-x
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - overscroll-behavior-x
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.overscroll-behavior-x
 ---
+
 {{CSSRef}}
 
 The **`overscroll-behavior-x`** CSS property sets the browser's behavior when the horizontal boundary of a scrolling area is reached.

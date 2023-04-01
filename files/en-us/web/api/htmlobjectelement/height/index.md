@@ -1,26 +1,20 @@
 ---
 title: HTMLObjectElement.height
 slug: Web/API/HTMLObjectElement/height
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - height
+page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.height
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`height`** property of the
-{{domxref("HTMLObjectElement")}} interface Returns a {{domxref("DOMString")}} that
-reflects the {{htmlattrxref("height", "object")}} HTML attribute, specifying the
+{{domxref("HTMLObjectElement")}} interface Returns a string that
+reflects the [`height`](/en-US/docs/Web/HTML/Element/object#height) HTML attribute, specifying the
 displayed height of the resource in CSS pixels.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

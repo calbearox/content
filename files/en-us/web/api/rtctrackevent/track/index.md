@@ -1,21 +1,10 @@
 ---
 title: RTCTrackEvent.track
 slug: Web/API/RTCTrackEvent/track
-tags:
-  - API
-  - Media
-  - Property
-  - RTCTrackEvent
-  - RTP
-  - Read-only
-  - Reference
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - events
-  - track
+page-type: web-api-instance-property
 browser-compat: api.RTCTrackEvent.track
 ---
+
 {{APIRef("WebRTC")}}
 
 The [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

@@ -1,17 +1,9 @@
 ---
 title: Internationalization
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
-tags:
-  - Article
-  - Guide
-  - Internationalization
-  - Localization
-  - WebExtensions
-  - i18n
-  - messages.json
-  - placeholders
-  - predefined messages
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as [i18n.js](http://i18njs.com/).
@@ -115,7 +107,7 @@ To internationalize strings, specify them like this:
 "description": "__MSG_extensionDescription__",
 ```
 
-Here, we are retrieving message strings dependant on the browser's locale, rather than just including static strings.
+Here, we are retrieving message strings dependent on the browser's locale, rather than just including static strings.
 
 To call a message string like this, you need to specify it like this:
 
@@ -181,7 +173,7 @@ The first one just retrieves the `notificationTitle message` field from the avai
 }
 ```
 
-The `"placeholders"` member defines all the placeholders, and where they are retrieved from. The `"url"` placeholder specifies that its content is taken from $1, which is the first value given inside the second parameter of `getMessage()`. Since the placeholder is called `"url"`, we use `$URL$` to call it inside the actual message string (so for `"name"` you'd use `$NAME$`, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — `[a, b, c]`will be available as`$1`, `$2`, and `$3`, and so on, inside `messages.json`.
+The `"placeholders"` member defines all the placeholders, and where they are retrieved from. The `"url"` placeholder specifies that its content is taken from $1, which is the first value given inside the second parameter of `getMessage()`. Since the placeholder is called `"url"`, we use `$URL$` to call it inside the actual message string (so for `"name"` you'd use `$NAME$`, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — `[a, b, c]` will be available as `$1`, `$2`, and `$3`, and so on, inside `messages.json`.
 
 Let's run through an example: the original `notificationContent` message string in the `en/messages.json` file is
 
@@ -206,7 +198,7 @@ It is possible to insert your variables (`$1`, `$2`, `$3`, etc.) directly into t
 }
 ```
 
-This may seem quicker and less complex, but the other way (using `"placeholders"`) is seen as best practice. This is because having the placeholder name (e.g. `"url"`) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what `$1`–`$8` refer to, but you'll be more likely to know what your placeholder names refer to.
+This may seem quicker and less complex, but the other way (using `"placeholders"`) is seen as best practice. This is because having the placeholder name (e.g. `"url"`) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what `$1` – `$8` refer to, but you'll be more likely to know what your placeholder names refer to.
 
 ### Hardcoded substitution
 
@@ -247,19 +239,19 @@ Take the following example:
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "colour", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "colour", "description": "Color." }, /* … */ }`
 
       en
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "color", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
 
     - fr
 
       - messages.json
 
-        - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, ...}`
+        - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
 
 Suppose the `default_locale` is set to `fr`, and the browser's current locale is `en_GB`:
 
@@ -305,7 +297,7 @@ The following table shows the different available predefined messages:
           the
           <a
             href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-            >applications</a
+            >browser_specific_settings</a
           >
           key in manifest.json. It's the generated UUID that appears in the
           add-on's URL. This means that you can't use this value as the
@@ -404,6 +396,6 @@ To test your extension's localization, you use [Firefox](https://www.mozilla.org
 
 Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
 
-Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place.
+Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place.
 
 If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.

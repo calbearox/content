@@ -1,22 +1,10 @@
 ---
 title: RTCErrorEvent.error
 slug: Web/API/RTCErrorEvent/error
-tags:
-  - API
-  - Audio
-  - Error
-  - Error Handling
-  - Media
-  - Property
-  - RTCError
-  - RTCErrorEvent
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
+page-type: web-api-instance-property
 browser-compat: api.RTCErrorEvent.error
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The read-only {{domxref("RTCErrorEvent")}} property **`error`**

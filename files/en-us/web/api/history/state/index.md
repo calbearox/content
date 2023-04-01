@@ -1,15 +1,10 @@
 ---
 title: History.state
 slug: Web/API/History/state
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.History.state
 ---
+
 {{APIRef("History API")}}
 
 The **`History.state`** property
@@ -18,7 +13,7 @@ a way to look at the state without having to wait for a {{domxref("Window/popsta
 
 ## Value
 
-The state at the top of the history stack. The value is {{jsxref("null")}} until the
+The state at the top of the history stack. The value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) until the
 {{domxref("History.pushState","pushState()")}} or
 {{domxref("History.replaceState","replaceState()")}} method is used.
 
@@ -34,10 +29,10 @@ The next line logs the value to the console again, showing that
 console.log(`History.state before pushState: ${history.state}`);
 
 // Now push something on the stack
-history.pushState({name: 'Example'}, "pushState example", 'page3.html');
+history.pushState({ name: "Example" }, "pushState example", "page3.html");
 
 // Now state has a value.
-console.log('History.state after pushState: ', history.state);
+console.log("History.state after pushState: ", history.state);
 ```
 
 ## Specifications
@@ -53,3 +48,4 @@ console.log('History.state after pushState: ', history.state);
 - [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
 - [`History.pushState()`](/en-US/docs/Web/API/History/pushState)
 - [`History.replaceState()`](/en-US/docs/Web/API/History/replaceState)
+- [`PopStateEvent.state`](/en-US/docs/Web/API/PopStateEvent/state)

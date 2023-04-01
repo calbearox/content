@@ -1,16 +1,10 @@
 ---
 title: HTMLObjectElement.form
 slug: Web/API/HTMLObjectElement/form
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - form
+page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.form
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`form`** read-only property of the

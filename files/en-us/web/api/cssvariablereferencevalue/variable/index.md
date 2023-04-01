@@ -1,18 +1,11 @@
 ---
 title: CSSVariableReferenceValue.variable
 slug: Web/API/CSSVariableReferenceValue/variable
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSVariableReferenceValue
-  - Houdini
-  - NeedsExample
-  - Property
-  - Reference
-  - variable
+page-type: web-api-instance-property
 browser-compat: api.CSSVariableReferenceValue.variable
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+
+{{APIRef("CSSOM")}}
 
 The **`variable`** property of the
 {{domxref("CSSVariableReferenceValue")}} interface returns the [custom property name](/en-US/docs/Web/CSS/--*) of the
@@ -20,7 +13,7 @@ The **`variable`** property of the
 
 ## Value
 
-A {{domxref('USVString')}} beginning with `--` (that is, a [custom property name](/en-US/docs/Web/CSS/--*)).
+A string beginning with `--` (that is, a [custom property name](/en-US/docs/Web/CSS/--*)).
 
 ## Specifications
 

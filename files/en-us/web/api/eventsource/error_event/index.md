@@ -1,14 +1,10 @@
 ---
-title: 'EventSource: error event'
+title: "EventSource: error event"
 slug: Web/API/EventSource/error_event
-tags:
-  - API
-  - Error
-  - Event
-  - EventSource
-  - Reference
+page-type: web-api-event
 browser-compat: api.EventSource.error_event
 ---
+
 {{APIRef}}
 
 The `error` event of the {{domxref("EventSource")}} API is fired when a connection with an event source fails to be opened.
@@ -20,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
+addEventListener("error", (event) => {});
 
-onerror = event => { };
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -32,10 +28,10 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 ```js
-var evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 
 // addEventListener version
-evtSource.addEventListener('error', (e) => {
+evtSource.addEventListener("error", (e) => {
   console.log("An error occurred while attempting to connect.");
 });
 

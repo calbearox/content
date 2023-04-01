@@ -1,15 +1,12 @@
 ---
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Non-standard
-  - Property
-  - Window
+page-type: web-api-instance-property
+status:
+  - non-standard
 browser-compat: api.Window.scrollMaxX
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 The **`Window.scrollMaxX`** read-only property returns the
@@ -30,7 +27,7 @@ window.scrollTo(maxX, 0);
 
 ## Notes
 
-Do not use this property to get the total document width, which is not equivalent to [window.innerWidth](/en-US/docs/DOM/window.innerWidth) + window\.scrollMaxX,
+Do not use this property to get the total document width, which is not equivalent to [window.innerWidth](/en-US/docs/Web/API/Window/innerWidth) + window\.scrollMaxX,
 because {{domxref("window.innerWidth")}} includes the width of any visible vertical
 scrollbar, thus the result would exceed the total document width by the width of any
 visible vertical scrollbar. Instead use

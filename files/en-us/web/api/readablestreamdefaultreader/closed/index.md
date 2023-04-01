@@ -1,15 +1,10 @@
 ---
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
-tags:
-  - API
-  - Property
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - closed
+page-type: web-api-instance-property
 browser-compat: api.ReadableStreamDefaultReader.closed
 ---
+
 {{APIRef("Streams")}}
 
 The **`closed`** read-only property of the
@@ -30,8 +25,8 @@ console.
 
 ```js
 reader.closed.then(() => {
-  console.log('reader closed');
-})
+  console.log("reader closed");
+});
 ```
 
 ## Specifications

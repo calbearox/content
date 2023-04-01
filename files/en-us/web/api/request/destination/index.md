@@ -1,21 +1,10 @@
 ---
 title: Request.destination
 slug: Web/API/Request/destination
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Files
-  - Loading
-  - Networking
-  - Property
-  - Read-only
-  - Reference
-  - data
-  - destination
-  - request
+page-type: web-api-instance-property
 browser-compat: api.Request.destination
 ---
+
 {{APIRef("Fetch")}}
 
 The **`destination`** read-only
@@ -49,7 +38,7 @@ A string which indicates the type of content the request is asking for. This typ
 Possible values are:
 
 - `""`
-  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#attr-ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#attr-ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache](/en-US/docs/Web/API/Cache) and more.
+  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache](/en-US/docs/Web/API/Cache) and more.
 - `"audio"`
   - : The target is audio data.
 - `"audioworklet"`
@@ -85,7 +74,7 @@ Possible values are:
 - `"worker"`
   - : The target is a worker.
 - `"xslt"`
-  - : The target is an XLST transform.
+  - : The target is an XSLT transform.
 
 ## Examples
 
@@ -94,8 +83,8 @@ In the following snippet, we create a new request using the
 directory as the script), then save the request's destination:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myDestination = myRequest.destination; // returns the empty string by default
+const myRequest = new Request("flowers.jpg");
+const myDestination = myRequest.destination; // returns the empty string by default
 ```
 
 ## Specifications

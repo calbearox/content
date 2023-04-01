@@ -1,14 +1,10 @@
 ---
 title: Document.scrollingElement
 slug: Web/API/Document/scrollingElement
-tags:
-  - API
-  - Document
-  - Property
-  - Reference
-  - scrollingElement
+page-type: web-api-instance-property
 browser-compat: api.Document.scrollingElement
 ---
+
 {{APIRef("DOM")}}
 
 The **`scrollingElement`** read-only property of the
@@ -17,8 +13,7 @@ scrolls the document. In standards mode, this is the root element of the
 document, {{domxref("document.documentElement")}}.
 
 When in quirks mode, the `scrollingElement` attribute returns the HTML
-`body` element if it exists and is [potentially
-scrollable](https://drafts.csswg.org/cssom-view/#potentially-scrollable), otherwise it returns null.
+`body` element if it exists and is [potentially scrollable](https://drafts.csswg.org/cssom-view/#potentially-scrollable), otherwise it returns null.
 
 ## Value
 
@@ -27,7 +22,7 @@ The {{domxref("Element")}} that scrolls the document, usually the root element (
 ## Examples
 
 ```js
-var scrollElm = document.scrollingElement;
+const scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
 ```
 

@@ -1,14 +1,10 @@
 ---
 title: WebSocket.extensions
 slug: Web/API/WebSocket/extensions
-tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
+page-type: web-api-instance-property
 browser-compat: api.WebSocket.extensions
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.extensions`** read-only property returns the
@@ -17,7 +13,7 @@ extensions as negotiated by the connection.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

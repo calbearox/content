@@ -1,37 +1,34 @@
 ---
 title: HTMLFrameSetElement
 slug: Web/API/HTMLFrameSetElement
-tags:
-  - API
-  - HTML-DOM
-  - HTMLFrameSetElement
-  - Interface
-  - Reference
-  - Deprecated
+page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.HTMLFrameSetElement
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`HTMLFrameSetElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface they also inherit) for manipulating {{HTMLELEment("frameset")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFrameSetElement.cols")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} structured as a comma-separated list specifying the width of each column inside a frameset.
+  - : A string structured as a comma-separated list specifying the width of each column inside a frameset.
 - {{domxref("HTMLFrameSetElement.rows")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} structured as a comma-separated list specifying the height of each column inside a frameset.
+  - : A string structured as a comma-separated list specifying the height of each column inside a frameset.
 
-## Methods
+## Instance methods
 
-_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Event handlers
 
-The {{domxref("HTMLElement")}} events are inherited. 
+The {{domxref("HTMLElement")}} events are inherited.
 
 The following {{domxref("Window")}} `onXYZ` event handler properties are also available as aliases targeting the `window` object. However, it is advised to listen to them on the `window` object directly rather than on `HTMLFrameSetElement`.
 

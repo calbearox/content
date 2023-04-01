@@ -1,19 +1,14 @@
 ---
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - Stylesheets
-  - lastStyleSheetSet
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.lastStyleSheetSet
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`Document.lastStyleSheetSet`** property returns the last enabled style sheet set. This property's
 value changes whenever the {{domxref("document.selectedStyleSheetSet")}} property is
@@ -32,10 +27,9 @@ The style sheet set that was most recently set. If the current style sheet set h
 let lastSheetSet = document.lastStyleSheetSet;
 
 if (!lastSheetSet) {
-  lastSheetSet = 'Style sheet not yet changed';
-}
-else {
-  console.log('The last style sheet set is: ' + lastSheetSet);
+  lastSheetSet = "Style sheet not yet changed";
+} else {
+  console.log(`The last style sheet set is: ${lastSheetSet}`);
 }
 ```
 

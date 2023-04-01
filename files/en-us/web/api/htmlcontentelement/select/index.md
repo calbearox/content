@@ -1,19 +1,17 @@
 ---
 title: HTMLContentElement.select
 slug: Web/API/HTMLContentElement/select
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web Components
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLContentElement.select
 ---
-{{ APIRef("Web Components") }}{{Deprecated_header}}
+
+{{APIRef("Web Components")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLContentElement.select`** property reflects the
-`select` attribute. It is a {{domxref("DOMString")}} containing a
+`select` attribute. It is a string containing a
 space-separated list of CSS selectors that select the content to insert in place of the
 \<content> element.
 

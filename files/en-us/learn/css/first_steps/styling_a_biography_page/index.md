@@ -1,14 +1,8 @@
 ---
 title: Styling a biography page
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - CSS
-  - Learn
-  - Playground
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 With the things you have learned in the last few lessons you should find that you can format simple text documents using CSS to add your own style to them. This assessment gives you a chance to do that.
@@ -18,8 +12,8 @@ With the things you have learned in the last few lessons you should find that yo
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Before attempting this assessment you should have worked through the
-        rest of the CSS first steps module, and also have an understanding of HTML
+        Before attempting this assessment you should have already worked through
+        all the articles in this module, and also have an understanding of HTML
         basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
@@ -35,7 +29,7 @@ With the things you have learned in the last few lessons you should find that yo
 
 ## Starting point
 
-You can work in the live editor below, or you can [download the starting point file](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) to work with in your own editor. This is a single page containing both the HTML and the starting point CSS (in the head of the document). If you prefer you could move this CSS to a separate file and link to it when you create the example on your local computer.
+You can work in the live editor below, or you can [download the starting point file](https://github.com/mdn/css-examples/blob/main/learn/getting-started/biog-download.html) to work with in your own editor. This is a single page containing both the HTML and the starting point CSS (in the head of the document). If you prefer you could move this CSS to a separate file and link to it when you create the example on your local computer.
 
 Alternatively use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 
@@ -77,22 +71,14 @@ You should end up with something like this image.
 
 ## Assessment or further help
 
-If you would like your work assessed, or are stuck and want to ask for help:
+If you would like your work assessed or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Styling a biography page".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+   - A descriptive title such as "Assessment wanted for Styling a biography page".
+   - Details of what you have already tried and what you would like us to do; for example, tell us if you're stuck and need help or want an assessment.
+   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+   - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## In this module
-
-1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3. [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

@@ -1,16 +1,10 @@
 ---
 title: TextTrackCueList.length
 slug: Web/API/TextTrackCueList/length
-tags:
-  - API
-  - Property
-  - Reference
-  - length
-  - TextTrackCueList
-  - WebVTT
-  - Media
+page-type: web-api-instance-property
 browser-compat: api.TextTrackCueList.length
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`length`** read-only property of the {{domxref("TextTrackCueList")}} interface returns the number of cues in the list.
@@ -48,10 +42,10 @@ Somebody must've stolen the crown jewels
 ```
 
 ```js
-let video = document.getElementById("video");
-video.onplay = function () {
-  console.log(video.textTracks[0].cues.length) //5;
-}
+const video = document.getElementById("video");
+video.onplay = () => {
+  console.log(video.textTracks[0].cues.length); // 5
+};
 ```
 
 ## Specifications

@@ -1,15 +1,10 @@
 ---
 title: Element.children
 slug: Web/API/Element/children
-tags:
-  - API
-  - DOM
-  - Element
-  - HTMLCollection
-  - Property
-  - children
+page-type: web-api-instance-property
 browser-compat: api.Element.children
 ---
+
 {{ APIRef("DOM") }}
 
 The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}
@@ -31,9 +26,9 @@ If the element has no element children, then `children` is an empty list with a
 ## Examples
 
 ```js
-const myElement = document.getElementById('foo');
-for (let i = 0; i < myElement.children.length; i++) {
-  console.log(myElement.children[i].tagName);
+const myElement = document.getElementById("foo");
+for (const child of myElement.children) {
+  console.log(child.tagName);
 }
 ```
 

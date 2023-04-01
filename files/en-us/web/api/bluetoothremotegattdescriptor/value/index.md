@@ -1,19 +1,13 @@
 ---
 title: BluetoothRemoteGATTDescriptor.value
 slug: Web/API/BluetoothRemoteGATTDescriptor/value
-tags:
-  - API
-  - Bluetooth
-  - BluetoothGattDescriptor
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - value
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTDescriptor.value
 ---
-{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.value`**
 read-only property returns an {{jsxref("ArrayBuffer")}} containing the currently cached

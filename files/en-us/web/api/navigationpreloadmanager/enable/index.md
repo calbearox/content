@@ -1,15 +1,10 @@
 ---
 title: NavigationPreloadManager.enable()
 slug: Web/API/NavigationPreloadManager/enable
-tags:
-  - API
-  - Method
-  - Reference
-  - Offline
-  - Service Workers
-  - NavigationPreloadManager
+page-type: web-api-instance-method
 browser-compat: api.NavigationPreloadManager.enable
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`enable()`** method of the {{domxref("NavigationPreloadManager")}} interface is used to enable preloading of resources managed by the service worker.
@@ -19,11 +14,15 @@ The method should be called in the service worker's `activate` event handler, wh
 
 ## Syntax
 
-```js
+```js-nolint
 enable()
 ```
 
-### Return Value
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
@@ -37,13 +36,15 @@ A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 The code below shows how to enable preloading, after first using {{domxref("ServiceWorkerRegistration.navigationPreload")}} to test that it is supported.
 
 ```js
-addEventListener('activate', event => {
-  event.waitUntil(async function() {
-    if (self.registration.navigationPreload) {
-      // Enable navigation preloads!
-      await self.registration.navigationPreload.enable();
-    }
-  }());
+addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
+      if (self.registration.navigationPreload) {
+        // Enable navigation preloads!
+        await self.registration.navigationPreload.enable();
+      }
+    })()
+  );
 });
 ```
 

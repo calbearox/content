@@ -1,11 +1,11 @@
 ---
-title: 'MediaRecorder: error event'
+title: "MediaRecorder: error event"
 slug: Web/API/MediaRecorder/error_event
-tags:
-  - Event
+page-type: web-api-event
 browser-compat: api.MediaRecorder.error_event
 ---
-{{APIRef}}
+
+{{APIRef("MediaStream Recording")}}
 
 The {{domxref("MediaRecorder")}} interface's **`error`** event is fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
 
@@ -16,14 +16,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('event', event => { });
+addEventListener("event", (event) => {});
 
-onevent = event => { };
+onevent = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaRecorderErrorEvent")}}
 
@@ -62,7 +62,7 @@ the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name"
     Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
     "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
     sent to the `MediaRecorder` with the remaining received data, and finally a
-    {{event("stop")}} event is sent.
+    {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
 
 These errors may occur either directly because of a call to a
 `MediaRecorder` method, or indirectly due to a problem arising during the
@@ -74,12 +74,12 @@ Using [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) to 
 
 ```js
 async function record() {
-    const stream = await navigator.mediaDevices.getUserMedia({audio: true});
-    const recorder = new MediaRecorder(stream);
-    recorder.addEventListener('error', (event) => {
-        console.error(`error recording stream: ${event.error.name}`)
-    });
-    recorder.start();
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  const recorder = new MediaRecorder(stream);
+  recorder.addEventListener("error", (event) => {
+    console.error(`error recording stream: ${event.error.name}`);
+  });
+  recorder.start();
 }
 
 record();
@@ -89,12 +89,12 @@ The same, but using the onerror event handler property:
 
 ```js
 async function record() {
-    const stream = await navigator.mediaDevices.getUserMedia({audio: true});
-    const recorder = new MediaRecorder(stream);
-    recorder.onerror = (event) => {
-        console.error(`error recording stream: ${event.error.name}`)
-    };
-    recorder.start();
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  const recorder = new MediaRecorder(stream);
+  recorder.onerror = (event) => {
+    console.error(`error recording stream: ${event.error.name}`);
+  };
+  recorder.start();
 }
 
 record();
@@ -110,4 +110,4 @@ record();
 
 ## See also
 
-- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

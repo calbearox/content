@@ -1,14 +1,10 @@
 ---
 title: WorkerNavigator.userAgent
 slug: Web/API/WorkerNavigator/userAgent
-tags:
-  - API
-  - WorkerNavigator
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.userAgent
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`WorkerNavigator.userAgent`** read-only property returns the
@@ -33,13 +29,10 @@ string is user configurable. For example:
   the HTTP header that gets sent, and doesn't affect browser detection performed by
   JavaScript code.
 - Opera 6+ allows users to set the browser identification string via a menu.
-- Microsoft Internet Explorer uses the Windows registry.
-- Safari and iCab allow users to change the browser user agent string to predefined
-  Internet Explorer or Netscape strings via a menu.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the complete user agent string the browser
+A string specifying the complete user agent string the browser
 provides both in {{Glossary("HTTP")}} headers and in response to this and other related
 methods on the {{domxref("WorkerNavigator")}} object.
 
@@ -48,7 +41,7 @@ several pieces of info. Each of these pieces of info comes from other navigator
 properties which are also settable by the user. Gecko-based browsers comply with the
 following general structure:
 
-```js
+```
 userAgent = appCodeName/appVersion number (Platform; Security; OS-or-CPU;
 Localization; rv: revision-version-number) product/productSub
 Application-Name Application-Name-version
@@ -57,7 +50,7 @@ Application-Name Application-Name-version
 ## Examples
 
 ```js
-alert(navigator.userAgent)
+alert(navigator.userAgent);
 // alerts "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1"
 ```
 

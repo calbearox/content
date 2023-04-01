@@ -1,15 +1,10 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.align-self
 ---
+
 {{CSSRef}}
 
 The **`align-self`** [CSS](/en-US/docs/Web/CSS) property overrides a grid or flex item's {{cssxref("align-items")}} value. In Grid, it aligns the item inside the {{glossary("Grid Areas", "grid area")}}. In Flexbox, it aligns the item on the {{glossary("cross axis")}}.
@@ -135,7 +130,7 @@ div:nth-child(3) {
 
 ## Specifications
 
-{{Specifications("css.properties.align-self.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

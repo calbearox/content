@@ -1,17 +1,10 @@
 ---
 title: scroll-margin-left
 slug: Web/CSS/scroll-margin-left
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Scroll margin left
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-left
+page-type: css-property
 browser-compat: css.properties.scroll-margin-left
 ---
+
 {{CSSRef}}
 
 The `scroll-margin-left` property defines the left margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.

@@ -1,19 +1,10 @@
 ---
 title: DOMPoint.y
 slug: Web/API/DOMPoint/y
-tags:
-  - API
-  - Coordinate
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Reference
-  - 'y'
+page-type: web-api-instance-property
 browser-compat: api.DOMPoint.y
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's

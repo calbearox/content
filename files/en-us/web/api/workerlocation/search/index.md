@@ -1,14 +1,10 @@
 ---
 title: WorkerLocation.search
 slug: Web/API/WorkerLocation/search
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
+page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.search
 ---
+
 {{ApiRef("WorkerLocation")}}
 
 The **`search`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.search", "search")}} part of the worker's location.
@@ -21,7 +17,7 @@ A string.
 
 ```js
 // In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web?t=67
-var result = location.search; // Returns:'?t=67'
+const result = location.search; // Returns:'?t=67'
 ```
 
 ## Specifications

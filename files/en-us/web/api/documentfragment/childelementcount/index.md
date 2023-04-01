@@ -1,13 +1,10 @@
 ---
 title: DocumentFragment.childElementCount
 slug: Web/API/DocumentFragment/childElementCount
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.DocumentFragment.childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Document.childElementCount`** read-only property
@@ -22,11 +19,11 @@ A number representing the number of children of the element.
 ## Examples
 
 ```js
-let fragment = new DocumentFragment()
+let fragment = new DocumentFragment();
 fragment.childElementCount; // 0
 
-let paragraph = document.createElement('p')
-fragment.appendChild(paragraph)
+let paragraph = document.createElement("p");
+fragment.appendChild(paragraph);
 
 fragment.childElementCount; // 1
 ```

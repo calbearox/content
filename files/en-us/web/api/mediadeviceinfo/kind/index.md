@@ -1,16 +1,11 @@
 ---
 title: MediaDeviceInfo.kind
 slug: Web/API/MediaDeviceInfo/kind
-tags:
-  - API
-  - Experimental
-  - Media
-  - MediaDevicesInfo
-  - Property
-  - kind
+page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.kind
 ---
-{{SeeCompatTable}}{{APIRef("Media Capture")}}
+
+{{APIRef("Media Capture")}}
 
 The **`kind`** readonly property of
 the {{domxref("MediaDeviceInfo")}} interface returns an enumerated value, that is
@@ -18,7 +13,7 @@ either "videoinput", "audioinput" or "audiooutput".
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

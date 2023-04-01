@@ -1,18 +1,10 @@
 ---
 title: RTCRtpContributingSource.audioLevel
 slug: Web/API/RTCRtpContributingSource/audioLevel
-tags:
-  - API
-  - Media
-  - MediaStreamTrack
-  - Property
-  - RTCRtpContributingSource
-  - RTP
-  - Reference
-  - WebRTC
-  - audioLevel
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpContributingSource.audioLevel
 ---
+
 {{APIRef("WebRTC API")}}
 
 The read-only **`audioLevel`**

@@ -1,14 +1,10 @@
 ---
 title: ImageData.height
 slug: Web/API/ImageData/height
-tags:
-  - API
-  - Canvas
-  - ImageData
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.ImageData.height
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.height`** property returns the number
@@ -25,7 +21,7 @@ pixels tall. Thus, the `height` property is `100`.
 
 ```js
 let imageData = new ImageData(200, 100);
-console.log(imageData.height);  // 100
+console.log(imageData.height); // 100
 ```
 
 ## Specifications

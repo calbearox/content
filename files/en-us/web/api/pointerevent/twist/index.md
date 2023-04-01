@@ -1,16 +1,10 @@
 ---
 title: PointerEvent.twist
 slug: Web/API/PointerEvent/twist
-tags:
-  - API
-  - DOM
-  - Pointer Events
-  - PointerEvent
-  - Property
-  - Reference
-  - twist
+page-type: web-api-instance-property
 browser-compat: api.PointerEvent.twist
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`twist`** read-only property of the
@@ -26,19 +20,23 @@ inclusive. For devices that do not report `twist`, the value is
 
 ## Examples
 
-When a {{event("pointerdown")}} event is fired, different functions are called
+When a {{domxref("Element/pointerdown_event", "pointerdown")}} event is fired, different functions are called
 depending on the value of the event's `twist` property.
 
 ```js
-someElement.addEventListener('pointerdown', function(event) {
-  if (event.twist == 0) {
-    // No twist
-    process_no_twist(event);
-  } else {
-    // Default
-    process_twist(event);
-  }
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.twist === 0) {
+      // No twist
+      process_no_twist(event);
+    } else {
+      // Default
+      process_twist(event);
+    }
+  },
+  false
+);
 ```
 
 ## Specifications

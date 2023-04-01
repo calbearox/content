@@ -1,14 +1,10 @@
 ---
 title: TransformStreamDefaultController.desiredSize
 slug: Web/API/TransformStreamDefaultController/desiredSize
-tags:
-  - API
-  - Property
-  - Reference
-  - desiredSize
-  - TransformStreamDefaultController
+page-type: web-api-instance-property
 browser-compat: api.TransformStreamDefaultController.desiredSize
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`desiredSize`** read-only property of the {{domxref("TransformStreamDefaultController")}} interface returns the desired size to fill the queue of the associated {{domxref("ReadableStream")}}.

@@ -1,23 +1,14 @@
 ---
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - NeedsExample
-  - Property
-  - Video
-  - Web
-  - autoplay
+page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.autoplay
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.autoplay`**
-property reflects the {{htmlattrxref("autoplay", "video")}} HTML attribute, indicating
+property reflects the [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) HTML attribute, indicating
 whether playback should automatically begin as soon as enough media is available to do
 so without interruption.
 
@@ -32,8 +23,7 @@ active (that is, when {{domxref("MediaStream.active")}} becomes `true`).
 > creating media elements whose source will be set at a later time, under user control.
 
 For a much more in-depth look at autoplay, autoplay blocking, and how to respond when
-autoplay is blocked by the user's browser, see our article [Autoplay guide for media and Web Audio
-APIs](/en-US/docs/Web/Media/Autoplay_guide).
+autoplay is blocked by the user's browser, see our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
 ## Value
 
@@ -49,18 +39,17 @@ interruption.
 
 ## Examples
 
-...
-
 ```html
 <video id="video" controls>
-  <source src="https://player.vimeo.com/external/250688977.sd.mp4?s=d14b1f1a971dde13c79d6e436b88a6a928dfe26b&profile_id=165">
+  <source
+    src="https://player.vimeo.com/external/250688977.sd.mp4?s=d14b1f1a971dde13c79d6e436b88a6a928dfe26b&profile_id=165" />
 </video>
 ```
 
 ```js
-*** Disable autoplay (recommended) ***
-      false is the default value
-        document.querySelector('#video').autoplay = false;
+// Disable autoplay (recommended)
+// false is the default value
+document.querySelector("#video").autoplay = false;
 ```
 
 ## Specifications
@@ -73,5 +62,5 @@ interruption.
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.autoplay` property
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}

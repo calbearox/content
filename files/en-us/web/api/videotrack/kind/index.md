@@ -1,20 +1,10 @@
 ---
 title: VideoTrack.kind
 slug: Web/API/VideoTrack/kind
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - id
-  - track
+page-type: web-api-instance-property
 browser-compat: api.VideoTrack.kind
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`kind`** property contains a
@@ -27,7 +17,7 @@ to determine the scenarios in which specific tracks should be enabled or disable
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the type of content the media represents. The
+A string specifying the type of content the media represents. The
 string is one of those found in [Video track kind strings](#video_track_kind_strings) below.
 
 ## Video track kind strings

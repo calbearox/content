@@ -1,16 +1,10 @@
 ---
 title: ElementInternals.ariaLabel
 slug: Web/API/ElementInternals/ariaLabel
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLabel
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaLabel
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaLabel`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)) attribute, which defines a string value that labels the current Element.
@@ -19,7 +13,7 @@ The **`ariaLabel`** property of the {{domxref("ElementInternals")}} interface re
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

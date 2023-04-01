@@ -1,10 +1,8 @@
 ---
 title: How to implement a promise-based API
 slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
-tags:
-  - JavaScript
-  - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 In the last article we discussed how to use APIs that return promises. In this article we'll look at the other side — how to _implement_ APIs that return promises. This is a much less common task than using promise-based APIs, but it's still worth knowing about.
@@ -20,7 +18,7 @@ In the last article we discussed how to use APIs that return promises. In this a
     </tr>
     <tr>
       <th scope="row">Objective:</th>
-      <td>To understand how implement promise-based APIs.</td>
+      <td>To understand how to implement promise-based APIs.</td>
     </tr>
   </tbody>
 </table>
@@ -44,7 +42,7 @@ In the example below, we call `setTimeout()` with a callback function and a dela
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
@@ -53,7 +51,7 @@ const output = document.querySelector('#output');
 const button = document.querySelector('#set-alarm');
 
 function setAlarm() {
-  window.setTimeout(() => {
+  setTimeout(() => {
     output.textContent = 'Wake up!';
   }, 1000);
 }
@@ -79,7 +77,7 @@ function alarm(person, delay) {
     if (delay < 0) {
       throw new Error('Alarm delay must not be negative');
     }
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve(`Wake up, ${person}!`);
     }, delay);
   });
@@ -90,7 +88,7 @@ This function creates and returns a new `Promise`. Inside the executor for the p
 
 - check that `delay` is not negative, and throw an error if it is.
 
-- call `window.setTimeout()`, passing a callback and `delay`. The callback will be called when the timer expires, and in the callback we call `resolve`, passing in our `"Wake up!"` message.
+- call `setTimeout()`, passing a callback and `delay`. The callback will be called when the timer expires, and in the callback we call `resolve`, passing in our `"Wake up!"` message.
 
 ## Using the alarm() API
 
@@ -99,12 +97,12 @@ This part should be quite familiar from the last article. We can call `alarm()`,
 ```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value = "Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value = "1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 
 <button id="set-alarm">Set alarm</button>
@@ -116,8 +114,9 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
@@ -132,7 +131,7 @@ function alarm(person, delay) {
     if (delay < 0) {
       throw new Error('Alarm delay must not be negative');
     }
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve(`Wake up, ${person}!`);
     }, delay);
   });
@@ -140,8 +139,8 @@ function alarm(person, delay) {
 
 button.addEventListener('click', () => {
   alarm(name.value, delay.value)
-    .then(message => output.textContent = message)
-    .catch(error => output.textContent = `Couldn't set alarm: ${error}`);
+    .then((message) => output.textContent = message)
+    .catch((error) => output.textContent = `Couldn't set alarm: ${error}`);
 });
 ```
 
@@ -156,12 +155,12 @@ Since `alarm()` returns a `Promise`, we can do everything with it that we could 
 ```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value = "Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value = "1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 
 <button id="set-alarm">Set alarm</button>
@@ -173,8 +172,9 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
@@ -189,7 +189,7 @@ function alarm(person, delay) {
     if (delay < 0) {
       throw new Error('Alarm delay must not be negative');
     }
-    window.setTimeout(() => {
+    setTimeout(() => {
       resolve(`Wake up, ${person}!`);
     }, delay);
   });
@@ -201,7 +201,7 @@ button.addEventListener('click', async () => {
     output.textContent = message;
   }
   catch (error) {
-    output.textContent = `Couldn't set alarm: ${error}`;  
+    output.textContent = `Couldn't set alarm: ${error}`;
   }
 });
 ```
@@ -214,11 +214,3 @@ button.addEventListener('click', async () => {
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## In this module
-
-- [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-- **Implementing a promise-based API**
-- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

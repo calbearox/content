@@ -1,27 +1,16 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
-tags:
-  - AJAX
-  - API
-  - Fetching Content
-  - Fetching Data
-  - Loading Data
-  - Property
-  - Read-only
-  - Reading Data
-  - Reference
-  - Response
-  - Server
-  - XMLHttpRequest
+page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.response
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}}
 **`response`** property returns the response's body content as
-an {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}},
-JavaScript {{jsxref("Object")}}, or {{domxref("DOMString")}}, depending on the value
+an {{jsxref("ArrayBuffer")}}, a {{domxref("Blob")}}, a {{domxref("Document")}},
+a JavaScript {{jsxref("Object")}}, or a string, depending on the value
 of the request's {{domxref("XMLHttpRequest.responseType", "responseType")}}
 property.
 
@@ -51,12 +40,12 @@ The content is handled as raw text data (since nothing here is overriding the de
 {{domxref("XMLHttpRequest.responseType", "responseType")}}).
 
 ```js
-var url = 'somePage.html'; //A local page
+const url = 'somePage.html'; //A local page
 
 function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
       callback(xhr.response);
     }
@@ -77,7 +66,6 @@ function load(url, callback) {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - Getting text and HTML/XML data: {{domxref("XMLHttpRequest.responseText")}} and
   {{domxref("XMLHttpRequest.responseXML")}}

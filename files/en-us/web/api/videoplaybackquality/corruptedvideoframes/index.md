@@ -1,24 +1,12 @@
 ---
 title: VideoPlaybackQuality.corruptedVideoFrames
 slug: Web/API/VideoPlaybackQuality/corruptedVideoFrames
-tags:
-  - API
-  - Corruption
-  - Data Loss
-  - Experimental
-  - Frames
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Playback
-  - Property
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - corruptedVideoFrames
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.VideoPlaybackQuality.corruptedVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The {{domxref("VideoPlaybackQuality")}} interface's read-only
@@ -44,10 +32,10 @@ value is greater than 5%, calls a function called `downgradeVideo()` that
 would be implemented to switch to a different video that might tax the network less.
 
 ```js
-var videoElem = document.getElementById("my_vid");
-var quality = videoElem.getVideoPlaybackQuality();
+const videoElem = document.getElementById("my_vid");
+const quality = videoElem.getVideoPlaybackQuality();
 
-if (quality.corruptedVideoFrames/quality.totalVideoFrames > 0.05) {
+if (quality.corruptedVideoFrames / quality.totalVideoFrames > 0.05) {
   downgradeVideo(videoElem);
 }
 ```

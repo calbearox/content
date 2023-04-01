@@ -1,15 +1,10 @@
 ---
 title: CSSPageRule.style
 slug: Web/API/CSSPageRule/style
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSPageRule
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.CSSPageRule.style
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`style`** read-only property of the {{domxref("CSSPageRule")}} interface returns a {{domxref("CSSStyleDeclaration")}} object. This represents an object that is a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block), and exposes style information and various style-related methods and properties.

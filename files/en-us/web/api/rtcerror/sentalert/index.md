@@ -1,21 +1,10 @@
 ---
 title: RTCError.sentAlert
 slug: Web/API/RTCError/sentAlert
-tags:
-  - API
-  - DTLS
-  - Error
-  - Networking
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - sentAlert
+page-type: web-api-instance-property
 browser-compat: api.RTCError.sentAlert
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sentAlert`** property in an

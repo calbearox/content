@@ -1,16 +1,10 @@
 ---
 title: ElementInternals.ariaModal
 slug: Web/API/ElementInternals/ariaModal
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaModal
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaModal
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaModal`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.
@@ -19,7 +13,7 @@ The **`ariaModal`** property of the {{domxref("ElementInternals")}} interface re
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is modal.

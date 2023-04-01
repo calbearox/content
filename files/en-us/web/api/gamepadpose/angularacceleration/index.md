@@ -1,18 +1,12 @@
 ---
 title: GamepadPose.angularAcceleration
 slug: Web/API/GamepadPose/angularAcceleration
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
-  - angularAcceleration
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.GamepadPose.angularAcceleration
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`angularAcceleration`** read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the angular acceleration vector of the {{domxref("Gamepad")}}, in meters per second per second.

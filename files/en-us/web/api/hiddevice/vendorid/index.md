@@ -1,15 +1,13 @@
 ---
 title: HIDDevice.vendorId
 slug: Web/API/HIDDevice/vendorId
-tags:
-  - API
-  - Property
-  - Reference
-  - vendorId
-  - HIDDevice
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HIDDevice.vendorId
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`vendorId`** read-only property of the {{domxref("HIDDevice")}} interface returns the vendor ID of the connected HID device. This identifies the vendor of the device.
 
@@ -22,9 +20,9 @@ An integer. If the device has no vendor ID, or the vendor ID cannot be accessed 
 The following example retrieves devices with {{domxref("HID.getDevices()")}} and logs the value of `vendorId` to the console.
 
 ```js
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   let devices = await navigator.hid.getDevices();
-  devices.forEach(device => {
+  devices.forEach((device) => {
     console.log(`HID: ${device.vendorId}`);
   });
 });

@@ -1,19 +1,10 @@
 ---
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Property
-  - Read-only
-  - Reference
-  - Table Rows
-  - rows
+page-type: web-api-instance-property
 browser-compat: api.HTMLTableElement.rows
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLTableElement")}}
@@ -37,7 +28,7 @@ without having to manually search for them.
 ```js
 myrows = mytable.rows;
 firstRow = mytable.rows[0];
-lastRow = mytable.rows.item(mytable.rows.length-1);
+lastRow = mytable.rows.item(mytable.rows.length - 1);
 ```
 
 This demonstrates how you can use both array syntax (line 2) and the

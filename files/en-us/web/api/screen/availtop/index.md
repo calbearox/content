@@ -1,15 +1,12 @@
 ---
 title: Screen.availTop
 slug: Web/API/Screen/availTop
-tags:
-  - API
-  - API:Mozilla Extensions
-  - API:WebKit Extensions
-  - DOM
-  - Non-standard
-  - Property
+page-type: web-api-instance-property
+status:
+  - non-standard
 browser-compat: api.Screen.availTop
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 Specifies the y-coordinate of the first pixel that is not allocated to permanent or

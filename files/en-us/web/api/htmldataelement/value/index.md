@@ -1,25 +1,18 @@
 ---
 title: HTMLDataElement.value
 slug: Web/API/HTMLDataElement/value
-tags:
-  - API
-  - HTML DOM
-  - HTMLDataElement
-  - Property
-  - Reference
-  - data
-  - value
+page-type: web-api-instance-property
 browser-compat: api.HTMLDataElement.value
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`value`** property of the {{domxref("HTMLDataElement")}}
-interface returns a {{domxref("DOMString")}} reflecting the {{htmlattrxref("value",
-  "data")}} HTML attribute.
+interface returns a string reflecting the [`value`](/en-US/docs/Web/HTML/Element/data#value) HTML attribute.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

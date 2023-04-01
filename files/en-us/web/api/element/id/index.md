@@ -1,14 +1,10 @@
 ---
 title: Element.id
 slug: Web/API/Element/id
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Element.id
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`id`** property of the {{domxref("Element")}} interface

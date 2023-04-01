@@ -1,16 +1,10 @@
 ---
 title: WorkerNavigator.hardwareConcurrency
 slug: Web/API/WorkerNavigator/hardwareConcurrency
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Web Workers
-  - Worker
-  - WorkerNavigator
-  - hardwareConcurrency
+page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.hardwareConcurrency
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`navigator.hardwareConcurrency`** read-only property
@@ -47,8 +41,8 @@ let workerList = [];
 
 for (let i = 0; i < navigator.hardwareConcurrency; i++) {
   let newWorker = {
-    worker: new Worker('cpuworker.js'),
-    inUse: false
+    worker: new Worker("cpuworker.js"),
+    inUse: false,
   };
   workerList.push(newWorker);
 }

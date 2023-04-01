@@ -1,17 +1,15 @@
 ---
 title: LayoutShiftAttribution.currentRect
 slug: Web/API/LayoutShiftAttribution/currentRect
-tags:
-  - API
-  - Property
-  - Reference
-  - currentRect
-  - LayoutShiftAttribution
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.LayoutShiftAttribution.currentRect
 ---
-{{APIRef("Layout Instability API")}}
 
-The **`currentRect`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
+{{APIRef("Performance API")}}{{SeeCompatTable}}
+
+The **`currentRect`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element after the shift.
 
 ## Value
 
@@ -23,12 +21,12 @@ The following example prints the `currentRect` of the first item in {{domxref("L
 
 ```js
 new PerformanceObserver((list) => {
-  for (const {sources} of list.getEntries()) {
+  for (const { sources } of list.getEntries()) {
     if (sources) {
       console.log(sources[0].currentRect);
     }
   }
-}).observe({type: 'layout-shift', buffered: true});
+}).observe({ type: "layout-shift", buffered: true });
 ```
 
 ## Specifications

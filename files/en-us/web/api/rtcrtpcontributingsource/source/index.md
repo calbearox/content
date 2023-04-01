@@ -1,16 +1,10 @@
 ---
 title: RTCRtpContributingSource.source
 slug: Web/API/RTCRtpContributingSource/source
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpContributingSource
-  - Reference
-  - WebRTC
-  - source
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpContributingSource.source
 ---
+
 {{APIRef("WebRTC API")}}
 
 The read-only **`source`** property of

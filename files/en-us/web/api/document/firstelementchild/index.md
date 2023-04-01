@@ -1,13 +1,10 @@
 ---
 title: Document.firstElementChild
 slug: Web/API/Document/firstElementChild
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.Document.firstElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Document.firstElementChild`** read-only property

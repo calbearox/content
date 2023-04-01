@@ -1,25 +1,25 @@
 ---
 title: NavigationPreloadManager.getState()
 slug: Web/API/NavigationPreloadManager/getState
-tags:
-  - API
-  - Method
-  - Reference
-  - NavigationPreloadManager
-  - Service Workers
+page-type: web-api-instance-method
 browser-compat: api.NavigationPreloadManager.getState
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`getState()`** method of the {{domxref("NavigationPreloadManager")}} interface returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preload is enabled and what value will be sent in the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header.
 
 ## Syntax
 
-```js
+```js-nolint
 getState()
 ```
 
-### Return Value
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} that resolves with an object that has the following properties:
 
@@ -40,14 +40,14 @@ The code below shows a request for the current state, made once the service work
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => {
-    return registration.navigationPreload.getState();
-  })
+  .then((registration) => registration.navigationPreload.getState())
   .then((state) => {
     console.log(state.enabled); // boolean
     console.log(state.headerValue); // string
   })
-  .catch(e => console.error("NavigationPreloadManager not supported: " + e.message));
+  .catch((e) =>
+    console.error(`NavigationPreloadManager not supported: ${e.message}`)
+  );
 ```
 
 ## Specifications

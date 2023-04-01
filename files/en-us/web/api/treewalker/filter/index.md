@@ -1,13 +1,10 @@
 ---
 title: TreeWalker.filter
 slug: Web/API/TreeWalker/filter
-tags:
-  - API
-  - DOM
-  - Property
-  - TreeWalker
+page-type: web-api-instance-property
 browser-compat: api.TreeWalker.filter
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.filter`** read-only property returns a
@@ -25,11 +22,15 @@ A {{domxref("NodeFilter")}} object.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+const treeWalker = document.createTreeWalker(
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false
 );
 nodeFilter = treeWalker.filter; // document.body in this case
 ```

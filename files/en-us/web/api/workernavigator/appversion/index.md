@@ -1,15 +1,12 @@
 ---
 title: WorkerNavigator.appVersion
 slug: Web/API/WorkerNavigator/appVersion
-tags:
-  - API
-  - Deprecated
-  - WorkerNavigator
-  - Property
-  - Reference
-  - appVersion
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.WorkerNavigator.appVersion
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 Returns either "`4.0`" or a string representing version information about
@@ -25,7 +22,7 @@ browser.
 ## Examples
 
 ```js
-alert('Your browser version is reported as ' + navigator.appVersion);
+alert(`Your browser version is reported as ${navigator.appVersion}`);
 ```
 
 ## Notes

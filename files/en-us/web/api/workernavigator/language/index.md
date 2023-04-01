@@ -1,15 +1,10 @@
 ---
 title: WorkerNavigator.language
 slug: Web/API/WorkerNavigator/language
-tags:
-  - API
-  - Language
-  - WorkerNavigator
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`WorkerNavigator.language`** read-only property returns
@@ -18,7 +13,7 @@ browser UI.
 
 ## Value
 
-A {{domxref("DOMString")}}. _`lang`_ stores a string representing the
+A string representing the
 language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language
 codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
 

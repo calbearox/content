@@ -1,15 +1,10 @@
 ---
 title: Crypto.subtle
 slug: Web/API/Crypto/subtle
-tags:
-  - API
-  - Cryptography
-  - Property
-  - Read-only
-  - Reference
-  - Web Crypto API
+page-type: web-api-instance-property
 browser-compat: api.Crypto.subtle
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`Crypto.subtle`** read-only property returns a
@@ -33,6 +28,5 @@ low-level cryptography features.
 
 - {{domxref("Crypto")}}.
 - {{domxref("SubtleCrypto")}}.
-- [Compatibility
-  test page](https://vibornoff.github.io/webcrypto-examples/index.html).
+- [Compatibility test page](https://vibornoff.github.io/webcrypto-examples/index.html).
 - [Shim for IE11 and Safari](https://github.com/vibornoff/webcrypto-shim).

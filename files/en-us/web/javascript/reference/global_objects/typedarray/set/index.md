@@ -1,15 +1,10 @@
 ---
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.set
 ---
+
 {{JSRef}}
 
 The **`set()`** method stores multiple values in the typed
@@ -19,7 +14,7 @@ array, reading input values from a specified array.
 
 ## Syntax
 
-```js
+```js-nolint
 set(array)
 set(array, targetOffset)
 
@@ -42,18 +37,24 @@ set(typedarray, targetOffset)
     array. If this value is omitted, 0 is assumed (that is, the source array will
     overwrite values in the target array starting at index 0).
 
+### Return value
+
+{{jsxref("undefined")}}.
+
 ### Exceptions
 
-A {{jsxref("RangeError")}}, if the `targetOffset` is set such as it would store
-beyond the end of the typed array.
+- {{jsxref("RangeError")}}
+  - : Thrown if one of the two conditions is met:
+    - An element will be stored beyond the end of the typed array, either because `targetOffset` is too large or because `array` or `typedarray` is too large.
+    - `targetOffset` is negative.
 
 ## Examples
 
 ### Using set()
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
 
 uint8.set([1, 2, 3], 3);
 

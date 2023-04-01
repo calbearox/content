@@ -1,15 +1,10 @@
 ---
 title: WorkerGlobalScope.console
 slug: Web/API/WorkerGlobalScope/console
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
+page-type: web-api-instance-property
 browser-compat: api.WorkerGlobalScope.console
 ---
+
 {{APIRef("Web Workers API")}}{{Non-standard_header}}
 
 The **`console`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("console")}} object providing access to the browser console for the worker.
@@ -23,7 +18,7 @@ A {{domxref("console")}} object.
 This property allows you to have access to a browser console for debugging purposes, inside a worker. So for example you could call
 
 ```js
-console.log('test');
+console.log("test");
 ```
 
 inside a worker (which would basically be the equivalent of `self.console.log('test');`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), to return a test message out to the browser console.

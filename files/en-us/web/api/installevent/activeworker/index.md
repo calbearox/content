@@ -1,17 +1,14 @@
 ---
 title: InstallEvent.activeWorker
 slug: Web/API/InstallEvent/activeWorker
-tags:
-  - API
-  - InstallEvent
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - activeWorker
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.InstallEvent.activeWorker
 ---
-{{non-standard_header}}{{deprecated_header}}
+
+{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`activeWorker`** read-only property of the {{domxref("InstallEvent")}} interface returns the {{domxref("ServiceWorker")}} that is currently actively controlling the page.
 
@@ -24,8 +21,8 @@ A {{domxref("ServiceWorker")}} object.
 ## Examples
 
 ```js
-self.addEventListener('install', function(event) {
-  var myActiveWorker = event.activeWorker;
+self.addEventListener("install", (event) => {
+  const myActiveWorker = event.activeWorker;
 });
 ```
 

@@ -1,14 +1,10 @@
 ---
 title: Selection.collapseToEnd()
 slug: Web/API/Selection/collapseToEnd
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+page-type: web-api-instance-method
 browser-compat: api.Selection.collapseToEnd
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.collapseToEnd()`** method collapses the
@@ -17,13 +13,17 @@ is focused and editable, the caret will blink there.
 
 ## Syntax
 
-```js
-sel.collapseToEnd()
+```js-nolint
+collapseToEnd()
 ```
 
 ### Parameters
 
-_None._
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

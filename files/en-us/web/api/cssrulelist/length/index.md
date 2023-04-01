@@ -1,14 +1,10 @@
 ---
 title: CSSRuleList.length
 slug: Web/API/CSSRuleList/length
-tags:
-  - API
-  - Property
-  - Reference
-  - length
-  - CSSRuleList
+page-type: web-api-instance-property
 browser-compat: api.CSSRuleList.length
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`length`** property of the {{domxref("CSSRuleList")}} interface returns the number of {{domxref("CSSRule")}} objects in the list.

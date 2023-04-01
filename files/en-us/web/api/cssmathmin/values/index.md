@@ -1,18 +1,11 @@
 ---
 title: CSSMathMin.values
 slug: Web/API/CSSMathMin/values
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathMin
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Property
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.CSSMathMin.values
 ---
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathMin.values read-only property of the
 {{domxref("CSSMathMin")}} interface returns a {{domxref('CSSNumericArray')}} object

@@ -1,19 +1,10 @@
 ---
 title: Signaling and video calling
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
-tags:
-  - API
-  - Audio
-  - Calling
-  - Example
-  - Guide
-  - Media
-  - Signaling
-  - Tutorial
-  - Video
-  - WebRTC
+page-type: guide
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) allows real-time, peer-to-peer, media exchange between two devices. A connection is established through a discovery and negotiation process called **signaling**. This tutorial will guide you through building a two-way video-call.
 
@@ -43,15 +34,7 @@ First up is the addition of the function `sendToOneUser()`. As the name suggests
 
 ```js
 function sendToOneUser(target, msgString) {
-  var isUnique = true;
-  var i;
-
-  for (i=0; i < connectionArray.length; i++) {
-    if (connectionArray[i].username === target) {
-      connectionArray[i].send(msgString);
-      break;
-    }
-  }
+  connectionArray.find((conn) => conn.username === target).send(msgString);
 }
 ```
 
@@ -61,14 +44,13 @@ Our original chat demo didn't support sending messages to a specific user. The n
 
 ```js
 if (sendToClients) {
-  var msgString = JSON.stringify(msg);
-  var i;
+  const msgString = JSON.stringify(msg);
 
   if (msg.target && msg.target.length !== 0) {
     sendToOneUser(msg.target, msgString);
   } else {
-    for (i=0; i < connectionArray.length; i++) {
-      connectionArray[i].send(msgString);
+    for (const connection of connectionArray) {
+      connection.send(msgString);
     }
   }
 }
@@ -95,7 +77,7 @@ When starting the signaling process, an **offer** is created by the user initiat
 - `name`
   - : The sender's username.
 - `target`
-  - : The username of the person to receive the description (if the caller is sending the message, this specifies the callee, and vice-versa).
+  - : The username of the person to receive the description (if the caller is sending the message, this specifies the callee, and vice versa).
 - `sdp`
   - : The SDP (Session Description Protocol) string describing the local end of the connection from the perspective of the sender (or the remote end of the connection from the receiver's point of view).
 
@@ -174,9 +156,7 @@ The HTML for our client needs a location for video to be presented. This require
   <div class="camera-box">
     <video id="received_video" autoplay></video>
     <video id="local_video" autoplay muted></video>
-    <button id="hangup-button" onclick="hangUpCall();" disabled>
-      Hang Up
-    </button>
+    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
   </div>
 </div>
 ```
@@ -197,7 +177,7 @@ Throughout our code, we call `sendToServer()` in order to send messages to the s
 
 ```js
 function sendToServer(msg) {
-  var msgJSON = JSON.stringify(msg);
+  const msgJSON = JSON.stringify(msg);
 
   connection.send(msgJSON);
 }
@@ -211,15 +191,14 @@ The code which handles the `"userlist"` message calls `handleUserlistMsg()`. Her
 
 ```js
 function handleUserlistMsg(msg) {
-  var i;
-  var listElem = document.querySelector(".userlistbox");
+  const listElem = document.querySelector(".userlistbox");
 
   while (listElem.firstChild) {
     listElem.removeChild(listElem.firstChild);
   }
 
-  msg.users.forEach(function(username) {
-    var item = document.createElement("li");
+  msg.users.forEach((username) => {
+    const item = document.createElement("li");
     item.appendChild(document.createTextNode(username));
     item.addEventListener("click", invite, false);
 
@@ -232,40 +211,45 @@ After getting a reference to the {{HTMLElement("ul")}} which contains the list o
 
 > **Note:** Obviously, it would be more efficient to update the list by adding and removing individual users instead of rebuilding the whole list every time it changes, but this is good enough for the purposes of this example.
 
-Then we iterate over the array of user names using {{jsxref("Array.forEach", "forEach()")}}. For each name, we create a new {{HTMLElement("li")}} element, then create a new text node containing the user name using {{domxref("Document.createTextNode", "createTextNode()")}}. That text node is added as a child of the `<li>` element. Next, we set a handler for the {{event("click")}} event on the list item, that clicking on a user name calls our `invite()` method, which we'll look at in the next section.
+Then we iterate over the array of user names using {{jsxref("Array.forEach", "forEach()")}}. For each name, we create a new {{HTMLElement("li")}} element, then create a new text node containing the user name using {{domxref("Document.createTextNode", "createTextNode()")}}. That text node is added as a child of the `<li>` element. Next, we set a handler for the {{domxref("Element/click_event", "click")}} event on the list item, that clicking on a user name calls our `invite()` method, which we'll look at in the next section.
 
 Finally, we append the new item to the `<ul>` that contains all of the user names.
 
 #### Starting a call
 
-When the user clicks on a username they want to call, the `invite()` function is invoked as the event handler for that {{event("click")}} event:
+When the user clicks on a username they want to call, the `invite()` function is invoked as the event handler for that {{domxref("Element/click_event", "click")}} event:
 
 ```js
-var mediaConstraints = {
+const mediaConstraints = {
   audio: true, // We want an audio track
-  video: true // ...and we want a video track
+  video: true, // And we want a video track
 };
 
 function invite(evt) {
   if (myPeerConnection) {
     alert("You can't start a call because you already have one open!");
   } else {
-    var clickedUsername = evt.target.textContent;
+    const clickedUsername = evt.target.textContent;
 
     if (clickedUsername === myUsername) {
-      alert("I'm afraid I can't let you talk to yourself. That would be weird.");
+      alert(
+        "I'm afraid I can't let you talk to yourself. That would be weird."
+      );
       return;
     }
 
     targetUsername = clickedUsername;
     createPeerConnection();
 
-    navigator.mediaDevices.getUserMedia(mediaConstraints)
-    .then(function(localStream) {
-      document.getElementById("local_video").srcObject = localStream;
-      localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
-    })
-    .catch(handleGetUserMediaError);
+    navigator.mediaDevices
+      .getUserMedia(mediaConstraints)
+      .then((localStream) => {
+        document.getElementById("local_video").srcObject = localStream;
+        localStream
+          .getTracks()
+          .forEach((track) => myPeerConnection.addTrack(track, localStream));
+      })
+      .catch(handleGetUserMediaError);
   }
 }
 ```
@@ -294,17 +278,19 @@ If the promise returned by `getUserMedia()` concludes in a failure, our `handleG
 
 ```js
 function handleGetUserMediaError(e) {
-  switch(e.name) {
+  switch (e.name) {
     case "NotFoundError":
-      alert("Unable to open your call because no camera and/or microphone" +
-            "were found.");
+      alert(
+        "Unable to open your call because no camera and/or microphone" +
+          "were found."
+      );
       break;
     case "SecurityError":
     case "PermissionDeniedError":
       // Do nothing; this is the same as the user canceling the call.
       break;
     default:
-      alert("Error opening your camera and/or microphone: " + e.message);
+      alert(`Error opening your camera and/or microphone: ${e.message}`);
       break;
   }
 
@@ -323,19 +309,22 @@ The `createPeerConnection()` function is used by both the caller and the callee 
 ```js
 function createPeerConnection() {
   myPeerConnection = new RTCPeerConnection({
-      iceServers: [     // Information about ICE servers - Use your own!
-        {
-          urls: "stun:stun.stunprotocol.org"
-        }
-      ]
+    iceServers: [
+      // Information about ICE servers - Use your own!
+      {
+        urls: "stun:stun.stunprotocol.org",
+      },
+    ],
   });
 
   myPeerConnection.onicecandidate = handleICECandidateEvent;
   myPeerConnection.ontrack = handleTrackEvent;
   myPeerConnection.onnegotiationneeded = handleNegotiationNeededEvent;
   myPeerConnection.onremovetrack = handleRemoveTrackEvent;
-  myPeerConnection.oniceconnectionstatechange = handleICEConnectionStateChangeEvent;
-  myPeerConnection.onicegatheringstatechange = handleICEGatheringStateChangeEvent;
+  myPeerConnection.oniceconnectionstatechange =
+    handleICEConnectionStateChangeEvent;
+  myPeerConnection.onicegatheringstatechange =
+    handleICEGatheringStateChangeEvent;
   myPeerConnection.onsignalingstatechange = handleSignalingStateChangeEvent;
 }
 ```
@@ -357,7 +346,7 @@ The first three of these event handlers are required; you have to handle them to
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}}
   - : This function is called whenever the WebRTC infrastructure needs you to start the session negotiation process anew. Its job is to create and send an offer, to the callee, asking it to connect with us. See [Starting negotiation](#starting_negotiation) to see how we handle this.
 - {{domxref("RTCPeerConnection.removetrack_event", "onremovetrack")}}
-  - : This counterpart to `ontrack` is called to handle the {{event("removetrack")}} event; it's sent to the `RTCPeerConnection` when the remote peer removes a track from the media being sent. See [Handling the removal of tracks](#handling_the_removal_of_tracks).
+  - : This counterpart to `ontrack` is called to handle the {{domxref("MediaStream/removetrack_event", "removetrack")}} event; it's sent to the `RTCPeerConnection` when the remote peer removes a track from the media being sent. See [Handling the removal of tracks](#handling_the_removal_of_tracks).
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "oniceconnectionstatechange")}}
   - : The {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event is sent by the ICE layer to let you know about changes to the state of the ICE connection. This can help you know when the connection has failed, or been lost. We'll look at the code for this example in [ICE connection state](#ice_connection_state) below.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "onicegatheringstatechange")}}
@@ -371,18 +360,18 @@ Once the caller has created its {{domxref("RTCPeerConnection")}}, created a medi
 
 ```js
 function handleNegotiationNeededEvent() {
-  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
-    sendToServer({
-      name: myUsername,
-      target: targetUsername,
-      type: "video-offer",
-      sdp: myPeerConnection.localDescription
-    });
-  })
-  .catch(reportError);
+  myPeerConnection
+    .createOffer()
+    .then((offer) => myPeerConnection.setLocalDescription(offer))
+    .then(() => {
+      sendToServer({
+        name: myUsername,
+        target: targetUsername,
+        type: "video-offer",
+        sdp: myPeerConnection.localDescription,
+      });
+    })
+    .catch(reportError);
 }
 ```
 
@@ -417,39 +406,37 @@ When the offer arrives, the callee's `handleVideoOfferMsg()` function is called 
 
 ```js
 function handleVideoOfferMsg(msg) {
-  var localStream = null;
+  let localStream = null;
 
   targetUsername = msg.name;
   createPeerConnection();
 
-  var desc = new RTCSessionDescription(msg.sdp);
+  const desc = new RTCSessionDescription(msg.sdp);
 
-  myPeerConnection.setRemoteDescription(desc).then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function(stream) {
-    localStream = stream;
-    document.getElementById("local_video").srcObject = localStream;
+  myPeerConnection
+    .setRemoteDescription(desc)
+    .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
+    .then((stream) => {
+      localStream = stream;
+      document.getElementById("local_video").srcObject = localStream;
 
-    localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
-  })
-  .then(function() {
-    return myPeerConnection.createAnswer();
-  })
-  .then(function(answer) {
-    return myPeerConnection.setLocalDescription(answer);
-  })
-  .then(function() {
-    var msg = {
-      name: myUsername,
-      target: targetUsername,
-      type: "video-answer",
-      sdp: myPeerConnection.localDescription
-    };
+      localStream
+        .getTracks()
+        .forEach((track) => myPeerConnection.addTrack(track, localStream));
+    })
+    .then(() => myPeerConnection.createAnswer())
+    .then((answer) => myPeerConnection.setLocalDescription(answer))
+    .then(() => {
+      const msg = {
+        name: myUsername,
+        target: targetUsername,
+        type: "video-answer",
+        sdp: myPeerConnection.localDescription,
+      };
 
-    sendToServer(msg);
-  })
-  .catch(handleGetUserMediaError);
+      sendToServer(msg);
+    })
+    .catch(handleGetUserMediaError);
 }
 ```
 
@@ -475,7 +462,7 @@ function handleICECandidateEvent(event) {
     sendToServer({
       type: "new-ice-candidate",
       target: targetUsername,
-      candidate: event.candidate
+      candidate: event.candidate,
     });
   }
 }
@@ -500,10 +487,9 @@ The signaling server delivers each ICE candidate to the destination peer using w
 
 ```js
 function handleNewICECandidateMsg(msg) {
-  var candidate = new RTCIceCandidate(msg.candidate);
+  const candidate = new RTCIceCandidate(msg.candidate);
 
-  myPeerConnection.addIceCandidate(candidate)
-    .catch(reportError);
+  myPeerConnection.addIceCandidate(candidate).catch(reportError);
 }
 ```
 
@@ -513,7 +499,7 @@ Each peer sends to the other peer a candidate for each possible transport config
 
 In addition, if something happens to cause a change in the streaming scenario, negotiation will begin again, with the {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event being sent to the {{domxref("RTCPeerConnection")}}, and the entire process starts again as described before. This can happen in a variety of situations, including:
 
-- Changes in the network status, such as a bandwidth change, transitioning from WiFi to cellular connectivity, or the like.
+- Changes in the network status, such as a bandwidth change, transitioning from Wi-Fi to cellular connectivity, or the like.
 - Switching between the front and rear cameras on a phone.
 - A change to the configuration of the stream, such as its resolution or frame rate.
 
@@ -534,20 +520,20 @@ Once this code has completed, finally the video being sent by the other peer is 
 
 ##### Handling the removal of tracks
 
-Your code receives a {{event("removetrack")}} event when the remote peer removes a track from the connection by calling {{domxref("RTCPeerConnection.removeTrack()")}}. Our handler for `"removetrack"` is:
+Your code receives a {{domxref("MediaStream/removetrack_event", "removetrack")}} event when the remote peer removes a track from the connection by calling {{domxref("RTCPeerConnection.removeTrack()")}}. Our handler for `"removetrack"` is:
 
 ```js
 function handleRemoveTrackEvent(event) {
-  var stream = document.getElementById("received_video").srcObject;
-  var trackList = stream.getTracks();
+  const stream = document.getElementById("received_video").srcObject;
+  const trackList = stream.getTracks();
 
-  if (trackList.length == 0) {
+  if (trackList.length === 0) {
     closeVideoCall();
   }
 }
 ```
 
-This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's {{htmlattrxref("srcObject", "video")}} attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
+This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
 
 If the array's length is zero, meaning there are no tracks left in the stream, we end the call by calling `closeVideoCall()`. This cleanly restores our app to a state in which it's ready to start or receive another call. See [Ending the call](#ending_the_call) to learn how `closeVideoCall()` works.
 
@@ -565,7 +551,7 @@ function hangUpCall() {
   sendToServer({
     name: myUsername,
     target: targetUsername,
-    type: "hang-up"
+    type: "hang-up",
   });
 }
 ```
@@ -578,8 +564,8 @@ The `closeVideoCall()` function, shown below, is responsible for stopping the st
 
 ```js
 function closeVideoCall() {
-  var remoteVideo = document.getElementById("received_video");
-  var localVideo = document.getElementById("local_video");
+  const remoteVideo = document.getElementById("received_video");
+  const localVideo = document.getElementById("local_video");
 
   if (myPeerConnection) {
     myPeerConnection.ontrack = null;
@@ -592,11 +578,11 @@ function closeVideoCall() {
     myPeerConnection.onnegotiationneeded = null;
 
     if (remoteVideo.srcObject) {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     if (localVideo.srcObject) {
-      localVideo.srcObject.getTracks().forEach(track => track.stop());
+      localVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     myPeerConnection.close();
@@ -620,7 +606,7 @@ After pulling references to the two {{HTMLElement("video")}} elements, we check 
 3. Close the {{domxref("RTCPeerConnection")}} by calling {{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.
 4. Set `myPeerConnection` to `null`, ensuring our code learns there's no ongoing call; this is useful when the user clicks a name in the user list.
 
-Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their {{htmlattrxref("src", "video")}} and {{htmlattrxref("srcObject", "video")}} attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
+Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/en-US/docs/Web/HTML/Element/video#src) and [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
 
 Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
 
@@ -634,7 +620,7 @@ There are a number of additional events you can set listeners for which notifyin
 
 ```js
 function handleICEConnectionStateChangeEvent(event) {
-  switch(myPeerConnection.iceConnectionState) {
+  switch (myPeerConnection.iceConnectionState) {
     case "closed":
     case "failed":
       closeVideoCall();
@@ -653,12 +639,12 @@ Similarly, we watch for {{domxref("RTCPeerConnection.signalingstatechange_event"
 
 ```js
 function handleSignalingStateChangeEvent(event) {
-  switch(myPeerConnection.signalingState) {
+  switch (myPeerConnection.signalingState) {
     case "closed":
       closeVideoCall();
       break;
   }
-};
+}
 ```
 
 > **Note:** The `closed` signaling state has been deprecated in favor of the `closed` {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}. We are watching for it here to add a bit of backward compatibility.
@@ -685,7 +671,7 @@ Another obvious improvement would be to add a "ringing" feature, so that instead
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
 - [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - The [Perfect Negotiation](/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation) pattern

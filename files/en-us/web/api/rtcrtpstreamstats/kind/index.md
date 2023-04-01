@@ -1,23 +1,10 @@
 ---
 title: RTCRtpStreamStats.kind
 slug: Web/API/RTCRtpStreamStats/kind
-tags:
-  - API
-  - Audio
-  - Media
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - kind
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.kind
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`kind`** property of the
@@ -33,7 +20,7 @@ determine how this affects the browsers you're targeting.
 
 ## Value
 
-A {{domxref("DOMString")}} whose value is `"audio"` if the track whose
+A string whose value is `"audio"` if the track whose
 statistics are given by the `RTCRtpStreamStats` object contains audio, or
 `"video"` if the track contains video media.
 

@@ -1,24 +1,10 @@
 ---
 title: RTCIceParameters.usernameFragment
 slug: Web/API/RTCIceParameters/usernameFragment
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Negotiation
-  - Property
-  - RTCIceParameters
-  - Reference
-  - Web RTC API
-  - WebRTC
-  - ice-ufrag
-  - parameters
-  - rtc
-  - ufrag
-  - username
-  - usernameFragment
+page-type: web-api-instance-property
 browser-compat: api.RTCIceParameters.usernameFragment
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceParameters")}}** dictionary's
@@ -28,7 +14,7 @@ current ICE session.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the username fragment that, in tandem with the
+A string containing the username fragment that, in tandem with the
 {{domxref("RTCIceParameters.password", "password")}}, uniquely identify the ICE session
 being used by the transport. The string may be up to 256 characters long.
 

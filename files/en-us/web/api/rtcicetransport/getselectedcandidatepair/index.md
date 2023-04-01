@@ -1,22 +1,10 @@
 ---
 title: RTCIceTransport.getSelectedCandidatePair()
 slug: Web/API/RTCIceTransport/getSelectedCandidatePair
-tags:
-  - API
-  - Candidates
-  - Connectivity
-  - Gathering
-  - ICE
-  - Method
-  - Negotiation
-  - Pair
-  - RTCIceTransport
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - getSelectedCandidatePair
+page-type: web-api-instance-method
 browser-compat: api.RTCIceTransport.getSelectedCandidatePair
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceTransport")}} method
@@ -26,8 +14,8 @@ of {{Glossary("ICE")}} candidates describing the configuration of the endpoints 
 
 ## Syntax
 
-```js
-candidatePair = RTCIceTransport.getSelectedCandidatePair();
+```js-nolint
+getSelectedCandidatePair()
 ```
 
 ### Parameters

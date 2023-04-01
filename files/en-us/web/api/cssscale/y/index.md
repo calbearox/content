@@ -1,18 +1,11 @@
 ---
 title: CSSScale.y
 slug: Web/API/CSSScale/y
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSScale
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.CSSScale.y
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`y`** property of the
 {{domxref("CSSScale")}} interface gets and sets the ordinate or y-axis of the

@@ -1,19 +1,11 @@
 ---
 title: SourceBuffer.videoTracks
 slug: Web/API/SourceBuffer/videoTracks
-tags:
-  - API
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - videoTracks
+page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.videoTracks
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`videoTracks`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns a list of the video tracks currently

@@ -1,15 +1,10 @@
 ---
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new
@@ -23,7 +18,7 @@ is used, it returns a function that, when invoked, returns this iterator itself.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -36,16 +31,16 @@ A new {{jsxref("Map")}} iterator object.
 ### Using entries()
 
 ```js
-let myMap = new Map()
-myMap.set('0', 'foo')
-myMap.set(1, 'bar')
-myMap.set({}, 'baz')
+const myMap = new Map();
+myMap.set('0', 'foo');
+myMap.set(1, 'bar');
+myMap.set({}, 'baz');
 
-let mapIter = myMap.entries()
+const mapIter = myMap.entries();
 
-console.log(mapIter.next().value)  // ["0", "foo"]
-console.log(mapIter.next().value)  // [1, "bar"]
-console.log(mapIter.next().value)  // [Object, "baz"]
+console.log(mapIter.next().value); // ["0", "foo"]
+console.log(mapIter.next().value); // [1, "bar"]
+console.log(mapIter.next().value); // [Object, "baz"]
 ```
 
 ## Specifications

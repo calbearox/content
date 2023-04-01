@@ -1,23 +1,10 @@
 ---
 title: RTCIceCandidateStats.lastPacketSentTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp
-tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - lastPacketSentTImestamp
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.lastPacketSentTimestamp
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

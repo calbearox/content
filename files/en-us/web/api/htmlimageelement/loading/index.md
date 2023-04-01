@@ -1,26 +1,10 @@
 ---
 title: HTMLImageElement.loading
 slug: Web/API/HTMLImageElement/loading
-tags:
-  - API
-  - Content
-  - Eager
-  - Graphics
-  - HTML DOM
-  - HTMLImageElement
-  - Images
-  - Layout
-  - Lazy
-  - Lazy-loading
-  - Loading
-  - Performance
-  - Pictures
-  - Property
-  - Reference
-  - load
-  - rendering
+page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.loading
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}}
@@ -34,7 +18,7 @@ it's expected to be needed, rather than immediately during the initial page load
 
 ## Value
 
-A {{domxref("DOMString")}} providing a hint to the user agent as to how to best
+A string providing a hint to the user agent as to how to best
 schedule the loading of the image to optimize page performance. The possible values are:
 
 - `eager`
@@ -77,10 +61,10 @@ image, then reflow the document as needed to update the positions of elements ba
 any size change made to the element to fit the image.
 
 To prevent this reflow from occurring, you should explicitly specify the size of the
-image's presentation using the image element's {{htmlattrxref("width", "img")}} and
-{{htmlattrxref("height", "img")}} attributes. By establishing the intrinsic aspect ratio
+image's presentation using the image element's [`width`](/en-US/docs/Web/HTML/Element/img#width) and
+[`height`](/en-US/docs/Web/HTML/Element/img#height) attributes. By establishing the intrinsic aspect ratio
 in this manner, you prevent elements from shifting around while the document loads,
-which can be disconcerting or offputting at best and can cause users to click the wrong
+which can be disconcerting or off-putting at best and can cause users to click the wrong
 thing at worst, depending on the exact timing of the deferred loads and reflows.
 
 ## Examples
@@ -121,5 +105,3 @@ function addImageToList(url) {
 - [Web performance](/en-US/docs/Learn/Performance) in the MDN Learning Area
 - [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) in the MDN web
   performance guide
-- {{SectionOnPage("/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages", "Use
-    lazy loading for images")}}

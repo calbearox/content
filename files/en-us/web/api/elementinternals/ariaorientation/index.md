@@ -1,16 +1,10 @@
 ---
 title: ElementInternals.ariaOrientation
 slug: Web/API/ElementInternals/ariaOrientation
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaOrientation
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaOrientation
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaOrientation`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
@@ -19,7 +13,7 @@ The **`ariaOrientation`** property of the {{domxref("ElementInternals")}} interf
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"horizontal"`
   - : The element is horizontal.

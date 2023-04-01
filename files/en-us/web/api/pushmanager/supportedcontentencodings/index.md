@@ -1,17 +1,11 @@
 ---
 title: PushManager.supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings
-tags:
-  - API
-  - Experimental
-  - Property
-  - PushManager
-  - Reference
-  - Service Workers
-  - supportedContentEncodings
+page-type: web-api-instance-property
 browser-compat: api.PushManager.supportedContentEncodings
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+
+{{APIRef("Push API")}}
 
 The **`supportedContentEncodings`** read-only property of the
 {{domxref("PushManager")}} interface returns an array of supported content codings that

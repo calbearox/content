@@ -1,14 +1,10 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Document.body
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.body`** property represents the
@@ -17,7 +13,7 @@ The **`Document.body`** property represents the
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - {{HTMLElement("body")}}
 - {{HTMLElement("frameset")}}

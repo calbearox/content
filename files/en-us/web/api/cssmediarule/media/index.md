@@ -1,14 +1,10 @@
 ---
 title: CSSMediaRule.media
 slug: Web/API/CSSMediaRule/media
-tags:
-  - API
-  - CSSOM
-  - CSSMediaRule
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CSSMediaRule.media
 ---
+
 {{ APIRef("CSSOM") }}
 
 The read-only **`media`** property of the

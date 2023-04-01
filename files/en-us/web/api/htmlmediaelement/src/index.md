@@ -1,15 +1,10 @@
 ---
 title: HTMLMediaElement.src
 slug: Web/API/HTMLMediaElement/src
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Reference
-  - src
+page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.src
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.src`** property reflects the value of
@@ -25,14 +20,14 @@ resource to use in the element.
 
 ## Value
 
-A {{domxref("USVString")}} object containing the URL of a media resource to use in the
+A string object containing the URL of a media resource to use in the
 element; this property reflects the value of the HTML element's `src`
 attribute.
 
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.src); // ""
 ```
 
@@ -46,4 +41,4 @@ console.log(obj.src); // ""
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.src` property

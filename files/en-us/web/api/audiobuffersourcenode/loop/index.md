@@ -1,18 +1,10 @@
 ---
 title: AudioBufferSourceNode.loop
 slug: Web/API/AudioBufferSourceNode/loop
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Loop
-  - Media
-  - Property
-  - Reference
-  - Web Audio API
-  - sound
+page-type: web-api-instance-property
 browser-compat: api.AudioBufferSourceNode.loop
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `loop` property of the {{ domxref("AudioBufferSourceNode") }}
@@ -40,23 +32,23 @@ are provided to play and stop the audio playback, and a slider control is used t
 the `playbackRate` property value on the fly. When the audio is played, it
 loops.
 
-> **Note:** You can [run the full
-> example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view
-> the source](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html).)
+> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view the source](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html).)
 
 ```js
 function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
-    var audioData = request.response;
+  request.onload = () => {
+    const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(
+      audioData,
+      (buffer) => {
         myBuffer = buffer;
         source.buffer = myBuffer;
         source.playbackRate.value = playbackControl.value;
@@ -64,21 +56,21 @@ function getData() {
         source.loop = true;
       },
 
-      function(e){"Error with decoding audio data" + e.err});
-
-  }
+      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    );
+  };
 
   request.send();
 }
 
 // wire up buttons to stop and play audio, and range slider control
 
-play.onclick = function() {
+play.onclick = () => {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-  playbackControl.removeAttribute('disabled');
-}
+  play.setAttribute("disabled", "disabled");
+  playbackControl.removeAttribute("disabled");
+};
 ```
 
 ## Specifications
@@ -92,6 +84,5 @@ play.onclick = function() {
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioBufferSourceNode")}}

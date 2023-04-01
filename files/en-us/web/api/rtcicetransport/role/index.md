@@ -1,24 +1,10 @@
 ---
 title: RTCIceTransport.role
 slug: Web/API/RTCIceTransport/role
-tags:
-  - API
-  - Audio
-  - Candidates
-  - ICE
-  - Media
-  - Negotiation
-  - Property
-  - RTCIceTransport
-  - Read-only
-  - Reference
-  - Role
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCIceTransport.role
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCIceTransport")}}**
@@ -27,8 +13,7 @@ the transport is fulfilling: that of the controlling agent, or the agent that is
 controlled.
 
 You can learn more about ICE roles in
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Choosing a candidate
-  pair")}}.
+[Choosing a candidate pair](/en-US/docs/Web/API/WebRTC_API/Connectivity#choosing_a_candidate_pair).
 
 ## Value
 

@@ -1,16 +1,10 @@
 ---
 title: IntersectionObserver.root
 slug: Web/API/IntersectionObserver/root
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Property
-  - Reference
-  - root
+page-type: web-api-instance-property
 browser-compat: api.IntersectionObserver.root
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only
@@ -55,5 +49,4 @@ observer.root.style.border = "2px solid #44aa44";
 
 ## See also
 
-- [Timing
-  element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
+- [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

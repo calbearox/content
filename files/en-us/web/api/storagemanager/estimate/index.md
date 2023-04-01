@@ -1,19 +1,10 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - estimate
+page-type: web-api-instance-method
 browser-compat: api.StorageManager.estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current [origin](/en-US/docs/Glossary/Same-origin_policy) takes up (`usage`), and how much space is available (`quota`).
@@ -22,8 +13,8 @@ This method operates asynchronously, so it returns a {{jsxref("Promise")}} which
 
 ## Syntax
 
-```js
-const estimatePromise = StorageManager.estimate();
+```js-nolint
+estimate()
 ```
 
 ### Parameters
@@ -49,7 +40,7 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 - Public site popularity data
 - User engagement signals like bookmarking, adding to homescreen, or accepting push notifications
 
-## Example
+## Examples
 
 In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.
 
@@ -57,23 +48,25 @@ In this example, we obtain the usage estimates and present the percentage of sto
 
 ```html
 <label>
-  You're currently using about <output id="percent">
-  </output>% of your available storage.
+  You're currently using about <output id="percent"> </output>% of your
+  available storage.
 </label>
 ```
 
 ### JavaScript content
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+navigator.storage.estimate().then((estimate) => {
+  document.getElementById("percent").value = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 40) }}
+{{ EmbedLiveSample('Examples', 600, 40) }}
 
 ## Specifications
 

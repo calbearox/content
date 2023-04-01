@@ -1,22 +1,10 @@
 ---
 title: RTCInboundRtpStreamStats.qpSum
 slug: Web/API/RTCInboundRtpStreamStats/qpSum
-tags:
-  - API
-  - Property
-  - QP
-  - Quantization
-  - RTCInboundRtpStreamStats
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - qpSum
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.qpSum
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`qpSum`** property of the
@@ -40,7 +28,7 @@ compressed the stream generally has been.
 
 ## Usage notes
 
-{{interwiki("wikipedia", "Quantization")}} is the process of applying lossy compression
+[Quantization](https://en.wikipedia.org/wiki/Quantization) is the process of applying lossy compression
 to a range of values, resulting in a single **quantum value**. This value
 takes the place of the range of values, thereby reducing the number of different values
 that appear in the overall data set, making the data more compressible. The quantization
@@ -51,13 +39,12 @@ frame—so it's difficult to know for certain how substantial the compression is
 you can do is make an estimate. You can, for example, use the value of
 {{domxref("RTCReceivedRtpStreamStats.framesDecoded")}} if receiving the media or
 {{domxref("RTCSentRtpStreamStats.framesEncoded")}} if sending it to get the number of
-frames handled so far, and compute an average from there. See [Calculating
-  average quantization](#calculating_average_quantization) below for a function that does this.
+frames handled so far, and compute an average from there. See [Calculating average quantization](#calculating_average_quantization) below for a function that does this.
 
 Also, the exact meaning of the QP value depends on the {{Glossary("codec")}} being
 used. For example, for the VP8 codec, the QP value can be anywhere from 1 to 127 and is
 found in the frame header element `"y_ac_qi"`, whose value is defined in
-{{RFC(6386, "19.2")}}. H.264 uses a QP which ranges from 0 to 51; in this case, it's an
+{{RFC(6386, "", "19.2")}}. H.264 uses a QP which ranges from 0 to 51; in this case, it's an
 index used to derive a scaling matrix used during the quantization process.
 Additionally, QP is not likely to be the only parameter the codec uses to adjust the
 compression. See the individual codec specifications for details.
@@ -74,7 +61,7 @@ the given {{domxref("RTCStats")}} object that contains RTP stream statistics, re
 function calculateAverageQP(stats) {
   let frameCount = 0;
 
-  switch(stats.type) {
+  switch (stats.type) {
     case "inbound-rtp":
     case "remote-inbound-rtp":
       frameCount = stats.framesDecoded;

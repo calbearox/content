@@ -1,24 +1,14 @@
 ---
 title: MediaTrackSettings.facingMode
 slug: Web/API/MediaTrackSettings/facingMode
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - facingMode
+page-type: web-api-instance-property
 browser-compat: api.MediaTrackSettings.facingMode
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
-**`facingMode`** property is a {{domxref("DOMString")}}
+**`facingMode`** property is a string
 indicating the direction in which the camera producing the video track represented by
 the {{domxref("MediaStreamTrack")}} is currently facing. This lets you determine what
 value was selected to comply with your specified constraints for this property's value
@@ -37,7 +27,7 @@ will never include this property.
 
 ## Value
 
-A {{domxref("DOMString")}} whose value is one of the strings in
+A string whose value is one of the strings in
 [`VideoFacingModeEnum`](#videofacingmodeenum).
 
 ### VideoFacingModeEnum
@@ -61,8 +51,7 @@ pointed.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 
@@ -74,8 +63,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.facingMode")}}
 - {{domxref("MediaTrackSettings")}}

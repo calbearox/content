@@ -1,15 +1,12 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Document.domain
 ---
+
 {{ApiRef}} {{Deprecated_Header}}
 
 The **`domain`** property of the {{domxref("Document")}}
@@ -19,6 +16,11 @@ document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-orig
 ## Value
 
 A string.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 
@@ -36,7 +38,7 @@ The getter for this property returns the domain portion of the current document'
 origin. In most cases, this will be the hostname portion of the document's URL. However,
 there are some exceptions:
 
-- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), then it will
+- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), then it will
   return the empty string.
 - If the `document.domain` [setter](#setter) has been used, then
   it will return the value that was set.
@@ -58,7 +60,7 @@ Other alternatives that provide slightly different information are
 ### Setting the domain
 
 ```js
-document.domain = domainString
+document.domain = domainString;
 ```
 
 The setter for this property can be used to _change_ a page's
@@ -87,8 +89,7 @@ have not done the same thing.
 #### Deprecation
 
 The `document.domain` setter is deprecated. It undermines the security
-protections provided by the [same
-origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
+protections provided by the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
 interoperability problems and security bugs.
 
 Attempting to set `document.domain` is dangerous. It opens up full access to
@@ -116,12 +117,11 @@ blanket exposure of all data caused by `document.domain`.
 The setter will throw a "`SecurityError`" {{domxref("DOMException")}} in
 several cases:
 
-- The {{httpheader('Feature-Policy/document-domain','document-domain')}}
-  {{HTTPHeader("Feature-Policy")}} is disabled.
+- The {{httpheader('Permissions-Policy/document-domain','document-domain')}}
+  {{HTTPHeader("Permissions-Policy")}} is disabled.
 - The document is inside a sandboxed {{htmlelement("iframe")}}.
 - The document has no {{glossary("browsing context")}}.
-- The document's [effective
-  domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.
+- The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.
 - The given value is neither the same as the page's current hostname, nor a parent
   domain of it.
 

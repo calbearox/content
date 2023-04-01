@@ -1,13 +1,10 @@
 ---
 title: CSSStyleDeclaration.parentRule
 slug: Web/API/CSSStyleDeclaration/parentRule
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CSSStyleDeclaration.parentRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **CSSStyleDeclaration.parentRule** read-only
@@ -26,8 +23,8 @@ The following JavaScript code gets the parent CSS style rule from a
 {{domxref('CSSStyleDeclaration')}}:
 
 ```js
-var declaration = document.styleSheets[0].rules[0].style;
-var rule = declaration.parentRule;
+const declaration = document.styleSheets[0].rules[0].style;
+const rule = declaration.parentRule;
 ```
 
 ## Specifications

@@ -1,16 +1,10 @@
 ---
 title: ElementInternals.ariaPressed
 slug: Web/API/ElementInternals/ariaPressed
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPressed
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaPressed
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaPressed`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
@@ -19,7 +13,7 @@ The **`ariaPressed`** property of the {{domxref("ElementInternals")}} interface 
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is pressed.

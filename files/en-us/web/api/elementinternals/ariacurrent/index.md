@@ -1,16 +1,10 @@
 ---
 title: ElementInternals.ariaCurrent
 slug: Web/API/ElementInternals/ariaCurrent
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaCurrent
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaCurrent
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaCurrent`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
@@ -19,7 +13,7 @@ The **`ariaCurrent`** property of the {{domxref("ElementInternals")}} interface 
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"page"`
   - : Represents the current page within a set of pages.

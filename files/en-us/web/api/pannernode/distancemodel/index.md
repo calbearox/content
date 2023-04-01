@@ -1,15 +1,10 @@
 ---
 title: PannerNode.distanceModel
 slug: Web/API/PannerNode/distanceModel
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - distanceModel
+page-type: web-api-instance-property
 browser-compat: api.PannerNode.distanceModel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `distanceModel` property of the {{ domxref("PannerNode") }} interface is an enumerated value determining which algorithm to use to reduce the volume of the audio source as it moves away from the listener.
@@ -27,11 +22,11 @@ The possible values are:
 
 ## Value
 
-A enum — see [`DistanceModelType`](https://webaudio.github.io/web-audio-api/#idl-def-DistanceModelType).
+An enum — see [`DistanceModelType`](https://webaudio.github.io/web-audio-api/#idl-def-DistanceModelType).
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 
@@ -44,4 +39,4 @@ See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/cre
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

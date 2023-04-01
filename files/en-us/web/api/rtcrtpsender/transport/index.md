@@ -1,23 +1,10 @@
 ---
 title: RTCRtpSender.transport
 slug: Web/API/RTCRtpSender/transport
-tags:
-  - API
-  - Connectivity
-  - DTLS
-  - Networking
-  - Property
-  - RTCP
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - sender
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpSender.transport
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The read-only **`transport`** property of an

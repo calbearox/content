@@ -1,13 +1,10 @@
 ---
 title: DocumentFragment.firstElementChild
 slug: Web/API/DocumentFragment/firstElementChild
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.DocumentFragment.firstElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`DocumentFragment.firstElementChild`** read-only property
@@ -24,7 +21,7 @@ An {{domxref("Element")}} that is the first child `Element` of the object, or `n
 let fragment = new DocumentFragment();
 fragment.firstElementChild; // null
 
-let paragraph = document.createElement('p');
+let paragraph = document.createElement("p");
 fragment.appendChild(paragraph);
 
 fragment.firstElementChild; // <p>

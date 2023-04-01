@@ -1,16 +1,10 @@
 ---
 title: VisualViewport.offsetleft
 slug: Web/API/VisualViewport/offsetleft
-tags:
-  - API
-  - Property
-  - Reference
-  - Visual Viewport API
-  - VisualViewport
-  - offsetleft
-  - viewport
+page-type: web-api-instance-property
 browser-compat: api.VisualViewport.offsetLeft
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`offsetLeft`** read-only property of the

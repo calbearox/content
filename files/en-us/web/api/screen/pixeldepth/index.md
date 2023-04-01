@@ -1,14 +1,10 @@
 ---
 title: Screen.pixelDepth
 slug: Web/API/Screen/pixelDepth
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Screen.pixelDepth
 ---
+
 {{APIRef("CSSOM")}}
 
 Returns the bit depth of the screen. Per the CSSOM, some implementations
@@ -23,11 +19,7 @@ A number.
 ```js
 // if there is not adequate bit depth
 // choose a simpler color
-if ( window.screen.pixelDepth > 8 ) {
-  document.style.color = "#FAEBD7";
-} else {
-  document.style.color = "#FFFFFF";
-}
+document.style.color = window.screen.pixelDepth > 8 ? "#FAEBD7" : "#FFFFFF";
 ```
 
 ## Specifications

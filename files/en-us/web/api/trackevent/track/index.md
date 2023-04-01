@@ -1,20 +1,10 @@
 ---
 title: TrackEvent.track
 slug: Web/API/TrackEvent/track
-tags:
-  - API
-  - Audio
-  - Event
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - TrackEvent
-  - Video
-  - track
+page-type: web-api-instance-property
 browser-compat: api.TrackEvent.track
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`track`** property of

@@ -1,17 +1,12 @@
 ---
 title: Document.all
 slug: Web/API/Document/all
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - HTMLAllCollection
-  - Property
-  - Reference
-  - all
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Document.all
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{DOMxRef("Document")}} interface's read-only **`all`**
@@ -27,8 +22,7 @@ An {{DOMxRef("HTMLAllCollection")}} which contains every element in the document
 
 `document.all` is the only {{Glossary("falsy")}} object accessible to
 JavaScript, because it has the [\[\[IsHTMLDDA\]\] internal
-slot](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot). This was done because of compatibility with older versions of Internet
-Explorer. More information about this can be found in [this answer from StackOverflow](https://stackoverflow.com/a/62005426).
+slot](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot).
 
 ## Specifications
 

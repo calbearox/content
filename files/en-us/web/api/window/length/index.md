@@ -1,15 +1,10 @@
 ---
 title: Window.length
 slug: Web/API/Window/length
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.length
 ---
+
 {{ ApiRef() }}
 
 Returns the number of frames (either {{HTMLElement("frame")}} or

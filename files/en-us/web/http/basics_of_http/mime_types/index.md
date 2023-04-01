@@ -1,18 +1,8 @@
 ---
 title: MIME types (IANA media types)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Content-Type
-  - Guide
-  - HTTP
-  - MIME Types
-  - Meta
-  - Request header
-  - Response Header
-  - application/javascript
-  - application/json
-  - application/xml
 ---
+
 {{HTTPSidebar}}
 
 A **media type** (also known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
@@ -26,7 +16,7 @@ The [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) is respo
 
 ## Structure of a MIME type
 
-A MIME type most-commonly consists of just two parts: a _type_ and a _subtype_, separated by a slash (`/`) — with no whitespace between:
+A MIME type most commonly consists of just two parts: a _type_ and a _subtype_, separated by a slash (`/`) — with no whitespace between:
 
 ```
 type/subtype
@@ -56,7 +46,7 @@ MIME types are case-insensitive but are traditionally written in lowercase. The 
 
 There are two classes of type: **discrete** and **multipart**.
 Discrete types are types which represent a single file or medium, such as a single text or music file, or a single video.
-A multipart type is one which represents a document that's comprised of multiple component parts, each of which may have its own individual MIME type; or, a multipart type may encapsulate multiple files being sent together in one transaction.
+A multipart type represents a document that's comprised of multiple component parts, each of which may have its own individual MIME type; or, a multipart type may encapsulate multiple files being sent together in one transaction.
 For example, multipart MIME types are used when attaching multiple files to an email.
 
 #### Discrete types
@@ -68,11 +58,11 @@ The discrete types currently registered with the IANA are:
     either data that will be executed or interpreted in some way or binary data that requires a specific application or category of application to use.
     Generic binary data (or binary data whose true type is unknown) is `application/octet-stream`.
     Other common examples include `application/pdf`, `application/pkcs8`, and `application/zip`.
-    [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#application)
+    [(See application type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#application)
 - `audio`
   - : Audio or music data. Examples include `audio/mpeg`,
     `audio/vorbis`.
-    [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#audio)
+    [(See audio type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#audio)
 - `example`
   - : Reserved for use as a placeholder in examples showing how to use MIME types.
     These should never be used outside of sample code listings and documentation.
@@ -80,22 +70,22 @@ The discrete types currently registered with the IANA are:
     for instance, in an example related to working with audio on the web, the MIME type `audio/example` can be used to indicate that the type is a placeholder and should be replaced with an appropriate one when using the code in the real world.
 - `font`
   - : Font/typeface data. Common examples include `font/woff`, `font/ttf`, and `font/otf`.
-    [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#font)
+    [(See font type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#font)
 - `image`
   - : Image or graphical data including both bitmap and vector still images as well as
     animated versions of still image formats such as animated {{Glossary("GIF")}} or APNG.
     Common examples are `image/jpeg`, `image/png`, and `image/svg+xml`.
-    [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#image)
+    [(See image type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#image)
 - `model`
   - : Model data for a 3D object or scene. Examples include `model/3mf` and `model/vrml`.
-    [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#model)
+    [(See model type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#model)
 - `text`
   - : Text-only data including any human-readable content, source code, or textual data such as comma-separated value (CSV) formatted data.
     Examples include: `text/plain`, `text/csv`, and `text/html`.
-    [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#text)
+    [(See text type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#text)
 - `video`
   - : Video data or files, such as MP4 movies (`video/mp4`).
-    [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#video)
+    [(See video type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#video)
 
 For text documents without a specific subtype, `text/plain` should be used.
 Similarly, for binary documents without a specific or known subtype, `application/octet-stream` should be used.
@@ -116,12 +106,12 @@ There are two multipart types:
   - : A message that encapsulates other messages. This can be used, for instance, to represent an email that includes a forwarded message as part of its data,
     or to allow sending very large messages in chunks as if it were multiple messages.
     Examples include `message/rfc822` (for forwarded or replied-to message quoting) and `message/partial` to allow breaking a large message into smaller ones automatically to be reassembled by the recipient.
-    [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#message)
+    [(See message type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#message)
 - `multipart`
   - : Data that consists of multiple components which may individually have different MIME types.
-    Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
+    Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "", "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
     "Partial Content" response returned when the fetched data is only part of the content, such as is delivered using the {{HTTPHeader("Range")}} header).
-    [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)
+    [(See multipart type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)
 
 ## Important MIME types for Web developers
 
@@ -152,11 +142,11 @@ All HTML content should be served with this type. Alternative MIME types for XHT
 
 ### text/javascript
 
-Per the current relevant standards, JavaScript content should always be served using the MIME type `text/javascript`.
-No other MIME types are considered valid for JavaScript, and using any MIME type other than`text/javascript` may result in scripts that do not load or run.
+Per the [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript), JavaScript content should always be served using the MIME type `text/javascript`.
+No other MIME types are considered valid for JavaScript, and using any MIME type other than `text/javascript` may result in scripts that do not load or run.
 
 You may find some JavaScript content incorrectly served with a `charset` parameter as part of the MIME type — as an attempt to specify the character set for the script content.
-That `charset` parameter isn’t valid for JavaScript content, and in most cases will result in a script failing to load.
+That `charset` parameter isn't valid for JavaScript content, and in most cases will result in a script failing to load.
 
 #### Legacy JavaScript MIME types
 
@@ -198,7 +188,7 @@ The following image types are used commonly enough to be considered _safe_ for u
 - [`image/svg+xml`](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics): Scalable Vector Graphics (SVG)
 - [`image/webp`](/en-US/docs/Web/Media/Formats/Image_types#webp_image): Web Picture format (WEBP)
 
-The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types##common_image_file_types) provides information and recommendations about when to use the different image formats.
+The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types#common_image_file_types) provides information and recommendations about when to use the different image formats.
 
 ### Audio and video types
 
@@ -215,16 +205,16 @@ The optional [codecs parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) 
 
 The most commonly used MIME types used for web content are listed below.
 This isn't a complete list of all the types that may be available, however.
-See the [media container formats](/en-US/docs/Web/Media/Formats/Containers) guide for that.
+See the [media container formats guide](/en-US/docs/Web/Media/Formats/Containers) for that.
 
-| MIME type                                               | Audio or video type                                                                                                                                                                     |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | An audio file in the WAVE container format. The PCM audio codec (WAVE codec "1") is often supported, but other codecs have limited support (if any).                                    |
-| `audio/webm`                                            | An audio file in the WebM container format. Vorbis and Opus are the codecs officially supported by the WebM specification.                                                              |
-| `video/webm`                                            | A video file, possibly with audio, in the WebM container format. VP8 and VP9 are the most common video codecs; Vorbis and Opus the most common audio codecs.                            |
-| `audio/ogg`                                             | An audio file in the Ogg container format. Vorbis is the most common audio codec used in such a container; however, Opus is now supported by Ogg as well.                               |
-| `video/ogg`                                             | A video file, possibly with audio, in the Ogg container format. Theora is the usual video codec used within it; Vorbis is the usual audio codec, although Opus is becoming more common. |
-| `application/ogg`                                       | An audio or video file using the Ogg container format. Theora is the usual video codec used within it; Vorbis is the usual audio codec.                                                 |
+| MIME type                                                  | Audio or video type                                                                                                                                                                     |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `audio/wave`, `audio/wav`, `audio/x-wav`, `audio/x-pn-wav` | An audio file in the WAVE container format. The PCM audio codec (WAVE codec "1") is often supported, but other codecs have limited support (if any).                                    |
+| `audio/webm`                                               | An audio file in the WebM container format. Vorbis and Opus are the codecs officially supported by the WebM specification.                                                              |
+| `video/webm`                                               | A video file, possibly with audio, in the WebM container format. VP8 and VP9 are the most common video codecs; Vorbis and Opus the most common audio codecs.                            |
+| `audio/ogg`                                                | An audio file in the Ogg container format. Vorbis is the most common audio codec used in such a container; however, Opus is now supported by Ogg as well.                               |
+| `video/ogg`                                                | A video file, possibly with audio, in the Ogg container format. Theora is the usual video codec used within it; Vorbis is the usual audio codec, although Opus is becoming more common. |
+| `application/ogg`                                          | An audio or video file using the Ogg container format. Theora is the usual video codec used within it; Vorbis is the usual audio codec.                                                 |
 
 ### multipart/form-data
 
@@ -233,7 +223,7 @@ The `multipart/form-data` type can be used when sending the values of a complete
 As a multipart document format, it consists of different parts, delimited by a boundary (a string starting with a double dash `--`).
 Each part is its own entity with its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and {{HTTPHeader("Content-Type")}} for file uploading fields.
 
-```
+```http
 Content-Type: multipart/form-data; boundary=aBoundaryString
 (other headers associated with the multipart document as a whole)
 
@@ -254,10 +244,15 @@ Content-Disposition: form-data; name="myField"
 The following `<form>`:
 
 ```html
-<form action="http://localhost:8000/" method="post" enctype="multipart/form-data">
-  <label>Name: <input name="myTextField" value="Test"></label>
-  <label><input type="checkbox" name="myCheckBox"> Check</label>
-  <label>Upload file: <input type="file" name="myFile" value="test.txt"></label>
+<form
+  action="http://localhost:8000/"
+  method="post"
+  enctype="multipart/form-data">
+  <label>Name: <input name="myTextField" value="Test" /></label>
+  <label><input type="checkbox" name="myCheckBox" /> Check</label>
+  <label>
+    Upload file: <input type="file" name="myFile" value="test.txt" />
+  </label>
   <button>Send the file</button>
 </form>
 ```
@@ -300,7 +295,7 @@ When the {{HTTPStatus("206", "206 Partial Content")}} status code is sent, this 
 requested ranges. Like other multipart types, the {{HTTPHeader("Content-Type")}} uses a `boundary` to separate the pieces.
 Each piece has a {{HTTPHeader("Content-Type")}} header with its actual type and a {{HTTPHeader("Content-Range")}} of the range it represents.
 
-```
+```http
 HTTP/1.1 206 Partial Content
 Accept-Ranges: bytes
 Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5

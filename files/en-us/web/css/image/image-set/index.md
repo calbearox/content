@@ -1,15 +1,10 @@
 ---
 title: image-set()
 slug: Web/CSS/image/image-set
-tags:
-  - CSS
-  - CSS Function
-  - CSS-4 Images
-  - Function
-  - Reference
-  - Web
+page-type: css-function
 browser-compat: css.types.image.image-set
 ---
+
 {{CSSRef}}
 
 The **`image-set()`** [CSS](/en-US/docs/Web/CSS) [functional](/en-US/docs/Web/CSS/CSS_Functions) notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
@@ -20,10 +15,29 @@ Resolution and bandwidth differ by device and network access. The `image-set()` 
 
 ## Syntax
 
-```css
-image-set() = image-set( <image-set-option># )
-where <image-set-option> = [ <image> | <string> ] <resolution> and
-      <string> is an <url>
+```css-nolint
+/* Select image based on resolution */
+image-set(
+  "image1.jpg" 1x,
+  "image2.jpg" 2x
+);
+
+image-set(
+  url("image1.jpg") 1x,
+  url("image2.jpg") 2x
+);
+
+/* Select gradient based on resolution */
+image-set(
+  linear-gradient(blue, white) 1x,
+  linear-gradient(blue, green) 2x
+);
+
+/* Select image based on supported formats */
+image-set(
+  url("image1.avif") type("image/avif"),
+  url("image2.jpg") type("image/jpeg")
+);
 ```
 
 ### Values
@@ -32,10 +46,14 @@ where <image-set-option> = [ <image> | <string> ] <resolution> and
   - : The [`<image>`](/en-US/docs/Web/CSS/image) can be any image type except for an image set. The `image-set()` function may not be nested inside another `image-set()` function.
 - `<string>`
   - : A URL to an image.
-- `<resolution>`{{optional_inline}}
+- `<resolution>` {{optional_inline}}
   - : [`<resolution>`](/en-US/docs/Web/CSS/resolution) units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
-- `type(<string>)`{{optional_inline}}
+- `type(<string>)` {{optional_inline}}
   - : A valid MIME type string, for example "image/jpeg".
+
+### Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -62,7 +80,8 @@ There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref
   background-image: url("large-balloons.jpg");
   background-image: image-set(
     "large-balloons.avif" type("image/avif"),
-    "large-balloons.jpg" type("image/jpeg"));
+    "large-balloons.jpg" type("image/jpeg")
+  );
 }
 ```
 

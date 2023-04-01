@@ -1,22 +1,15 @@
 ---
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Locale
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Locale
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale`** object is a standard built-in property of the Intl object that represents a Unicode locale identifier.
 
 {{EmbedInteractiveExample("pages/js/intl-locale.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Description
 
@@ -31,6 +24,8 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
 
 ## Instance properties
 
+These properties are defined on `Intl.Locale.prototype` and shared by all `Intl.Locale` instances.
+
 - {{jsxref("Intl/Locale/baseName", "Intl.Locale.prototype.baseName")}}
   - : Returns basic, core information about the `Locale` in the form of a substring of the complete data string.
 - {{jsxref("Intl/Locale/calendar", "Intl.Locale.prototype.calendar")}}
@@ -41,6 +36,10 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
   - : Returns whether case is taken into account for the locale's collation rules.
 - {{jsxref("Intl/Locale/collation", "Intl.Locale.prototype.collation")}}
   - : Returns the collation type for the `Locale`, which is used to order strings according to the locale's rules.
+- {{jsxref("Intl/Locale/collations", "Intl.Locale.prototype.collations")}}
+  - : Returns an {{jsxref("Array")}} of the collation types for the `Locale`.
+- {{jsxref("Object/constructor", "Intl.Locale.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.Locale` instances, the initial value is the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor.
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : Returns the time keeping format convention used by the locale.
 - {{jsxref("Intl/Locale/hourCycles", "Intl.Locale.prototype.hourCycles")}}
@@ -63,13 +62,15 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
   - : Returns an {{jsxref("Array")}} of time zone identifiers, associated with the `Locale`.
 - {{jsxref("Intl/Locale/weekInfo", "Intl.Locale.prototype.weekInfo")}}
   - : Returns [UTS 35's Week Elements](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements) according to the locale rules.
+- `Intl.Locale.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Locale"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
 - {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}
   - : Gets the most likely values for the language, script, and region of the locale based on existing values.
 - {{jsxref("Intl/Locale/minimize", "Intl.Locale.prototype.minimize()")}}
-  - : Attempts to remove information about the locale that would be added by calling {{jsxref("Intl/Locale/maximize", "Locale.maximize()")}}.
+  - : Attempts to remove information about the locale that would be added by calling {{jsxref("Intl/Locale/maximize", "maximize()")}}.
 - {{jsxref("Intl/Locale/toString", "Intl.Locale.prototype.toString()")}}
   - : Returns the Locale's full locale identifier string.
 
@@ -77,10 +78,10 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
 
 ### Basic usage
 
-At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor takes a locale identifier string as its argument:
+At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes a locale identifier string as its argument:
 
 ```js
-let us = new Intl.Locale('en-US');
+const us = new Intl.Locale("en-US");
 ```
 
 ### Using the Locale constructor with an options object
@@ -88,7 +89,7 @@ let us = new Intl.Locale('en-US');
 The constructor also takes an optional configuration object argument, which can contain any of several extension types. For example, set the {{jsxref("Intl/Locale/hourCycle", "hourCycle")}} property of the configuration object to your desired hour cycle type, and then pass it into the constructor:
 
 ```js
-let us12hour = new Intl.Locale("en-US", {hourCycle: "h12"});
+const us12hour = new Intl.Locale("en-US", { hourCycle: "h12" });
 console.log(us12hour.hourCycle); // Prints "h12"
 ```
 
@@ -103,5 +104,5 @@ console.log(us12hour.hourCycle); // Prints "h12"
 ## See also
 
 - {{jsxref("Intl")}}
-- [The Intl.Locale Polyfill](https://formatjs.io/docs/polyfills/intl-locale)
+- [The Intl.Locale Polyfill](https://formatjs.io/docs/polyfills/intl-locale/)
 - [Unicode locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)

@@ -1,22 +1,20 @@
 ---
 title: SerialPort.getInfo()
 slug: Web/API/SerialPort/getInfo
-tags:
-  - API
-  - Method
-  - Reference
-  - getInfo()
-  - SerialPort
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.SerialPort.getInfo
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The **`getInfo()`** method of the {{domxref("SerialPort")}} interface returns an object whose properties are the vendor ID and product ID of the device.
 
 ## Syntax
 
-```js
-SerialPort.getInfo();
+```js-nolint
+getInfo()
 ```
 
 ### Parameters

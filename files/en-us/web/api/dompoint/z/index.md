@@ -1,21 +1,10 @@
 ---
 title: DOMPoint.z
 slug: Web/API/DOMPoint/z
-tags:
-  - API
-  - Coordinate
-  - DOM
-  - DOMPoint
-  - Depth
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Position
-  - Property
-  - Reference
-  - z
+page-type: web-api-instance-property
 browser-compat: api.DOMPoint.z
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's

@@ -1,19 +1,11 @@
 ---
 title: PaymentResponse.details
 slug: Web/API/PaymentResponse/details
-tags:
-  - API
-  - Experimental
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - details
+page-type: web-api-instance-property
 browser-compat: api.PaymentResponse.details
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}
+
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`details`** read-only property of the
 {{domxref("PaymentResponse")}} interface returns a JSON-serializable object that
@@ -31,14 +23,14 @@ object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
 real-world implementation this data would then be sent to a payment server.
 
 ```js
-payment.show().then(paymentResponse => {
-  var paymentData = {
+payment.show().then((paymentResponse) => {
+  const paymentData = {
     // payment method string
     method: paymentResponse.methodName,
     // payment details as you requested
     details: paymentResponse.details,
     // shipping address information
-    address: toDict(paymentResponse.shippingAddress)
+    address: toDict(paymentResponse.shippingAddress),
   };
   // Send information to the server
 });

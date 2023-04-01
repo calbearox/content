@@ -1,20 +1,11 @@
 ---
 title: SourceBuffer.updating
 slug: Web/API/SourceBuffer/updating
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Updating
-  - Video
+page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.updating
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`updating`** read-only property of the
 {{domxref("SourceBuffer")}} interface indicates whether the `SourceBuffer` is

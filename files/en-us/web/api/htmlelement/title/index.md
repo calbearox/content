@@ -1,14 +1,10 @@
 ---
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.title
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.title`** property
@@ -22,10 +18,10 @@ A string.
 ## Examples
 
 ```js
-const link = document.createElement('a');
-link.innerText = 'grapes';
-link.href = 'https://en.wikipedia.org/wiki/Grape';
-link.title = 'Wikipedia page on grapes';
+const link = document.createElement("a");
+link.innerText = "grapes";
+link.href = "https://en.wikipedia.org/wiki/Grape";
+link.title = "Wikipedia page on grapes";
 ```
 
 ## Specifications

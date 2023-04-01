@@ -1,14 +1,10 @@
 ---
 title: HTMLMediaElement.defaultPlaybackRate
 slug: Web/API/HTMLMediaElement/defaultPlaybackRate
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
+page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.defaultPlaybackRate
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.defaultPlaybackRate`** property indicates the default playback rate for the media.
@@ -25,7 +21,7 @@ A double. `1.0` is "normal speed," values lower than `1.0` make the media play s
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.defaultPlaybackRate); // 1
 ```
 
@@ -39,4 +35,4 @@ console.log(obj.defaultPlaybackRate); // 1
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.defaultPlaybackRate` property
